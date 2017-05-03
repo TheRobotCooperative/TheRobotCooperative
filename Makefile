@@ -1,11 +1,13 @@
 SHELL=/bin/bash
 
-all = jackal
+ROBOTS = jackal grizzly
 
-jackal:
-	docker build -t squareslab/robots:jackal jackal
+all = $(ROBOTS)
+
+$(ROBOTS):
+	docker build -t squareslab/robots:$@ $@
 
 push:
 	docker push squareslab/robots:jackal
 
-.PHONY: jackal push
+.PHONY: $(ROBOTS) push
