@@ -11,10 +11,10 @@ RUN useradd -ms /bin/bash robot && \
 USER robot
 
 # add ROS install file
-ADD pmb2_public.rosinstall /tmp/pmb2_public.rosinstall
+ADD pmb2_public.rosinstall "${HOME}/pmb2/pmb2_public.rosinstall"
 
-#RUN mkdir ~/pmb2_public_ws && \
-#    cd ~/pmb2_public_ws && \
+RUN mkdir ~/pmb2 && \
+    cd ~/pmb2 && \
     
 #RUN sudo apt-get update && \
 #    sudo apt-get install -y ros-${ROSVERSION}-grizzly-desktop \
