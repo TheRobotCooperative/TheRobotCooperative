@@ -3,9 +3,9 @@ SHELL=/bin/bash
 all = jackal
 
 jackal:
-	docker build -t christimperley/robots:jackal jackal
+	docker build -t squareslab/robots:jackal jackal
 
 push:
-	docker push christimperley/robots:jackal
+	docker push squareslab/robots:jackal
 
 .PHONY: jackal push
