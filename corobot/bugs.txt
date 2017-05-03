@@ -52,6 +52,9 @@ https://github.com/corobotics/corobots/commit/a329851d3847086885b0e8afb7921fdeef
 https://github.com/corobotics/corobots/commit/179f0946eef5a00e66427f5ffaedcbf193e272fa
 https://github.com/corobotics/corobots/commit/8c6e1dcb1160810ed84e3f20dc89a95811d67e10
 https://github.com/corobotics/corobots/commit/b5bfac17e8e019e5b0f56e337010eee296e3251f
+https://github.com/corobotics/corobots/commit/92d0f83ec9c2e083e715c068ab61e5afddaf4214
+https://github.com/corobotics/corobots/commit/d0a02cd7f1f2aa694a05100b7141c39a43f7633a
+https://github.com/corobotics/corobots/commit/a21a3f61afa599aa486701ae84d22ab6bc9ce2d9
 
 
 ## Compilation
