@@ -8,5 +8,5 @@ docker run --rm \
   -e DISPLAY=unix$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -it \
-  christimperley/robots:${robot} \
+  squareslab/robots:${robot} \
   /bin/bash
