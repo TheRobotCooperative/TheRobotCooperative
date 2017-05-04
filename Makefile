@@ -1,6 +1,6 @@
 SHELL=/bin/bash
 
-ROBOTS = jackal grizzly cob4 fetch kobuki
+ROBOTS = jackal grizzly cob4 fetch kobuki nao
 
 all = $(ROBOTS)
 
