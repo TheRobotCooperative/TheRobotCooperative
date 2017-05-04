@@ -10,7 +10,7 @@ A collection of Dockerfiles for various different ROS robots
 * Care-O-Bot 4
 * Fetch
 * Freight
-* (Aldebaran Nao)[http://wiki.ros.org/nao]
+* [Aldebaran Nao](http://wiki.ros.org/nao)
 
 
 ## Installation
