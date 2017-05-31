@@ -12,6 +12,7 @@ RUN useradd -ms /bin/bash robot && \
 USER robot
 WORKDIR /home/robot
 
+RUN git config --global url.https://github.com/.insteadOf git://github.com/
 RUN git clone https://github.com/ArduPilot/ardupilot
 RUN cd ardupilot && git submodule update --init --recursive
 
