@@ -15,12 +15,21 @@ WORKDIR "/home/robot/${ROBOT_NAME}"
 
 # add ROS install file
 ADD rosinstall rosinstall
-RUN sudo rosinstall src /opt/ros/indigo rosinstall && \
-    sudo apt-get update && \
+RUN rosinstall src /opt/ros/indigo rosinstall && \
+    apt-get update && \
     rosdep update && \
     rosdep install  -y \
                     --from-paths src \
                     --ignore-src \
                     --rosdistro indigo
-# RUN sudo apt-get install -y python-catkin-tools
-# RUN sudo bash -c "source src/setup.sh && catkin build -j $(nproc)"
+# RUN apt-get --no-install-recommends install -y python-catkin-tools \
+    && apt-get clean \
+    && rm -rf \
+        /var/lib/apt/lists/* \
+        /tmp/* \
+        /var/tmp/* \
+        /usr/share/man \
+        /usr/share/doc \
+        /usr/share/doc-base
+            
+# RUN bash -c "source src/setup.sh && catkin build -j $(nproc)"

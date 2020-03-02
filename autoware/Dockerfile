@@ -1,15 +1,24 @@
 FROM ubuntu:14.04
 MAINTAINER Yuki Iida <aiueo.0409@gmail.com>
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get --no-install-recommends install -y \
         software-properties-common \
         wget curl git cmake cmake-curses-gui \
-        libglew-dev openssh-server vim
+        libglew-dev openssh-server vim \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base
 
 # Intall ROS
 RUN wget http://packages.ros.org/ros.key -O - | apt-key add -
 RUN echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get --no-install-recommends install -y \
         ros-indigo-desktop-full ros-indigo-nmea-msgs \
         ros-indigo-nmea-navsat-driver ros-indigo-sound-play \
         ros-indigo-jsk-visualization \
@@ -22,35 +31,90 @@ RUN apt-get update && apt-get install -y \
         ros-indigo-gazebo-ros-control \
         ros-indigo-sicktoolbox ros-indigo-sicktoolbox-wrapper \
         libnlopt-dev freeglut3-dev qtbase5-dev \
-        libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu
+        libqt5opengl5-dev libssh2-1-dev libarmadillo-dev libpcap-dev gksu \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base      
+
+
 RUN rosdep init \
         && rosdep update \
         && echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 
 # Develop
-RUN apt-get install -y \
+RUN apt-get update && apt-get --no-install-recommends install -y \
         libboost-all-dev \
         libflann-dev \
         libgsl0-dev \
         libgoogle-perftools-dev \
-        libeigen3-dev
+        libeigen3-dev \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base
+
 
 # Intall some basic GUI and sound libs
-RUN apt-get install -y \
+RUN apt-get update && apt-get --no-install-recommends install -y \
                 xz-utils file locales dbus-x11 pulseaudio dmz-cursor-theme \
                 fonts-dejavu fonts-liberation hicolor-icon-theme \
                 libcanberra-gtk3-0 libcanberra-gtk-module libcanberra-gtk3-module \
                 libasound2 libgtk2.0-0 libdbus-glib-1-2 libxt6 libexif12 \
                 libgl1-mesa-glx libgl1-mesa-dri \
-        && update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX
+        && update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base
 
 # Intall some basic GUI tools
-RUN apt-get install -y \
+RUN apt-get update && apt-get --no-install-recommends install -y \
         cmake-qt-gui \
-        gnome-terminal
+        gnome-terminal \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base
 
 # Install OpenCV
-RUN apt-get update && apt-get -y install libopencv-dev build-essential cmake git libgtk2.0-dev pkg-config python-dev python-numpy libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-0 libjasper-dev libavcodec-dev libavformat-dev libswscale-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev libxvidcore-dev x264 v4l-utils unzip
+RUN apt-get update \
+        && apt-get --no-install-recommends -y install libopencv-dev build-essential \
+                cmake git libgtk2.0-dev pkg-config python-dev python-numpy \
+                libdc1394-22 libdc1394-22-dev libjpeg-dev libpng12-0 libjasper-dev \
+                libavcodec-dev libavformat-dev libswscale-dev libgstreamer0.10-dev \
+                libgstreamer-plugins-base0.10-dev libv4l-dev libtbb-dev libqt4-dev libmp3lame-dev \
+                libopencore-amrnb-dev libopencore-amrwb-dev libtheora-dev libvorbis-dev \
+                libxvidcore-dev x264 v4l-utils unzip \
+        && apt-get clean \
+        && apt-get --purge autoremove
+        && rm -rf \
+                /var/lib/apt/lists/* \
+                /tmp/* \
+                /var/tmp/* \
+                /usr/share/man \
+                /usr/share/doc \
+                /usr/share/doc-base
 
 RUN wget https://github.com/opencv/opencv/archive/2.4.13.zip && \
     unzip 2.4.13.zip && \
