@@ -14,7 +14,7 @@ WORKDIR /home/robot/pmb2
 
 # add ROS install file
 ADD pmb2_public.rosinstall pmb2.rosinstall
-RUN sudo rosinstall src /opt/ros/indigo pmb2.rosinstall && \
+RUN rosinstall src /opt/ros/indigo pmb2.rosinstall && \
     sudo apt-get update && \
     rosdep update && \
     rosdep install  -y \
@@ -23,7 +23,7 @@ RUN sudo rosinstall src /opt/ros/indigo pmb2.rosinstall && \
                     --rosdistro indigo \
                     --skip-keys \
                     "pal_gazebo_plugins speed_limit sensor_to_cloud"
-RUN sudo apt-get install -y python-catkin-tools
-RUN sudo bash -c "source src/setup.sh && catkin build -j $(nproc)"
+RUN apt-get --no-install-recommends install -y python-catkin-tools
+RUN bash -c "source src/setup.sh && catkin build -j $(nproc)"
 
-#RUN sudo apt-get update && sudo apt-get install -y ros-indigo-joint-state-controller
+#RUN apt-get update && apt-get --no-install-recommends install -y ros-indigo-joint-state-controller
