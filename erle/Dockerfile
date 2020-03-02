@@ -17,8 +17,8 @@ RUN git clone https://github.com/ArduPilot/ardupilot
 RUN cd ardupilot && git submodule update --init --recursive
 
 # install build tools
-RUN sudo apt-get update && \
-    sudo apt-get install -y libtool \
+RUN apt-get update && \
+    apt-get --no-install-recommends install -y libtool \
                             automake \
                             autoconf \
                             gcc \
@@ -30,7 +30,7 @@ RUN cd jsbsim && \
     ./autogen.sh --enable-libraries && \
     make -j
 
-RUN sudo apt-get install -y python-matplotlib \
+RUN apt-get --no-install-recommends install -y python-matplotlib \
                             python-serial \
                             python-wxgtk2.8 \
                             python-wxtools \
@@ -41,7 +41,7 @@ RUN sudo apt-get install -y python-matplotlib \
                             gawk \
                             python-pip \
                             python-pexpect
-RUN sudo pip install future pymavlink MAVProxy
+RUN pip install future pymavlink MAVProxy
 
 ENV HOME "/home/robot"
 ENV PATH "${PATH}:${HOME}/jsbsim/src"
