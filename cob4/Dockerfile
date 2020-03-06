@@ -51,3 +51,28 @@ RUN wstool init -j8 src pkgs.rosinstall \
 
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && catkin build
+
+# install gzweb
+ENV NODE_PATH /opt/nodejs
+ENV NODE_VERSION v12.16.1
+ENV NODE_DISTRO linux-x64
+ENV NODE_RELEASE "node-${NODE_VERSION}-${NODE_DISTRO}"
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      libjansson-dev \
+      libboost-dev \
+      imagemagick \
+      libtinyxml-dev \
+      mercurial \
+      cmake \
+      build-essential \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && cd /tmp \
+ && wget -nv "https://nodejs.org/dist/${NODE_VERSION}/${NODE_RELEASE}.tar.xz" \
+ && mkdir -p "${NODE_PATH}" \
+ && tar -xJvf "${NODE_RELEASE}.tar.xz" -C "${NODE_PATH}" \
+ && rm -f "${NODE_RELEASE}.tar.xz"
+ENV PATH "${NODE_PATH}/${NODE_RELEASE}/bin:${PATH}"
+
+ENTRYPOINT ["/bin/bash", "-c"]
