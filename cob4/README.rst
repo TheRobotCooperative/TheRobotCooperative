@@ -10,6 +10,13 @@ To launch the robot in a Gazebo simulation, use :code:`roslaunch` on the followi
       robot_env:=ipa-apartment
 
 
+To launch the GazeboWeb server:
+
+::
+
+  $ cd /opt/gzweb && npm start
+
+
 References
 ----------
 

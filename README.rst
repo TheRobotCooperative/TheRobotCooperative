@@ -31,3 +31,5 @@ Resources
 ---------
 
 http://moore-mike.com/docker-ros.html
+http://gazebosim.org/tutorials?tut=gzweb_install&cat=gzweb
+https://github.com/nodejs/help/wiki/Installation

@@ -24,37 +24,10 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-# add entrypoint
-ENV ROS_WSPACE /ros_ws
-WORKDIR "${ROS_WSPACE}"
-RUN echo "#!/bin/bash \n\
-set -e \n\
-source \"/opt/ros/\${ROS_DISTRO}/setup.bash\" \n\
-source \"${ROS_WSPACE}/devel/setup.bash\" \n\
-exec \"\$@\"" > "${ROS_WSPACE}/entrypoint.sh" \
- && chmod +x "${ROS_WSPACE}/entrypoint.sh"
-ENTRYPOINT ["/ros_ws/entrypoint.sh"]
-CMD ["/bin/bash"]
-
-# build package
-COPY pkgs.rosinstall /ros_ws
-RUN wstool init -j8 src pkgs.rosinstall \
- && . /opt/ros/${ROS_DISTRO}/setup.sh \
- && apt-get update \
- && rosdep update \
- && rosdep install -i -y -r --from-paths src \
-      --ignore-src \
-      --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
-      --rosdistro="${ROS_DISTRO}" \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && catkin build
-
 # install gzweb deps
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
+      wget \
       libjansson-dev \
       libboost-dev \
       imagemagick \
@@ -80,9 +53,35 @@ ENV GZWEB_PATH /opt/gzweb
 ENV GZWEB_RELEASE gzweb_1.4.0
 RUN hg clone https://bitbucket.org/osrf/gzweb "${GZWEB_PATH}" -u "${GZWEB_RELEASE}"
 
+# add entrypoint
+ENV ROS_WSPACE /ros_ws
+WORKDIR "${ROS_WSPACE}"
+RUN echo "#!/bin/bash \n\
+set -e \n\
+source \"/opt/ros/\${ROS_DISTRO}/setup.bash\" \n\
+source \"${ROS_WSPACE}/devel/setup.bash\" \n\
+exec \"\$@\"" > "${ROS_WSPACE}/entrypoint.sh" \
+ && chmod +x "${ROS_WSPACE}/entrypoint.sh"
+ENTRYPOINT ["/ros_ws/entrypoint.sh"]
+CMD ["/bin/bash"]
+
+# build package
+ARG ROSINSTALL_FILE
+COPY "${ROSINSTALL_FILE}" /ros_ws
+RUN wstool init -j8 src pkgs.rosinstall \
+ && . /opt/ros/${ROS_DISTRO}/setup.sh \
+ && apt-get update \
+ && rosdep update \
+ && rosdep install -i -y -r --from-paths src \
+      --ignore-src \
+      --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
+      --rosdistro="${ROS_DISTRO}" \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
+ && catkin build
+
 # install gazebo models
 RUN cd "${GZWEB_PATH}" \
  && . /usr/share/gazebo/setup.sh \
  && npm run deploy --- -m
-
-#ENTRYPOINT ["/bin/bash", "-c"]

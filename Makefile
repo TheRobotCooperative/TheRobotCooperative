@@ -1,8 +1,6 @@
-ROBOTS = jackal grizzly cob4 fetch kobuki nao roch erle
+all = cob4
 
-all = $(ROBOTS)
+cob4:
+	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=cob4/pkgs.rosinstall -t cob4 .
 
-$(ROBOTS):
-	docker build -t squareslab/robots:$@ $@
-
-.PHONY: $(ROBOTS)
+.PHONY: cob4
