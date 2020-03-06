@@ -1,5 +1,3 @@
-SHELL=/bin/bash
-
 ROBOTS = jackal grizzly cob4 fetch kobuki nao roch erle
 
 all = $(ROBOTS)
