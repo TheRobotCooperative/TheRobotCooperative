@@ -25,3 +25,9 @@ Usage
 -----
 
 Todo
+
+
+Resources
+---------
+
+http://moore-mike.com/docker-ros.html
