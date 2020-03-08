@@ -1,0 +1,690 @@
+# rosinstall_generator fetch_gazebo fetch_gazebo_demo --deps
+# Using ROS_DISTRO: melodic
+- git:
+    local-name: actionlib
+    uri: https://github.com/ros-gbp/actionlib-release.git
+    version: release/melodic/actionlib/1.12.0-1
+- git:
+    local-name: angles
+    uri: https://github.com/ros-gbp/geometry_angles_utils-release.git
+    version: release/melodic/angles/1.9.12-1
+- git:
+    local-name: bond_core/bond
+    uri: https://github.com/ros-gbp/bond_core-release.git
+    version: release/melodic/bond/1.8.3-0
+- git:
+    local-name: bond_core/bondcpp
+    uri: https://github.com/ros-gbp/bond_core-release.git
+    version: release/melodic/bondcpp/1.8.3-0
+- git:
+    local-name: bond_core/smclib
+    uri: https://github.com/ros-gbp/bond_core-release.git
+    version: release/melodic/smclib/1.8.3-0
+- git:
+    local-name: catkin
+    uri: https://github.com/ros-gbp/catkin-release.git
+    version: release/melodic/catkin/0.7.23-1
+- git:
+    local-name: class_loader
+    uri: https://github.com/ros-gbp/class_loader-release.git
+    version: release/melodic/class_loader/0.4.1-0
+- git:
+    local-name: cmake_modules
+    uri: https://github.com/ros-gbp/cmake_modules-release.git
+    version: release/melodic/cmake_modules/0.4.2-0
+- git:
+    local-name: code_coverage
+    uri: https://github.com/mikeferguson/code_coverage-gbp.git
+    version: release/melodic/code_coverage/0.3.0-1
+- git:
+    local-name: common_msgs/actionlib_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/actionlib_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/diagnostic_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/diagnostic_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/geometry_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/geometry_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/nav_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/nav_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/sensor_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/sensor_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/shape_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/shape_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/stereo_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/stereo_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/trajectory_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/trajectory_msgs/1.12.7-0
+- git:
+    local-name: common_msgs/visualization_msgs
+    uri: https://github.com/ros-gbp/common_msgs-release.git
+    version: release/melodic/visualization_msgs/1.12.7-0
+- git:
+    local-name: control_msgs
+    uri: https://github.com/ros-gbp/control_msgs-release.git
+    version: release/melodic/control_msgs/1.5.1-1
+- git:
+    local-name: control_toolbox
+    uri: https://github.com/ros-gbp/control_toolbox-release.git
+    version: release/melodic/control_toolbox/1.17.0-0
+- git:
+    local-name: diagnostics/diagnostic_updater
+    uri: https://github.com/ros-gbp/diagnostics-release.git
+    version: release/melodic/diagnostic_updater/1.9.3-0
+- git:
+    local-name: dynamic_reconfigure
+    uri: https://github.com/ros-gbp/dynamic_reconfigure-release.git
+    version: release/melodic/dynamic_reconfigure/1.6.1-1
+- git:
+    local-name: eigen_stl_containers
+    uri: https://github.com/ros-gbp/eigen_stl_containers-release.git
+    version: release/melodic/eigen_stl_containers/0.1.8-0
+- git:
+    local-name: eigenpy
+    uri: https://github.com/ipab-slmc/eigenpy_catkin-release.git
+    version: release/melodic/eigenpy/1.6.9-1
+- git:
+    local-name: fetch_gazebo/fetch_gazebo
+    uri: https://github.com/fetchrobotics-gbp/fetch_gazebo-release.git
+    version: release/melodic/fetch_gazebo/0.9.2-1
+- git:
+    local-name: fetch_gazebo/fetch_gazebo_demo
+    uri: https://github.com/fetchrobotics-gbp/fetch_gazebo-release.git
+    version: release/melodic/fetch_gazebo_demo/0.9.2-1
+- git:
+    local-name: fetch_ros/fetch_depth_layer
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_depth_layer/0.8.2-1
+- git:
+    local-name: fetch_ros/fetch_description
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_description/0.8.2-1
+- git:
+    local-name: fetch_ros/fetch_ikfast_plugin
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_ikfast_plugin/0.8.2-1
+- git:
+    local-name: fetch_ros/fetch_maps
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_maps/0.8.2-1
+- git:
+    local-name: fetch_ros/fetch_moveit_config
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_moveit_config/0.8.2-1
+- git:
+    local-name: fetch_ros/fetch_navigation
+    uri: https://github.com/fetchrobotics-gbp/fetch_ros-release.git
+    version: release/melodic/fetch_navigation/0.8.2-1
+- git:
+    local-name: gazebo_ros_pkgs/gazebo_dev
+    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release.git
+    version: release/melodic/gazebo_dev/2.8.6-1
+- git:
+    local-name: gazebo_ros_pkgs/gazebo_msgs
+    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release.git
+    version: release/melodic/gazebo_msgs/2.8.6-1
+- git:
+    local-name: gazebo_ros_pkgs/gazebo_plugins
+    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release.git
+    version: release/melodic/gazebo_plugins/2.8.6-1
+- git:
+    local-name: gazebo_ros_pkgs/gazebo_ros
+    uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release.git
+    version: release/melodic/gazebo_ros/2.8.6-1
+- git:
+    local-name: gencpp
+    uri: https://github.com/ros-gbp/gencpp-release.git
+    version: release/melodic/gencpp/0.6.5-1
+- git:
+    local-name: geneus
+    uri: https://github.com/tork-a/geneus-release.git
+    version: release/melodic/geneus/2.2.6-0
+- git:
+    local-name: genlisp
+    uri: https://github.com/ros-gbp/genlisp-release.git
+    version: release/melodic/genlisp/0.4.16-0
+- git:
+    local-name: genmsg
+    uri: https://github.com/ros-gbp/genmsg-release.git
+    version: release/melodic/genmsg/0.5.15-1
+- git:
+    local-name: gennodejs
+    uri: https://github.com/RethinkRobotics-release/gennodejs-release.git
+    version: release/melodic/gennodejs/2.0.1-0
+- git:
+    local-name: genpy
+    uri: https://github.com/ros-gbp/genpy-release.git
+    version: release/melodic/genpy/0.6.9-1
+- git:
+    local-name: geometric_shapes
+    uri: https://github.com/ros-gbp/geometric_shapes-release.git
+    version: release/melodic/geometric_shapes/0.6.1-0
+- git:
+    local-name: geometry/eigen_conversions
+    uri: https://github.com/ros-gbp/geometry-release.git
+    version: release/melodic/eigen_conversions/1.12.0-0
+- git:
+    local-name: geometry/kdl_conversions
+    uri: https://github.com/ros-gbp/geometry-release.git
+    version: release/melodic/kdl_conversions/1.12.0-0
+- git:
+    local-name: geometry/tf
+    uri: https://github.com/ros-gbp/geometry-release.git
+    version: release/melodic/tf/1.12.0-0
+- git:
+    local-name: geometry/tf_conversions
+    uri: https://github.com/ros-gbp/geometry-release.git
+    version: release/melodic/tf_conversions/1.12.0-0
+- git:
+    local-name: geometry2/tf2
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2/0.6.5-0
+- git:
+    local-name: geometry2/tf2_eigen
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_eigen/0.6.5-0
+- git:
+    local-name: geometry2/tf2_geometry_msgs
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_geometry_msgs/0.6.5-0
+- git:
+    local-name: geometry2/tf2_kdl
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_kdl/0.6.5-0
+- git:
+    local-name: geometry2/tf2_msgs
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_msgs/0.6.5-0
+- git:
+    local-name: geometry2/tf2_py
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_py/0.6.5-0
+- git:
+    local-name: geometry2/tf2_ros
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_ros/0.6.5-0
+- git:
+    local-name: geometry2/tf2_sensor_msgs
+    uri: https://github.com/ros-gbp/geometry2-release.git
+    version: release/melodic/tf2_sensor_msgs/0.6.5-0
+- git:
+    local-name: grasping_msgs
+    uri: https://github.com/mikeferguson/grasping_msgs-gbp.git
+    version: release/melodic/grasping_msgs/0.3.1-0
+- git:
+    local-name: image_common/camera_calibration_parsers
+    uri: https://github.com/ros-gbp/image_common-release.git
+    version: release/melodic/camera_calibration_parsers/1.11.13-0
+- git:
+    local-name: image_common/camera_info_manager
+    uri: https://github.com/ros-gbp/image_common-release.git
+    version: release/melodic/camera_info_manager/1.11.13-0
+- git:
+    local-name: image_common/image_transport
+    uri: https://github.com/ros-gbp/image_common-release.git
+    version: release/melodic/image_transport/1.11.13-0
+- git:
+    local-name: image_common/polled_camera
+    uri: https://github.com/ros-gbp/image_common-release.git
+    version: release/melodic/polled_camera/1.11.13-0
+- git:
+    local-name: image_pipeline/depth_image_proc
+    uri: https://github.com/ros-gbp/image_pipeline-release.git
+    version: release/melodic/depth_image_proc/1.14.0-1
+- git:
+    local-name: image_pipeline/image_proc
+    uri: https://github.com/ros-gbp/image_pipeline-release.git
+    version: release/melodic/image_proc/1.14.0-1
+- git:
+    local-name: interactive_markers
+    uri: https://github.com/ros-gbp/interactive_markers-release.git
+    version: release/melodic/interactive_markers/1.11.4-0
+- git:
+    local-name: joint_state_publisher/joint_state_publisher
+    uri: https://github.com/ros-gbp/joint_state_publisher-release.git
+    version: release/melodic/joint_state_publisher/1.12.14-1
+- git:
+    local-name: kdl_parser/kdl_parser
+    uri: https://github.com/ros-gbp/kdl_parser-release.git
+    version: release/melodic/kdl_parser/1.13.1-0
+- git:
+    local-name: laser_geometry
+    uri: https://github.com/ros-gbp/laser_geometry-release.git
+    version: release/melodic/laser_geometry/1.6.4-0
+- git:
+    local-name: media_export
+    uri: https://github.com/ros-gbp/media_export-release.git
+    version: release/melodic/media_export/0.2.0-0
+- git:
+    local-name: message_generation
+    uri: https://github.com/ros-gbp/message_generation-release.git
+    version: release/melodic/message_generation/0.4.1-1
+- git:
+    local-name: message_runtime
+    uri: https://github.com/ros-gbp/message_runtime-release.git
+    version: release/melodic/message_runtime/0.4.12-0
+- git:
+    local-name: moveit/moveit_commander
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_commander/1.0.2-1
+- git:
+    local-name: moveit/moveit_core
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_core/1.0.2-1
+- git:
+    local-name: moveit/moveit_fake_controller_manager
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_fake_controller_manager/1.0.2-1
+- git:
+    local-name: moveit/moveit_kinematics
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_kinematics/1.0.2-1
+- git:
+    local-name: moveit/moveit_planners_ompl
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_planners_ompl/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_manipulation
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_manipulation/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_move_group
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_move_group/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_perception
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_perception/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_planning
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_planning/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_planning_interface
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_planning_interface/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_robot_interaction
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_robot_interaction/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_visualization
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_visualization/1.0.2-1
+- git:
+    local-name: moveit/moveit_ros_warehouse
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_ros_warehouse/1.0.2-1
+- git:
+    local-name: moveit/moveit_simple_controller_manager
+    uri: https://github.com/ros-gbp/moveit-release.git
+    version: release/melodic/moveit_simple_controller_manager/1.0.2-1
+- git:
+    local-name: moveit_msgs
+    uri: https://github.com/ros-gbp/moveit_msgs-release.git
+    version: release/melodic/moveit_msgs/0.10.0-0
+- git:
+    local-name: moveit_python
+    uri: https://github.com/mikeferguson/moveit_python-release.git
+    version: release/melodic/moveit_python/0.3.3-1
+- git:
+    local-name: moveit_resources
+    uri: https://github.com/ros-gbp/moveit_resources-release.git
+    version: release/melodic/moveit_resources/0.6.5-1
+- git:
+    local-name: navigation/amcl
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/amcl/1.16.4-1
+- git:
+    local-name: navigation/base_local_planner
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/base_local_planner/1.16.4-1
+- git:
+    local-name: navigation/clear_costmap_recovery
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/clear_costmap_recovery/1.16.4-1
+- git:
+    local-name: navigation/costmap_2d
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/costmap_2d/1.16.4-1
+- git:
+    local-name: navigation/map_server
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/map_server/1.16.4-1
+- git:
+    local-name: navigation/move_base
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/move_base/1.16.4-1
+- git:
+    local-name: navigation/nav_core
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/nav_core/1.16.4-1
+- git:
+    local-name: navigation/navfn
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/navfn/1.16.4-1
+- git:
+    local-name: navigation/rotate_recovery
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/rotate_recovery/1.16.4-1
+- git:
+    local-name: navigation/voxel_grid
+    uri: https://github.com/ros-gbp/navigation-release.git
+    version: release/melodic/voxel_grid/1.16.4-1
+- git:
+    local-name: navigation_msgs/map_msgs
+    uri: https://github.com/ros-gbp/navigation_msgs-release.git
+    version: release/melodic/map_msgs/1.13.0-0
+- git:
+    local-name: navigation_msgs/move_base_msgs
+    uri: https://github.com/ros-gbp/navigation_msgs-release.git
+    version: release/melodic/move_base_msgs/1.13.0-0
+- git:
+    local-name: nodelet_core/nodelet
+    uri: https://github.com/ros-gbp/nodelet_core-release.git
+    version: release/melodic/nodelet/1.9.16-0
+- git:
+    local-name: nodelet_core/nodelet_topic_tools
+    uri: https://github.com/ros-gbp/nodelet_core-release.git
+    version: release/melodic/nodelet_topic_tools/1.9.16-0
+- git:
+    local-name: object_recognition_msgs
+    uri: https://github.com/ros-gbp/object_recognition_msgs-release.git
+    version: release/melodic/object_recognition_msgs/0.4.1-0
+- git:
+    local-name: octomap/octomap
+    uri: https://github.com/ros-gbp/octomap-release.git
+    version: release/melodic/octomap/1.9.0-1
+- git:
+    local-name: octomap_msgs
+    uri: https://github.com/ros-gbp/octomap_msgs-release.git
+    version: release/melodic/octomap_msgs/0.3.3-1
+- git:
+    local-name: ompl
+    uri: https://github.com/ros-gbp/ompl-release.git
+    version: release/melodic/ompl/1.4.2-5
+- git:
+    local-name: open_karto
+    uri: https://github.com/ros-gbp/open_karto-release.git
+    version: release/melodic/open_karto/1.2.0-0
+- git:
+    local-name: orocos_kinematics_dynamics/orocos_kdl
+    uri: https://github.com/orocos/orocos-kdl-release.git
+    version: release/melodic/orocos_kdl/1.4.0-0
+- git:
+    local-name: orocos_kinematics_dynamics/python_orocos_kdl
+    uri: https://github.com/orocos/orocos-kdl-release.git
+    version: release/melodic/python_orocos_kdl/1.4.0-0
+- git:
+    local-name: pcl_msgs
+    uri: https://github.com/ros-gbp/pcl_msgs-release.git
+    version: release/melodic/pcl_msgs/0.2.0-0
+- git:
+    local-name: perception_pcl/pcl_conversions
+    uri: https://github.com/ros-gbp/perception_pcl-release.git
+    version: release/melodic/pcl_conversions/1.7.0-2
+- git:
+    local-name: perception_pcl/pcl_ros
+    uri: https://github.com/ros-gbp/perception_pcl-release.git
+    version: release/melodic/pcl_ros/1.7.0-2
+- git:
+    local-name: pluginlib
+    uri: https://github.com/ros-gbp/pluginlib-release.git
+    version: release/melodic/pluginlib/1.12.1-0
+- git:
+    local-name: python_qt_binding
+    uri: https://github.com/ros-gbp/python_qt_binding-release.git
+    version: release/melodic/python_qt_binding/0.4.0-1
+- git:
+    local-name: random_numbers
+    uri: https://github.com/ros-gbp/random_numbers-release.git
+    version: release/melodic/random_numbers/0.3.2-0
+- git:
+    local-name: realtime_tools
+    uri: https://github.com/ros-gbp/realtime_tools-release.git
+    version: release/melodic/realtime_tools/1.15.1-1
+- git:
+    local-name: resource_retriever
+    uri: https://github.com/ros-gbp/resource_retriever-release.git
+    version: release/melodic/resource_retriever/1.12.6-1
+- git:
+    local-name: rgbd_launch
+    uri: https://github.com/ros-gbp/rgbd_launch-release.git
+    version: release/melodic/rgbd_launch/2.2.2-0
+- git:
+    local-name: robot_controllers/robot_controllers
+    uri: https://github.com/fetchrobotics-gbp/robot_controllers-release.git
+    version: release/melodic/robot_controllers/0.6.0-0
+- git:
+    local-name: robot_controllers/robot_controllers_interface
+    uri: https://github.com/fetchrobotics-gbp/robot_controllers-release.git
+    version: release/melodic/robot_controllers_interface/0.6.0-0
+- git:
+    local-name: robot_controllers/robot_controllers_msgs
+    uri: https://github.com/fetchrobotics-gbp/robot_controllers-release.git
+    version: release/melodic/robot_controllers_msgs/0.6.0-0
+- git:
+    local-name: robot_state_publisher
+    uri: https://github.com/ros-gbp/robot_state_publisher-release.git
+    version: release/melodic/robot_state_publisher/1.14.0-1
+- git:
+    local-name: ros/rosbash
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/rosbash/1.14.8-1
+- git:
+    local-name: ros/rosbuild
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/rosbuild/1.14.8-1
+- git:
+    local-name: ros/rosclean
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/rosclean/1.14.8-1
+- git:
+    local-name: ros/roslang
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/roslang/1.14.8-1
+- git:
+    local-name: ros/roslib
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/roslib/1.14.8-1
+- git:
+    local-name: ros/rosmake
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/rosmake/1.14.8-1
+- git:
+    local-name: ros/rosunit
+    uri: https://github.com/ros-gbp/ros-release.git
+    version: release/melodic/rosunit/1.14.8-1
+- git:
+    local-name: ros_comm/message_filters
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/message_filters/1.14.4-1
+- git:
+    local-name: ros_comm/rosbag
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosbag/1.14.4-1
+- git:
+    local-name: ros_comm/rosbag_storage
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosbag_storage/1.14.4-1
+- git:
+    local-name: ros_comm/roscpp
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/roscpp/1.14.4-1
+- git:
+    local-name: ros_comm/rosgraph
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosgraph/1.14.4-1
+- git:
+    local-name: ros_comm/roslaunch
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/roslaunch/1.14.4-1
+- git:
+    local-name: ros_comm/roslz4
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/roslz4/1.14.4-1
+- git:
+    local-name: ros_comm/rosmaster
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosmaster/1.14.4-1
+- git:
+    local-name: ros_comm/rosmsg
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosmsg/1.14.4-1
+- git:
+    local-name: ros_comm/rosnode
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosnode/1.14.4-1
+- git:
+    local-name: ros_comm/rosout
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosout/1.14.4-1
+- git:
+    local-name: ros_comm/rosparam
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosparam/1.14.4-1
+- git:
+    local-name: ros_comm/rospy
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rospy/1.14.4-1
+- git:
+    local-name: ros_comm/rosservice
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rosservice/1.14.4-1
+- git:
+    local-name: ros_comm/rostest
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rostest/1.14.4-1
+- git:
+    local-name: ros_comm/rostopic
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/rostopic/1.14.4-1
+- git:
+    local-name: ros_comm/roswtf
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/roswtf/1.14.4-1
+- git:
+    local-name: ros_comm/topic_tools
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/topic_tools/1.14.4-1
+- git:
+    local-name: ros_comm/xmlrpcpp
+    uri: https://github.com/ros-gbp/ros_comm-release.git
+    version: release/melodic/xmlrpcpp/1.14.4-1
+- git:
+    local-name: ros_comm_msgs/rosgraph_msgs
+    uri: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    version: release/melodic/rosgraph_msgs/1.11.2-0
+- git:
+    local-name: ros_comm_msgs/std_srvs
+    uri: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    version: release/melodic/std_srvs/1.11.2-0
+- git:
+    local-name: ros_environment
+    uri: https://github.com/ros-gbp/ros_environment-release.git
+    version: release/melodic/ros_environment/1.2.2-1
+- git:
+    local-name: rosbag_migration_rule
+    uri: https://github.com/ros-gbp/rosbag_migration_rule-release.git
+    version: release/melodic/rosbag_migration_rule/1.0.0-0
+- git:
+    local-name: rosconsole
+    uri: https://github.com/ros-gbp/rosconsole-release.git
+    version: release/melodic/rosconsole/1.13.11-1
+- git:
+    local-name: rosconsole_bridge
+    uri: https://github.com/ros-gbp/rosconsole_bridge-release.git
+    version: release/melodic/rosconsole_bridge/0.5.3-0
+- git:
+    local-name: roscpp_core/cpp_common
+    uri: https://github.com/ros-gbp/roscpp_core-release.git
+    version: release/melodic/cpp_common/0.6.13-1
+- git:
+    local-name: roscpp_core/roscpp_serialization
+    uri: https://github.com/ros-gbp/roscpp_core-release.git
+    version: release/melodic/roscpp_serialization/0.6.13-1
+- git:
+    local-name: roscpp_core/roscpp_traits
+    uri: https://github.com/ros-gbp/roscpp_core-release.git
+    version: release/melodic/roscpp_traits/0.6.13-1
+- git:
+    local-name: roscpp_core/rostime
+    uri: https://github.com/ros-gbp/roscpp_core-release.git
+    version: release/melodic/rostime/0.6.13-1
+- git:
+    local-name: roslint
+    uri: https://github.com/ros-gbp/roslint-release.git
+    version: release/melodic/roslint/0.11.2-0
+- git:
+    local-name: rospack
+    uri: https://github.com/ros-gbp/rospack-release.git
+    version: release/melodic/rospack/2.5.5-1
+- git:
+    local-name: rviz
+    uri: https://github.com/ros-gbp/rviz-release.git
+    version: release/melodic/rviz/1.13.7-1
+- git:
+    local-name: simple_grasping
+    uri: https://github.com/ros-gbp/simple_grasping-release.git
+    version: release/melodic/simple_grasping/0.3.1-0
+- git:
+    local-name: slam_karto
+    uri: https://github.com/ros-gbp/slam_karto-release.git
+    version: release/melodic/slam_karto/0.8.1-0
+- git:
+    local-name: sparse_bundle_adjustment
+    uri: https://github.com/ros-gbp/sparse_bundle_adjustment-release.git
+    version: release/melodic/sparse_bundle_adjustment/0.4.3-1
+- git:
+    local-name: srdfdom
+    uri: https://github.com/ros-gbp/srdfdom-release.git
+    version: release/melodic/srdfdom/0.5.1-0
+- git:
+    local-name: std_msgs
+    uri: https://github.com/ros-gbp/std_msgs-release.git
+    version: release/melodic/std_msgs/0.5.12-0
+- git:
+    local-name: teleop_twist_keyboard
+    uri: https://github.com/ros-gbp/teleop_twist_keyboard-release.git
+    version: release/melodic/teleop_twist_keyboard/0.6.2-0
+- git:
+    local-name: urdf/urdf
+    uri: https://github.com/ros-gbp/urdf-release.git
+    version: release/melodic/urdf/1.13.1-0
+- git:
+    local-name: urdf/urdf_parser_plugin
+    uri: https://github.com/ros-gbp/urdf-release.git
+    version: release/melodic/urdf_parser_plugin/1.13.1-0
+- git:
+    local-name: urdfdom_py
+    uri: https://github.com/ros-gbp/urdfdom_py-release.git
+    version: release/melodic/urdfdom_py/0.4.2-1
+- git:
+    local-name: vision_opencv/cv_bridge
+    uri: https://github.com/ros-gbp/vision_opencv-release.git
+    version: release/melodic/cv_bridge/1.13.0-0
+- git:
+    local-name: vision_opencv/image_geometry
+    uri: https://github.com/ros-gbp/vision_opencv-release.git
+    version: release/melodic/image_geometry/1.13.0-0
+- git:
+    local-name: warehouse_ros
+    uri: https://github.com/ros-gbp/warehouse_ros-release.git
+    version: release/melodic/warehouse_ros/0.9.3-1
+- git:
+    local-name: xacro
+    uri: https://github.com/ros-gbp/xacro-release.git
+    version: release/melodic/xacro/1.13.5-1
