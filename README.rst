@@ -18,7 +18,14 @@ A collection of Dockerfiles for various different ROS robots
 Installation
 ------------
 
-Todo
+To use GzWeb, you must ensure that all of the required Gazebo models that will
+be simulated have been baked into `http/client/assets`:
+
+.. code::
+
+  $ export GAZEBO_MODEL_PATH="foo"
+  $ cd /opt/gzweb
+  $ npm run deploy --- -m
 
 
 Usage
