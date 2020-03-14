@@ -40,3 +40,4 @@ Resources
 http://moore-mike.com/docker-ros.html
 http://gazebosim.org/tutorials?tut=gzweb_install&cat=gzweb
 https://github.com/nodejs/help/wiki/Installation
+https://answers.gazebosim.org//question/17367/simulated-robot-model-randomly-appears-in-gzweb-gui/
