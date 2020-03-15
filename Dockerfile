@@ -1,6 +1,16 @@
 ARG DISTRO
-FROM ros:${DISTRO}
 
+FROM ubuntu:18.04 AS gzweb
+ENV GZWEB_RELEASE gzweb_1.4.0
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      ca-certificates \
+      mercurial \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && hg clone https://bitbucket.org/osrf/gzweb /opt/gzweb -u "${GZWEB_RELEASE}"
+
+FROM ros:${DISTRO} AS main
 WORKDIR /ros_ws
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
@@ -48,11 +58,6 @@ RUN cd /tmp \
  && rm -f "${NODE_RELEASE}.tar.xz"
 ENV PATH "${NODE_PATH}/${NODE_RELEASE}/bin:${PATH}"
 
-# install gzweb
-ENV GZWEB_PATH /opt/gzweb
-ENV GZWEB_RELEASE gzweb_1.4.0
-RUN hg clone https://bitbucket.org/osrf/gzweb "${GZWEB_PATH}" -u "${GZWEB_RELEASE}"
-
 # add entrypoint
 ENV ROS_WSPACE /ros_ws
 WORKDIR "${ROS_WSPACE}"
@@ -82,6 +87,7 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && catkin build
 
 # install gazebo models
-RUN cd "${GZWEB_PATH}" \
+COPY --from=gzweb /opt/gzweb /opt/gzweb
+RUN cd /opt/gzweb \
  && . /usr/share/gazebo/setup.sh \
  && npm run deploy --- -m
