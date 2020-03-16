@@ -10,12 +10,16 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* \
  && hg clone https://bitbucket.org/osrf/gzweb /opt/gzweb -u "${GZWEB_RELEASE}"
 
+# NOTE: We need to install the cmake_modules to avoid some build failures
+# that are due to unspecified dependencies.
+# (https://github.com/ros-industrial/industrial_calibration/issues/50)
 FROM ros:${DISTRO} AS main
 WORKDIR /ros_ws
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       apt-utils \
       ca-certificates \
+      "ros-${ROS_DISTRO}-cmake-modules" \
       vim \
       software-properties-common \
       wget \
