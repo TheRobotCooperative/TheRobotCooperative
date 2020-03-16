@@ -1,7 +1,7 @@
 Warthog
 =======
 
-.. image:: robot.jpg
+.. image:: robot.png
 
 
 References
