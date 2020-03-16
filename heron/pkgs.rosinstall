@@ -1,0 +1,48 @@
+- git:
+    local-name: heron/heron_control
+    uri: https://github.com/clearpath-gbp/heron-release.git
+    version: release/kinetic/heron_control/0.3.2-1
+- git:
+    local-name: heron/heron_description
+    uri: https://github.com/clearpath-gbp/heron-release.git
+    version: release/kinetic/heron_description/0.3.2-1
+- git:
+    local-name: heron/heron_msgs
+    uri: https://github.com/clearpath-gbp/heron-release.git
+    version: release/kinetic/heron_msgs/0.3.2-1
+- git:
+    local-name: heron_desktop/heron_desktop
+    uri: https://github.com/clearpath-gbp/heron_desktop-release.git
+    version: release/kinetic/heron_desktop/0.0.3-0
+- git:
+    local-name: heron_desktop/heron_viz
+    uri: https://github.com/clearpath-gbp/heron_desktop-release.git
+    version: release/kinetic/heron_viz/0.0.3-0
+- git:
+    local-name: image_common/image_transport
+    uri: https://github.com/ros-gbp/image_common-release.git
+    version: release/kinetic/image_transport/1.11.13-0
+- git:
+    local-name: imu_tools/imu_complementary_filter
+    uri: https://github.com/uos-gbp/imu_tools-release.git
+    version: release/kinetic/imu_complementary_filter/1.1.7-1
+- git:
+    local-name: imu_tools/imu_filter_madgwick
+    uri: https://github.com/uos-gbp/imu_tools-release.git
+    version: release/kinetic/imu_filter_madgwick/1.1.7-1
+- git:
+    local-name: imu_tools/imu_tools
+    uri: https://github.com/uos-gbp/imu_tools-release.git
+    version: release/kinetic/imu_tools/1.1.7-1
+- git:
+    local-name: imu_tools/rviz_imu_plugin
+    uri: https://github.com/uos-gbp/imu_tools-release.git
+    version: release/kinetic/rviz_imu_plugin/1.1.7-1
+- git:
+    local-name: heron/heron_simulator
+    uri: https://github.com/heron/heron_simulator.git
+    version: b4c9ba7520cedf2f5b91824a1f2b6e37ab77a2b6
+- git:
+    local-name: heron/heron_worlds
+    uri: https://github.com/heron/heron_worlds.git
+    version: c7dac1eb4f53079c7de22f181cbd3621ed54639e
