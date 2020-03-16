@@ -1,0 +1,32 @@
+- git:
+    local-name: warthog/warthog_control
+    uri: https://github.com/clearpath-gbp/warthog-release.git
+    version: release/melodic/warthog_control/0.1.1-2
+- git:
+    local-name: warthog/warthog_description
+    uri: https://github.com/clearpath-gbp/warthog-release.git
+    version: release/melodic/warthog_description/0.1.1-2
+- git:
+    local-name: warthog/warthog_msgs
+    uri: https://github.com/clearpath-gbp/warthog-release.git
+    version: release/melodic/warthog_msgs/0.1.1-2
+- git:
+    local-name: warthog_desktop/warthog_desktop
+    uri: https://github.com/clearpath-gbp/warthog_desktop-release.git
+    version: release/melodic/warthog_desktop/0.0.1-1
+- git:
+    local-name: warthog_desktop/warthog_viz
+    uri: https://github.com/clearpath-gbp/warthog_desktop-release.git
+    version: release/melodic/warthog_viz/0.0.1-1
+- git:
+    local-name: warthog_simulator/warthog_gazebo
+    uri: https://github.com/clearpath-gbp/warthog_simulator-release.git
+    version: release/melodic/warthog_gazebo/0.2.0-1
+- git:
+    local-name: warthog_simulator/warthog_simulator
+    uri: https://github.com/clearpath-gbp/warthog_simulator-release.git
+    version: release/melodic/warthog_simulator/0.2.0-1
+- git:
+    local-name: warthog/warthog_manipulation
+    uri: https://github.com/warthog-cpr/warthog_manipulation
+    version: 0ac72ab765753665b6496173adf5b03fb21898d5
