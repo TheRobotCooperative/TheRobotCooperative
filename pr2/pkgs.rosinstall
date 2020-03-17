@@ -1,0 +1,313 @@
+# $ rosinstall_generator --rosdistro kinetic --deps pr2 pr2_simulator
+- git:
+    local-name: pr2_apps/pr2_app_manager
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_app_manager/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_apps
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_apps/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_mannequin_mode
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_mannequin_mode/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_position_scripts
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_position_scripts/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_teleop
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_teleop/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_teleop_general
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_teleop_general/0.6.0-0
+- git:
+    local-name: pr2_apps/pr2_tuckarm
+    uri: https://github.com/pr2-gbp/pr2_apps-release.git
+    version: release/kinetic/pr2_tuckarm/0.6.0-0
+- git:
+    local-name: pr2_calibration/dense_laser_assembler
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/dense_laser_assembler/1.0.11-0
+- git:
+    local-name: pr2_calibration/laser_joint_processor
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/laser_joint_processor/1.0.11-0
+- git:
+    local-name: pr2_calibration/laser_joint_projector
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/laser_joint_projector/1.0.11-0
+- git:
+    local-name: pr2_calibration/pr2_calibration
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/pr2_calibration/1.0.11-0
+- git:
+    local-name: pr2_calibration/pr2_calibration_launch
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/pr2_calibration_launch/1.0.11-0
+- git:
+    local-name: pr2_calibration/pr2_dense_laser_snapshotter
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/pr2_dense_laser_snapshotter/1.0.11-0
+- git:
+    local-name: pr2_calibration/pr2_se_calibration_launch
+    uri: https://github.com/UNR-RoboticsResearchLab/pr2_calibration-release.git
+    version: release/kinetic/pr2_se_calibration_launch/1.0.11-0
+- git:
+    local-name: pr2_common/pr2_common
+    uri: https://github.com/pr2-gbp/pr2_common-release.git
+    version: release/kinetic/pr2_common/1.12.4-1
+- git:
+    local-name: pr2_common/pr2_dashboard_aggregator
+    uri: https://github.com/pr2-gbp/pr2_common-release.git
+    version: release/kinetic/pr2_dashboard_aggregator/1.12.4-1
+- git:
+    local-name: pr2_common/pr2_description
+    uri: https://github.com/pr2-gbp/pr2_common-release.git
+    version: release/kinetic/pr2_description/1.12.4-1
+- git:
+    local-name: pr2_common/pr2_machine
+    uri: https://github.com/pr2-gbp/pr2_common-release.git
+    version: release/kinetic/pr2_machine/1.12.4-1
+- git:
+    local-name: pr2_common/pr2_msgs
+    uri: https://github.com/pr2-gbp/pr2_common-release.git
+    version: release/kinetic/pr2_msgs/1.12.4-1
+- git:
+    local-name: pr2_common_actions/joint_trajectory_action_tools
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/joint_trajectory_action_tools/0.0.10-0
+- git:
+    local-name: pr2_common_actions/joint_trajectory_generator
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/joint_trajectory_generator/0.0.10-0
+- git:
+    local-name: pr2_common_actions/pr2_arm_move_ik
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/pr2_arm_move_ik/0.0.10-0
+- git:
+    local-name: pr2_common_actions/pr2_common_action_msgs
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/pr2_common_action_msgs/0.0.10-0
+- git:
+    local-name: pr2_common_actions/pr2_common_actions
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/pr2_common_actions/0.0.10-0
+- git:
+    local-name: pr2_common_actions/pr2_tilt_laser_interface
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/pr2_tilt_laser_interface/0.0.10-0
+- git:
+    local-name: pr2_common_actions/pr2_tuck_arms_action
+    uri: https://github.com/pr2-gbp/pr2_common_actions-release.git
+    version: release/kinetic/pr2_tuck_arms_action/0.0.10-0
+- git:
+    local-name: pr2_controllers/ethercat_trigger_controllers
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/ethercat_trigger_controllers/1.10.14-0
+- git:
+    local-name: pr2_controllers/joint_trajectory_action
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/joint_trajectory_action/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_calibration_controllers
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_calibration_controllers/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_controllers
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_controllers/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_controllers_msgs
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_controllers_msgs/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_gripper_action
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_gripper_action/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_head_action
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_head_action/1.10.14-0
+- git:
+    local-name: pr2_controllers/pr2_mechanism_controllers
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/pr2_mechanism_controllers/1.10.14-0
+- git:
+    local-name: pr2_controllers/robot_mechanism_controllers
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/robot_mechanism_controllers/1.10.14-0
+- git:
+    local-name: pr2_controllers/single_joint_position_action
+    uri: https://github.com/pr2-gbp/pr2_controllers-release.git
+    version: release/kinetic/single_joint_position_action/1.10.14-0
+- git:
+    local-name: pr2_ethercat_drivers/ethercat_hardware
+    uri: https://github.com/PR2-prime/pr2_ethercat_drivers-release.git
+    version: release/kinetic/ethercat_hardware/1.8.18-1
+- git:
+    local-name: pr2_ethercat_drivers/fingertip_pressure
+    uri: https://github.com/PR2-prime/pr2_ethercat_drivers-release.git
+    version: release/kinetic/fingertip_pressure/1.8.18-1
+- git:
+    local-name: pr2_ethercat_drivers/pr2_ethercat_drivers
+    uri: https://github.com/PR2-prime/pr2_ethercat_drivers-release.git
+    version: release/kinetic/pr2_ethercat_drivers/1.8.18-1
+- git:
+    local-name: pr2_kinematics/pr2_arm_kinematics
+    uri: https://github.com/pr2-gbp/pr2_kinematics-release.git
+    version: release/kinetic/pr2_arm_kinematics/1.0.9-0
+- git:
+    local-name: pr2_kinematics/pr2_kinematics
+    uri: https://github.com/pr2-gbp/pr2_kinematics-release.git
+    version: release/kinetic/pr2_kinematics/1.0.9-0
+- git:
+    local-name: pr2_mechanism/pr2_controller_interface
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_controller_interface/1.8.17-0
+- git:
+    local-name: pr2_mechanism/pr2_controller_manager
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_controller_manager/1.8.17-0
+- git:
+    local-name: pr2_mechanism/pr2_hardware_interface
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_hardware_interface/1.8.17-0
+- git:
+    local-name: pr2_mechanism/pr2_mechanism
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_mechanism/1.8.17-0
+- git:
+    local-name: pr2_mechanism/pr2_mechanism_diagnostics
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_mechanism_diagnostics/1.8.17-0
+- git:
+    local-name: pr2_mechanism/pr2_mechanism_model
+    uri: https://github.com/pr2-gbp/pr2_mechanism-release.git
+    version: release/kinetic/pr2_mechanism_model/1.8.17-0
+- git:
+    local-name: pr2_mechanism_msgs
+    uri: https://github.com/ros-gbp/pr2_mechanism_msgs-release.git
+    version: release/kinetic/pr2_mechanism_msgs/1.8.2-0
+- git:
+    local-name: pr2_metapackages/pr2
+    uri: https://github.com/PR2-prime/pr2_metapackages-release.git
+    version: release/kinetic/pr2/1.1.3-0
+- git:
+    local-name: pr2_metapackages/pr2_base
+    uri: https://github.com/PR2-prime/pr2_metapackages-release.git
+    version: release/kinetic/pr2_base/1.1.3-0
+- git:
+    local-name: pr2_navigation/laser_tilt_controller_filter
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/laser_tilt_controller_filter/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_move_base
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_move_base/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_config
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_config/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_global
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_global/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_local
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_local/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_perception
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_perception/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_self_filter
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_self_filter/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_slam
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_slam/0.1.28-0
+- git:
+    local-name: pr2_navigation/pr2_navigation_teleop
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/pr2_navigation_teleop/0.1.28-0
+- git:
+    local-name: pr2_navigation/semantic_point_annotator
+    uri: https://github.com/pr2-gbp/pr2_navigation-release.git
+    version: release/kinetic/semantic_point_annotator/0.1.28-0
+- git:
+    local-name: pr2_navigation_apps/pr2_navigation_apps
+    uri: https://github.com/pr2-gbp/pr2_navigation_apps-release.git
+    version: release/kinetic/pr2_navigation_apps/1.0.2-0
+- git:
+    local-name: pr2_power_drivers/ocean_battery_driver
+    uri: https://github.com/pr2-gbp/pr2_power_drivers-release.git
+    version: release/kinetic/ocean_battery_driver/1.1.7-0
+- git:
+    local-name: pr2_power_drivers/power_monitor
+    uri: https://github.com/pr2-gbp/pr2_power_drivers-release.git
+    version: release/kinetic/power_monitor/1.1.7-0
+- git:
+    local-name: pr2_power_drivers/pr2_power_board
+    uri: https://github.com/pr2-gbp/pr2_power_drivers-release.git
+    version: release/kinetic/pr2_power_board/1.1.7-0
+- git:
+    local-name: pr2_power_drivers/pr2_power_drivers
+    uri: https://github.com/pr2-gbp/pr2_power_drivers-release.git
+    version: release/kinetic/pr2_power_drivers/1.1.7-0
+- git:
+    local-name: pr2_robot/imu_monitor
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/imu_monitor/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_bringup
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_bringup/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_camera_synchronizer
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_camera_synchronizer/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_computer_monitor
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_computer_monitor/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_controller_configuration
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_controller_configuration/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_ethercat
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_ethercat/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_robot
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_robot/1.6.30-0
+- git:
+    local-name: pr2_robot/pr2_run_stop_auto_restart
+    uri: https://github.com/pr2-gbp/pr2_robot-release.git
+    version: release/kinetic/pr2_run_stop_auto_restart/1.6.30-0
+- git:
+    local-name: pr2_simulator/pr2_controller_configuration_gazebo
+    uri: https://github.com/pr2-gbp/pr2_simulator-release.git
+    version: release/kinetic/pr2_controller_configuration_gazebo/2.0.11-0
+- git:
+    local-name: pr2_simulator/pr2_gazebo
+    uri: https://github.com/pr2-gbp/pr2_simulator-release.git
+    version: release/kinetic/pr2_gazebo/2.0.11-0
+- git:
+    local-name: pr2_simulator/pr2_gazebo_plugins
+    uri: https://github.com/pr2-gbp/pr2_simulator-release.git
+    version: release/kinetic/pr2_gazebo_plugins/2.0.11-0
+- git:
+    local-name: pr2_simulator/pr2_simulator
+    uri: https://github.com/pr2-gbp/pr2_simulator-release.git
+    version: release/kinetic/pr2_simulator/2.0.11-0
