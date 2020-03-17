@@ -1,6 +1,9 @@
 Care-o-Bot 4
 ============
 
+.. image:: robot.jpg
+
+
 To launch the robot in a Gazebo simulation, use :code:`roslaunch` on the following launchfile:
 
 ::
