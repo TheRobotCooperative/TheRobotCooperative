@@ -1,0 +1,14 @@
+libraw1394-11
+libgtkmm-2.4-1v5
+libglademm-2.4-1v5
+libglademm-2.4-dev
+libgtkglextmm-x11-1.2-dev
+libgtkglextmm-x11-1.2
+libusb-1.0-0
+doxygen
+openssh-server
+libusb-dev
+texinfo
+cutecom
+cmake-curses-gui
+synaptic 

@@ -89,6 +89,9 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
       --ignore-src \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
       --rosdistro="${ROS_DISTRO}" \
+ && (test -f /.dockerinstall/prebuild.sh \
+     && /bin/bash /.dockerinstall/prebuild.sh \
+     || exit 0) \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \

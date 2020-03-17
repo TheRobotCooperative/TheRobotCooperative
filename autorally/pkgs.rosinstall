@@ -1,0 +1,12 @@
+- git:
+    local-name: autorally
+    uri: https://github.com/AutoRally/autorally.git
+    version: f928702aa223f0fcacb81ef91b0ba27ad27573e1
+- git:
+    local-name: imu_3dm_gx4
+    uri: https://github.com/AutoRally/imu_3dm_gx4.git
+    version: c9652c8ab3e002861449eba5b3ea569c90cdd236
+- git:
+    local-name: pointgrey_camera_driver
+    uri: https://github.com/ros-drivers/pointgrey_camera_driver.git
+    version: 6c3e4cb82f67e00980fce33bdc4d4fb251a4a06b
