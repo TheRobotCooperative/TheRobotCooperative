@@ -1,0 +1,4 @@
+- git:
+    local-name: fanuc
+    uri: https://github.com/ros-industrial/fanuc.git
+    version: 0.5.0
