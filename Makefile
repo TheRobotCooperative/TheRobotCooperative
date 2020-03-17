@@ -1,4 +1,4 @@
-all = baxter cob4 fanuc fetch heron husky pr2 turtlebot warthog
+all = baxter cob4 fanuc fetch heron husky nao pr2 turtlebot warthog
 
 baxter:
 	docker build --build-arg DISTRO=indigo --build-arg ROSINSTALL_FILE=baxter/pkgs.rosinstall -t baxter .
@@ -18,6 +18,9 @@ heron:
 husky:
 	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=husky/pkgs.rosinstall -t husky .
 
+nao:
+	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=nao/pkgs.rosinstall -t nao .
+
 pr2:
 	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=pr2/pkgs.rosinstall -t pr2 .
 
@@ -27,4 +30,4 @@ turtlebot:
 warthog:
 	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=warthog/pkgs.rosinstall -t warthog .
 
-.PHONY: baxter cob4 fanuc fetch heron husky pr2 turtlebot warthog
+.PHONY: baxter cob4 fanuc fetch heron husky nao pr2 turtlebot warthog

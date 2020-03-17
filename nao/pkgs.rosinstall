@@ -1,0 +1,48 @@
+- git:
+    local-name: nao_virtual
+    uri: https://github.com/ros-naoqi/nao_virtual.git
+    version: 0.0.6
+- git:
+    local-name: nao_dcm_bringup
+    uri: https://github.com/ros-naoqi/nao_dcm_robot-release.git
+    version: release/kinetic/nao_dcm_bringup/0.0.5-0
+- git:
+    local-name: nao_interaction/nao_audio
+    uri: https://github.com/ros-naoqi/nao_interaction-release.git
+    version: release/kinetic/nao_audio/0.1.5-0
+- git:
+    local-name: nao_interaction/nao_interaction
+    uri: https://github.com/ros-naoqi/nao_interaction-release.git
+    version: release/kinetic/nao_interaction/0.1.5-0
+- git:
+    local-name: nao_interaction/nao_interaction_launchers
+    uri: https://github.com/ros-naoqi/nao_interaction-release.git
+    version: release/kinetic/nao_interaction_launchers/0.1.5-0
+- git:
+    local-name: nao_interaction/nao_vision
+    uri: https://github.com/ros-naoqi/nao_interaction-release.git
+    version: release/kinetic/nao_vision/0.1.5-0
+- git:
+    local-name: nao_meshes
+    uri: https://github.com/ros-naoqi/nao_meshes-release.git
+    version: release/kinetic/nao_meshes/0.1.12-1
+- git:
+    local-name: nao_moveit_config
+    uri: https://github.com/ros-naoqi/nao_moveit_config-release.git
+    version: release/kinetic/nao_moveit_config/0.0.11-0
+- git:
+    local-name: nao_robot/nao_apps
+    uri: https://github.com/ros-naoqi/nao_robot-release.git
+    version: release/kinetic/nao_apps/0.5.15-0
+- git:
+    local-name: nao_robot/nao_bringup
+    uri: https://github.com/ros-naoqi/nao_robot-release.git
+    version: release/kinetic/nao_bringup/0.5.15-0
+- git:
+    local-name: nao_robot/nao_description
+    uri: https://github.com/ros-naoqi/nao_robot-release.git
+    version: release/kinetic/nao_description/0.5.15-0
+- git:
+    local-name: nao_robot/nao_robot
+    uri: https://github.com/ros-naoqi/nao_robot-release.git
+    version: release/kinetic/nao_robot/0.5.15-0
