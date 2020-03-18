@@ -26,18 +26,18 @@ The remote database of models is installed by passing the `-m` option to
 Installing models from local sources is trickier and is not as well documented.
 Below is a rough description of the steps that one generally needs to take to
 add gzweb compatibility to a particular ROS package. In the very near future, I
-intend to include these steps in the general `Dockerfile` used for each robot.
+intend to include these steps in the general :code:`Dockerfile` used for each robot.
 (If anyone wants to take a shot at automating the process and adding the steps
-to `Dockerfile`, that would also be awesome.)
+to :code:`Dockerfile`, that would also be awesome.)
 
 1. First, you need to convert any robot description files from Xacro into pure
-   URDF. Typically, Xacro files end in `.urdf.xacro` or `.xacro.urdf`, but be
+   URDF. Typically, Xacro files end in :code:`.urdf.xacro` or :code:`.xacro.urdf`, but be
    aware that sometimes Xacro files will simply end in `.urdf`, making it
    impossible to distinguish them from pure URDF on the sole basis of their
    file ending.
    The following code can be executed from within a catkin workspace to
-   transform an Xacro file, `model.urdf.xacro`, into a pure URDF file,
-   `model.urdf`:
+   transform an Xacro file, :code:`model.urdf.xacro`, into a pure URDF file,
+   :code:`model.urdf`:
 
    .. code::
 
@@ -47,8 +47,8 @@ to `Dockerfile`, that would also be awesome.)
    will receive a semantically equivalent URDF file with slightly different
    formatting.
 
-2. Next, you must replace all instances of `package://` inside your pure URDF
-   files with `model://`. This can be done by executing the following code on
+2. Next, you must replace all instances of :code:`package://` inside your pure URDF
+   files with :code:`model://`. This can be done by executing the following code on
    a pure URDF file:
 
    .. code::
@@ -57,11 +57,11 @@ to `Dockerfile`, that would also be awesome.)
 
 3. To essentially "register" your model with Gazebo, you must add 
    each of the ROS package directories within your workspace that provide
-   models to the `GAZEBO_MODEL_PATH` environment variable using the absolute
+   models to the :code:`GAZEBO_MODEL_PATH` environment variable using the absolute
    paths of those directories.
 
    For example, to register the models for the Fetch robot, we update the
-   `GAZEBO_MODEL_PATH` as follows:
+   :code:`GAZEBO_MODEL_PATH` as follows:
 
    .. code::
 
