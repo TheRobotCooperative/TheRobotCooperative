@@ -55,7 +55,46 @@ to :code:`Dockerfile`, that would also be awesome.)
       
       $ sed -i "s#package://#model://#g" model.urdf
 
-3. To essentially "register" your model with Gazebo, you must add 
+3. To enable gzweb compatibility, you must add a :code:`model.config` for each
+   model that you wish to visualise in simulation. Below is an example of a
+   :code:`model.config` file, taken from a repository that has gzweb support
+   (https://bitbucket.org/iche033/turtlebot_race/src/default/gazebo_models/turtlebot_description/model.config):
+
+   .. code:: xml
+
+      <?xml version="1.0"?>
+      <model>
+        <name>turtlebot</name>
+        <version>1.0</version>
+        <sdf version="1.4">kobuki_hexagons_kinect.urdf</sdf>
+      
+        <author>
+          <name>osrf</name>
+          <email>osrf@osrfoundation.org</email>
+        </author>
+      
+        <author>
+          <name>Nate Koenig</name>
+          <email>natekoenig@gmail.com</email>
+        </author>
+      
+        <description>Kobuki robot</description>
+      </model>
+
+   At the time of writing, my understanding of :code:`model.config` files is
+   that either:
+
+   1. There must be a single :code:`model.config` file at the root of the
+      package responsible for providing a description of that robot that
+      you wish to simulate (e.g., :code:`turtlebot_description`).
+   2. The package may provide multiple model description files in the same
+      manner that the central `gazebo_models <https://bitbucket.org/osrf/gazebo_models>`_
+      repository does so by creating a separate top-level directory for each
+      robot provided by that package (e.g., :code:`turtlebot`) and placing
+      a separate :code:`model.config` in each of these top-level directories
+      (e.g., :code:`turtlebot/model.config`).
+
+4. To essentially "register" your model with Gazebo, you must add 
    each of the ROS package directories within your workspace that provide
    models to the :code:`GAZEBO_MODEL_PATH` environment variable using the absolute
    paths of those directories.
@@ -74,7 +113,6 @@ to :code:`Dockerfile`, that would also be awesome.)
    initially deploying models via :code:`deploy.sh`, but that should be the only
    difference.)
    
-4. Add model.config for each model
 5. Deploy: ./deploy -m local
 
 
