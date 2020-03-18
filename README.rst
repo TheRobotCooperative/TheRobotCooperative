@@ -70,8 +70,8 @@ to :code:`Dockerfile`, that would also be awesome.)
    (For the purposes of automation, it may be possible to discover these
    directories using some simple bash scripting. It also appears that there
    is no serious disadvantage to simply adding the path of every ROS package
-   to `GAZEBO_MODEL_PATH`; a slightly higher upfront cost is paid when
-   initially deploying models via `deploy.sh`, but that should be the only
+   to :code:`GAZEBO_MODEL_PATH`; a slightly higher upfront cost is paid when
+   initially deploying models via :code:`deploy.sh`, but that should be the only
    difference.)
    
 4. Add model.config for each model
