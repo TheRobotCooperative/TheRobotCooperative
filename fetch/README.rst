@@ -1,20 +1,12 @@
+Fetch
+=====
+
+.. image:: robot.jpg
+
 Meshes and URDF files can be found at: /ros_ws/src/fetch_ros/fetch_description
 
 https://bitbucket.org/osrf/gzweb/issues/45/creating-local-model-of
 https://bitbucket.org/iche033/turtlebot_race/src/default/setup.sh
-
-
-Steps
------
-
-1. Convert xacro to URDF
-2. Replace package:// with model://
-
-      sed -i "s#package://#model://#g" robots/fetch.urdf
-
-3. Update GAZEBO_MODEL_PATH
-4. Add model.config for each model
-5. Deploy: ./deploy -m local
 
 
 Structure
