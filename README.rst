@@ -14,7 +14,7 @@ GzWeb
 To use GzWeb, you must ensure that all of the required Gazebo models that will
 be simulated have been baked into `http/client/assets`.
 The required Gazebo models may come from both the remote
-`gazebo_models <https://bitbucket.org/osrf/gazebo_models>` repository,
+`gazebo_models <https://bitbucket.org/osrf/gazebo_models>`_ repository,
 as well as from local sources inside your catkin workspace.
 The remote database of models is installed by passing the `-m` option to
 `/opt/gzweb/deploy.sh` as follows:
