@@ -94,7 +94,7 @@ to :code:`Dockerfile`, that would also be awesome.)
       a separate :code:`model.config` in each of these top-level directories
       (e.g., :code:`turtlebot/model.config`).
 
-4. To essentially "register" your model with Gazebo, you must add 
+4. To essentially "register" your model with Gazebo and GzWeb, you must add 
    each of the ROS package directories within your workspace that provide
    models to the :code:`GAZEBO_MODEL_PATH` environment variable using the absolute
    paths of those directories.
@@ -113,7 +113,17 @@ to :code:`Dockerfile`, that would also be awesome.)
    initially deploying models via :code:`deploy.sh`, but that should be the only
    difference.)
    
-5. Deploy: ./deploy -m local
+5. Finally, you must use :code:`/opt/gazebo/deploy.sh` to collect the local
+   models from your catkin workspace by searching each directory in the
+   :code:`GAZEBO_MODEL_PATH` environment variable:
+
+   .. code::
+
+      $ /opt/gzweb/deploy.sh -m local
+
+   At the end of this process, you should *hopefully* see your local models
+   appear in :code:`/opt/gzweb/http/client/assets`. If your models don't appear
+   in that directory, then they won't be rendered by gzweb.
 
 
 Resources
