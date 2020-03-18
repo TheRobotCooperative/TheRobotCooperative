@@ -55,7 +55,25 @@ to `Dockerfile`, that would also be awesome.)
       
       $ sed -i "s#package://#model://#g" model.urdf
 
-3. Update GAZEBO_MODEL_PATH
+3. To essentially "register" your model with Gazebo, you must add 
+   each of the ROS package directories within your workspace that provide
+   models to the `GAZEBO_MODEL_PATH` environment variable using the absolute
+   paths of those directories.
+
+   For example, to register the models for the Fetch robot, we update the
+   `GAZEBO_MODEL_PATH` as follows:
+
+   .. code::
+
+      $ export GAZEBO_MODEL_PATH="/ros_ws/src/fetch_ros/fetch_description:${GAZEBO_MODEL_PATH}"
+
+   (For the purposes of automation, it may be possible to discover these
+   directories using some simple bash scripting. It also appears that there
+   is no serious disadvantage to simply adding the path of every ROS package
+   to `GAZEBO_MODEL_PATH`; a slightly higher upfront cost is paid when
+   initially deploying models via `deploy.sh`, but that should be the only
+   difference.)
+   
 4. Add model.config for each model
 5. Deploy: ./deploy -m local
 
