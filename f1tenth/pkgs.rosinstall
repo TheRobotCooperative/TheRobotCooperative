@@ -1,0 +1,4 @@
+- git:
+    local-name: f1tenth_gtc_tutorial
+    uri: https://github.com/linklab-uva/f1tenth_gtc_tutorial.git
+    version: c3454e92723739805c64cf0811f25a1cccf2565c
