@@ -1,33 +1,33 @@
 all = baxter cob4 fanuc fetch heron husky nao pr2 turtlebot warthog
 
 baxter:
-	docker build --build-arg DISTRO=indigo --build-arg ROSINSTALL_FILE=baxter/pkgs.rosinstall -t baxter .
+	docker build --build-arg DISTRO=indigo --build-arg DIRECTORY=baxter -t baxter .
 
 cob4:
-	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=cob4/pkgs.rosinstall -t cob4 .
+	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=cob4 -t cob4 .
 
 fanuc:
-	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=fanuc/pkgs.rosinstall -t fanuc .
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=fanuc -t fanuc .
 
 fetch:
-	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=fetch/pkgs.rosinstall -t fetch .
+	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=fetch -t fetch .
 
 heron:
-	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=heron/pkgs.rosinstall -t heron .
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=heron -t heron .
 
 husky:
-	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=husky/pkgs.rosinstall -t husky .
+	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=husky -t husky .
 
 nao:
-	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=nao/pkgs.rosinstall -t nao .
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=nao -t nao .
 
 pr2:
-	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=pr2/pkgs.rosinstall -t pr2 .
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=pr2 -t pr2 .
 
 turtlebot:
-	docker build --build-arg DISTRO=kinetic --build-arg ROSINSTALL_FILE=turtlebot/pkgs.rosinstall -t turtlebot .
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=turtlebot -t turtlebot .
 
 warthog:
-	docker build --build-arg DISTRO=melodic --build-arg ROSINSTALL_FILE=warthog/pkgs.rosinstall -t warthog .
+	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=warthog -t warthog .
 
 .PHONY: baxter cob4 fanuc fetch heron husky nao pr2 turtlebot warthog

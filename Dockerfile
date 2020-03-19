@@ -75,11 +75,15 @@ ENTRYPOINT ["/ros_ws/entrypoint.sh"]
 CMD ["/bin/bash"]
 
 # build package
-ARG ROSINSTALL_FILE
-COPY "${ROSINSTALL_FILE}" /ros_ws
-RUN wstool init -j8 src pkgs.rosinstall \
- && . /opt/ros/${ROS_DISTRO}/setup.sh \
+ARG DIRECTORY
+COPY "${DIRECTORY}" /.dockerinstall
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
+ && mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && apt-get update \
+ && (test -f /.dockerinstall/apt.list \
+     && xargs -a /.dockerinstall/apt.list apt-get install -y --no-install-recommends \
+     || exit 0) \
+ && wstool init -j8 src pkgs.rosinstall \
  && rosdep update \
  && rosdep install -i -y -r --from-paths src \
       --ignore-src \

@@ -1,52 +1,23 @@
 - git:
-    local-name: baxter_common/baxter_core_msgs
-    uri: https://github.com/RethinkRobotics-release/baxter_common-release.git
-    version: release/indigo/baxter_core_msgs/1.2.0-0
+    local-name: baxter_simulator
+    uri: https://github.com/RethinkRobotics/baxter_simulator.git
+    version: master
 - git:
-    local-name: baxter_common/baxter_description
-    uri: https://github.com/RethinkRobotics-release/baxter_common-release.git
-    version: release/indigo/baxter_description/1.2.0-0
-- git:
-    local-name: baxter_common/baxter_maintenance_msgs
-    uri: https://github.com/RethinkRobotics-release/baxter_common-release.git
-    version: release/indigo/baxter_maintenance_msgs/1.2.0-0
-- git:
-    local-name: baxter_common/rethink_ee_description
-    uri: https://github.com/RethinkRobotics-release/baxter_common-release.git
-    version: release/indigo/rethink_ee_description/1.2.0-0
+    local-name: baxter
+    uri: https://github.com/RethinkRobotics/baxter.git
+    version: master
 - git:
     local-name: baxter_interface
-    uri: https://github.com/RethinkRobotics-release/baxter_interface-release.git
-    version: release/indigo/baxter_interface/1.2.0-0
-- git:
-    local-name: baxter_simulator/baxter_gazebo
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_gazebo/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_sim_controllers
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_sim_controllers/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_sim_examples
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_sim_examples/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_sim_hardware
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_sim_hardware/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_sim_io
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_sim_io/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_sim_kinematics
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_sim_kinematics/1.2.12-0
-- git:
-    local-name: baxter_simulator/baxter_simulator
-    uri: https://github.com/RethinkRobotics-release/baxter_simulator-release.git
-    version: release/indigo/baxter_simulator/1.2.12-0
+    uri: https://github.com/RethinkRobotics/baxter_interface.git
+    version: master
 - git:
     local-name: baxter_tools
-    uri: https://github.com/RethinkRobotics-release/baxter_tools-release.git
-    version: release/indigo/baxter_tools/1.2.0-0
+    uri: https://github.com/RethinkRobotics/baxter_tools.git
+    version: master
+- git:
+    local-name: baxter_common
+    uri: https://github.com/RethinkRobotics/baxter_common.git
+    version: master
+- git:
+    local-name: baxter_examples
+    uri: https://github.com/RethinkRobotics/baxter_examples.git
