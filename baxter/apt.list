@@ -1,0 +1,13 @@
+gazebo2
+ros-indigo-qt-build
+ros-indigo-driver-common
+ros-indigo-gazebo-ros-control
+ros-indigo-gazebo-ros-pkgs
+ros-indigo-ros-control
+ros-indigo-control-toolbox
+ros-indigo-realtime-tools
+ros-indigo-ros-controllers
+ros-indigo-xacro
+python-wstool
+ros-indigo-tf-conversions
+ros-indigo-kdl-parser
