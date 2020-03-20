@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+source "/opt/ros/${ROS_DISTRO}/setup.bash"
+source "/ros_ws/devel/setup.bash"
+
 # first, we create a directory named after the robot to store its
 # description and its associated meshes and materials
 mkdir /ros_ws/src/fetch_gazebo/fetch_gazebo/robots/fetch

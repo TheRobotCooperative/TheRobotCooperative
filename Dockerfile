@@ -103,5 +103,5 @@ RUN cd /opt/gzweb \
  && . /usr/share/gazebo/setup.sh \
  && npm run deploy --- -m
 RUN (test -f /.dockerinstall/postbuild.sh \
-     && (echo "running postbuild script..." && /bin/bash /.dockerinstall/postbuild.sh || exit 1) \
+     && (echo "running postbuild script..." && /.dockerinstall/postbuild.sh || exit 1) \
      || (echo "skipping postbuild step [no postbuild.sh]" && exit 0))
