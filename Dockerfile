@@ -102,3 +102,6 @@ COPY --from=gzweb /opt/gzweb /opt/gzweb
 RUN cd /opt/gzweb \
  && . /usr/share/gazebo/setup.sh \
  && npm run deploy --- -m
+RUN (test -f /.dockerinstall/postbuild.sh \
+     && (echo "running postbuild script..." && /bin/bash /.dockerinstall/postbuild.sh) \
+     || (echo "skipping postbuild step [no postbuild.sh]" && exit 0))
