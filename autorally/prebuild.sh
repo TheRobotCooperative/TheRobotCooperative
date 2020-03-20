@@ -8,7 +8,7 @@ cd GeographicLib-1.50.1
 mkdir build
 cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
-make
+make -j8
 make install
 echo "installed geographiclib"
 
@@ -19,7 +19,7 @@ git checkout 2c44ee459bc8090364ca8034e2988d3e8a01c422
 mkdir build
 cd build
 cmake -DGTSAM_INSTALL_GEOGRAPHICLIB=OFF -DGTSAM_WITH_EIGEN_MKL=OFF ..
-make
+make -j8
 make install
 ldconfig
 echo "installed gtsam"

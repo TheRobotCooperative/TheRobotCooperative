@@ -8,28 +8,43 @@ Meshes and URDF files can be found at: /ros_ws/src/fetch_ros/fetch_description
 https://bitbucket.org/osrf/gzweb/issues/45/creating-local-model-of
 https://bitbucket.org/iche033/turtlebot_race/src/default/setup.sh
 
+Progress
+--------
 
-Structure
----------
-
-The models directory, added to `GAZEBO_MODEL_PATH`, should contain several
-directories. Each of these directories provides a single model and should
-contain a `model.config` file. (See https://bitbucket.org/iche033/turtlebot_race/src/default/gazebo_models/turtlebot_description/model.config)
+.. image:: gzweb-progress.png
 
 
-.. code:: xml
+Usage
+-----
 
-   <?xml version="1.0">
-   <model>
-      <name>fetch</name>
-      <version>1.0</version>
-      <sdf version="1.4">robots/fetch.urdf</sdf>
-   </model>
+.. code::
+
+   # cd ros_ws/src/fetch_gazebo/fetch_gazebo/robots
+   # xacro --inorder fetch.gazebo.xacro > /ros_ws/src/fetch_gazebo/fetch_gazebo/robots/fetch/fetch.gazebo.urdf
+   # cd /ros_ws/src/fetch_gazebo/fetch_gazebo/robots/fetch
+   # sed "s#package://#model://#g" fetch.gazebo.urdf
+   # sed -i "s#fetch_description#fetch#g" fetch.gazebo.urdf
+   # sed "s#fetch.gazebo.xacro#fetch.gazebo.urdf#g" /ros_ws/src/fetch_gazebo/fetch_gazebo/launch/include/fetch.launch.xml
+   # roslaunch fetch_gazebo playground.launch
+
+Link the meshes:
+
+.. code::
+
+   # ln -s /ros_ws/src/fetch_ros/fetch_description/meshes/ meshes
+
+Build the models!
+
+.. code::
+
+   # /opt/gzweb/deploy.sh -m local && ls /opt/gzweb/http/client/assets/
 
 
-Alternatively, use dynamic conversion: (slow?)
-https://bitbucket.org/osrf/gzweb/issues/45/creating-local-model-of
 
 
-https://github.com/ros-simulation/gazebo_ros_pkgs/pull/288
-https://github.com/ros-simulation/gazebo_ros_pkgs/issues/449
+
+.. code::
+
+   # export GAZEBO_MODEL_PATH="/ros_ws/src/fetch_ros:${GAZEBO_MODEL_PATH}"
+   # export GAZEBO_MODEL_PATH="/ros_ws/src/fetch_gazebo/fetch_gazebo/models:${GAZEBO_MODEL_PATH}"
+   # export GAZEBO_MODEL_PATH="/ros_ws/src/fetch_gazebo/fetch_gazebo/robots:${GAZEBO_MODEL_PATH}"
