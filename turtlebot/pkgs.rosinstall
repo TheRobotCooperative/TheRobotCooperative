@@ -7,14 +7,14 @@
     local-name: angles
     uri: https://github.com/ros-gbp/geometry_angles_utils-release.git
     version: release/kinetic/angles/1.9.12-1
-- git:
-    local-name: astra_camera
-    uri: https://github.com/ros-drivers-gbp/astra_camera-release.git
-    version: release/kinetic/astra_camera/0.2.2-1
-- git:
-    local-name: astra_launch
-    uri: https://github.com/ros-drivers-gbp/astra_launch-release.git
-    version: release/kinetic/astra_launch/0.2.2-0
+#- git:
+#    local-name: astra_camera
+#    uri: https://github.com/ros-drivers-gbp/astra_camera-release.git
+#    version: release/kinetic/astra_camera/0.2.2-1
+#- git:
+#    local-name: astra_launch
+#    uri: https://github.com/ros-drivers-gbp/astra_launch-release.git
+#    version: release/kinetic/astra_launch/0.2.2-0
 - git:
     local-name: bfl
     uri: https://github.com/ros-gbp/bfl-release.git
@@ -195,14 +195,14 @@
     local-name: ecl_tools/ecl_license
     uri: https://github.com/yujinrobot-release/ecl_tools-release.git
     version: release/kinetic/ecl_license/0.61.6-0
-- git:
-    local-name: freenect_stack/freenect_camera
-    uri: https://github.com/ros-drivers-gbp/freenect_stack-release.git
-    version: release/kinetic/freenect_camera/0.4.2-0
-- git:
-    local-name: freenect_stack/freenect_launch
-    uri: https://github.com/ros-drivers-gbp/freenect_stack-release.git
-    version: release/kinetic/freenect_launch/0.4.2-0
+#- git:
+#    local-name: freenect_stack/freenect_camera
+#    uri: https://github.com/ros-drivers-gbp/freenect_stack-release.git
+#    version: release/kinetic/freenect_camera/0.4.2-0
+#- git:
+#    local-name: freenect_stack/freenect_launch
+#    uri: https://github.com/ros-drivers-gbp/freenect_stack-release.git
+#    version: release/kinetic/freenect_launch/0.4.2-0
 - git:
     local-name: gazebo_ros_pkgs/gazebo_dev
     uri: https://github.com/ros-gbp/gazebo_ros_pkgs-release.git
@@ -447,10 +447,10 @@
     local-name: navigation/navigation
     uri: https://github.com/ros-gbp/navigation-release.git
     version: release/kinetic/navigation/1.14.5-1
-- git:
-    local-name: navigation/robot_pose_ekf
-    uri: https://github.com/ros-gbp/navigation-release.git
-    version: release/kinetic/robot_pose_ekf/1.14.5-1
+#- git:
+#    local-name: navigation/robot_pose_ekf
+#    uri: https://github.com/ros-gbp/navigation-release.git
+#    version: release/kinetic/robot_pose_ekf/1.14.5-1
 - git:
     local-name: navigation/rotate_recovery
     uri: https://github.com/ros-gbp/navigation-release.git
