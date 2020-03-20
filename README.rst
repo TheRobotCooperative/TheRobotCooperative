@@ -180,3 +180,4 @@ Resources
 * https://github.com/ros-simulation/gazebo_ros_pkgs/pull/288
 * https://bitbucket.org/osrf/gzweb/issues/45/creating-local-model-of
 * https://bitbucket.org/iche033/turtlebot_race/src/default/gazebo_models/turtlebot_description/
+* http://wiki.ros.org/simulator_gazebo/Tutorials/Gazebo_ROS_API
