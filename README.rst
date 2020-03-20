@@ -133,7 +133,7 @@ Below are the contents of an XML launch file,
 :code:`turtlebot/turtlebot_simulator/melodic/turtlebot_gazebo/launch/includes/kobuki.launch.xml`,
 for spawning a TurtleBot in simulation:
 
-.. code::
+.. code:: xml
 
   <launch>
     <arg name="base"/>
