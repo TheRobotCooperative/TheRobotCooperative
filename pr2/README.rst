@@ -4,6 +4,15 @@ PR2
 .. image:: robot.jpg
 
 
+GzWeb Status
+------------
+
+.. image:: gzweb-status.png
+
+
+See: https://bitbucket.org/osrf/gzweb/issues/78/spawning-the-pr2-robot-vs-inserting-the
+
+
 Structure
 ---------
 
