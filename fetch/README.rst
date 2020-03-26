@@ -36,3 +36,15 @@ be started by executing the following:
 .. code::
 
    # roslaunch fetch_gazebo_demo demo.launch
+
+
+Issues
+------
+
+The robot will refuse to move unless all `model` references are removed from
+the URDF file. As a temporary workaround, those file references can be replaced
+with absolute paths via the following command:
+
+.. code::
+
+   # sed -i "s#model://#/ros_ws/src/fetch_gazebo/fetch_gazebo/robots/#g" /ros_ws/src/fetch_gazebo/fetch_gazebo/robots/fetch/fetch.gazebo.urdf
