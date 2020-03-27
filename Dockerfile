@@ -90,8 +90,8 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
       --rosdistro="${ROS_DISTRO}" \
  && (test -f /.dockerinstall/prebuild.sh \
-     && /bin/bash /.dockerinstall/prebuild.sh \
-     || exit 0) \
+     && (echo "running prebuild step..." && /bin/bash /.dockerinstall/prebuild.sh || exit 1) \
+     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
@@ -103,5 +103,5 @@ RUN cd /opt/gzweb \
  && . /usr/share/gazebo/setup.sh \
  && npm run deploy --- -m
 RUN (test -f /.dockerinstall/postbuild.sh \
-     && (echo "running postbuild script..." && /.dockerinstall/postbuild.sh || exit 1) \
+     && (echo "running postbuild step..." && /.dockerinstall/postbuild.sh || exit 1) \
      || (echo "skipping postbuild step [no postbuild.sh]" && exit 0))
