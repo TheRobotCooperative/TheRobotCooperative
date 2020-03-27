@@ -7,6 +7,10 @@ AutoRally
 Status
 ------
 
+This build error makes no sense. The missing header file actually exists
+at :code:`/ros_ws/devel/include/imu_3dm_gx4/FilterOutput.h`. Why isn't
+the compiler picking up on this?
+
 .. code::
 
    Errors     << autorally_core:make /ros_ws/logs/autorally_core/build.make.000.log                                                                                                   
