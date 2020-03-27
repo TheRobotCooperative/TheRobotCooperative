@@ -4,6 +4,15 @@ TurtleBot3
 .. image:: robot.png
 
 
+Status
+------
+
+The simulated world loads as expected in gzweb, but the model currently does
+not since it hasn't updated to support gzweb via a :code:`postbuild.sh` script.
+
+.. image:: gzweb-progress.png
+
+
 Usage
 -----
 
