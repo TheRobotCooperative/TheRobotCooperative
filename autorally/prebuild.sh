@@ -55,6 +55,9 @@ cmake ..
 make install
 echo "built eigen ${EIGEN_VERSION}"
 
+# SEE: https://github.com/AutoRally/autorally/issues/88
+cp /.dockerinstall/StateEstimator_CMakeLists.fixed.txt /ros_ws/src/autorally/autorally_core/src/StateEstimator/CMakeLists.txt
+
 #echo "fixing shared library locations (see: https://github.com/AutoRally/autorally/issues/84)"
 #ln -s /usr/local/lib/libgtsam.so.4.0.2 /usr/local/lib/libgtsam.so
 #echo "fixed shared library locations"
