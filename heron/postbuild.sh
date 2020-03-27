@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# fix the webify_models_v2.py script
+cp /.dockerinstall/webify_models_v2.py /opt/gzweb/webify_models_v2.py
+
 ROBOT_NAME=heron
 MESHES_DIR="/ros_ws/src/heron/heron_description/meshes"
 ROBOT_DIR="/ros_ws/src/heron/heron_description/robots/${ROBOT_NAME}"
@@ -32,6 +35,27 @@ echo "<?xml version="1.0"?>
 # update launch file
 sed -i "s#urdf/heron.urdf.xacro#robots/${ROBOT_NAME}/$(basename ${URDF_FILE})#g" "${LAUNCH_FILE}"
 
+# a bug in the gzweb deploy script prevents the following file from working:
+rm /opt/ros/kinetic/share/gazebo_plugins/Media/models/chair/textures.txt
+
+function fix_uuv_model {
+  model_name=$1
+  model_dir="/ros_ws/src/uuv_simulator/uuv_gazebo_worlds/models/${model_name}"
+  echo "fixing UUV model: ${model_name}"
+  ln -s /ros_ws/src/uuv_simulator/uuv_gazebo_worlds/Media/materials "${model_dir}/materials"
+  ln -s /ros_ws/src/uuv_simulator/uuv_gazebo_worlds/Media/models "${model_dir}/models"
+  sed -i "s#file://Media/#model://${model_name}/#g" "${model_dir}/model.sdf"
+}
+
+# fix uuv models
+pushd /ros_ws/src/uuv_simulator/uuv_gazebo_worlds/models
+for uuv_model in *; do
+  fix_uuv_model "${uuv_model}"
+done
+popd
+
 # deploy the models!
 export GAZEBO_MODEL_PATH="$(dirname ${ROBOT_DIR}):${GAZEBO_MODEL_PATH}"
-/opt/gzweb/deploy.sh -m local 
+export GAZEBO_MODEL_PATH="/ros_ws/src/uuv_simulator/uuv_gazebo_worlds/models:${GAZEBO_MODEL_PATH}"
+echo "using GAZEBO_MODEL_PATH: ${GAZEBO_MODEL_PATH}"
+/opt/gzweb/deploy.sh -m local
