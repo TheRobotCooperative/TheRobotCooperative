@@ -4,6 +4,30 @@ TurtleBot3
 .. image:: robot.png
 
 
+Usage
+-----
+
+Note that before running the simulation, the TurtleBot3 model that you wish
+to use must be specified in the :code:`TURTLEBOT3_MODEL` environment variable.
+The following models are supported: :code:`burger`, :code:`waffle`, and
+:code:`waffle_pi`.
+
+.. code::
+
+   # export TURTLEBOT3_MODEL="burger"
+
+After specifying the appropriate model, the TurtleBot can be launched in a
+Gazebo simulation using the following command:
+
+.. code::
+
+   # roslaunch turtlebot3_gazebo turtlebot3_house.launch
+
+(Note that there are other simulated worlds where the robot can be launched.
+Look inside the :code:`launch` directory of the :code:`turtlebot3_gazebo`
+package for more details.)
+
+
 References
 ----------
 
