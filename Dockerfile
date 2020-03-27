@@ -95,7 +95,7 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && catkin build
+ && catkin_make
 
 # install gazebo models
 COPY --from=gzweb /opt/gzweb /opt/gzweb
