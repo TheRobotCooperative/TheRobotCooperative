@@ -7,28 +7,22 @@ AutoRally
 Status
 ------
 
-This build error makes no sense. The missing header file actually exists
-at :code:`/ros_ws/devel/include/imu_3dm_gx4/FilterOutput.h`. Why isn't
-the compiler picking up on this?
-
 .. code::
 
-   Errors     << autorally_core:make /ros_ws/logs/autorally_core/build.make.000.log                                                                                                   
-   /ros_ws/src/autorally/autorally_core/src/ocs/ImageMaskEntry.hpp:0: Note: No relevant classes found. No output generated.
-   /ros_ws/src/autorally/autorally_core/src/CameraAutoBalance/CameraAutoBalance.cpp: In member function ‘void autorally_core::CameraAutoBalance::configCallback(const autorally_core::camera_auto_balance_paramsConfig&, uint32_t)’:
-   /ros_ws/src/autorally/autorally_core/src/CameraAutoBalance/CameraAutoBalance.cpp:86:97: warning: unused parameter ‘level’ [-Wunused-parameter]
-    void CameraAutoBalance::configCallback(const camera_auto_balance_paramsConfig &config, uint32_t level)
-                                                                                                    ^~~~~
-   In file included from /ros_ws/src/autorally/autorally_core/src/StateEstimator/StateEstimator.cpp:52:0:
-   /ros_ws/src/autorally/autorally_core/src/StateEstimator/StateEstimator.h:68:10: fatal error: imu_3dm_gx4/FilterOutput.h: No such file or directory
-    #include <imu_3dm_gx4/FilterOutput.h>
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   compilation terminated.
-   make[2]: *** [src/StateEstimator/CMakeFiles/StateEstimator.dir/StateEstimator.cpp.o] Error 1
-   make[1]: *** [src/StateEstimator/CMakeFiles/StateEstimator.dir/all] Error 2
-   make[1]: *** Waiting for unfinished jobs....
-   make: *** [all] Error 2
-   cd /ros_ws/build/autorally_core; c
+   [100%] Linking CXX executable /ros_ws/devel/lib/autorally_core/StateEstimator
+   /usr/bin/ld: cannot find -lBoost::serialization
+   /usr/bin/ld: cannot find -lBoost::system
+   /usr/bin/ld: cannot find -lBoost::filesystem
+   /usr/bin/ld: cannot find -lBoost::thread
+   /usr/bin/ld: cannot find -lBoost::date_time
+   /usr/bin/ld: cannot find -lBoost::regex
+   /usr/bin/ld: cannot find -lBoost::timer
+   /usr/bin/ld: cannot find -lBoost::chrono
+   collect2: error: ld returned 1 exit status
+   make[2]: *** [/ros_ws/devel/lib/autorally_core/StateEstimator] Error 1
+   autorally/autorally_core/src/StateEstimator/CMakeFiles/StateEstimator.dir/build.make:140: recipe for target '/ros_ws/devel/lib/autorally_core/StateEstimator' failed
+   CMakeFiles/Makefile2:7472: recipe for target 'autorally/autorally_core/src/StateEstimator/CMakeFiles/StateEstimator.dir/all' failed
+   make[1]: *** [autorally/autorally_core/src/StateEstimator/CMakeFiles/StateEstimator.dir/all] Error 2
 
 
 References
@@ -37,3 +31,4 @@ References
 * https://github.com/AutoRally
 * https://github.com/AutoRally/autorally/issues/84
 * https://github.com/ethz-asl/rotors_simulator/issues/520
+* http://wiki.ros.org/catkin/CMakeLists.txt
