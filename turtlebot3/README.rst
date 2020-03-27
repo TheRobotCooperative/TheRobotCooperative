@@ -21,11 +21,18 @@ Gazebo simulation using the following command:
 
 .. code::
 
-   # roslaunch turtlebot3_gazebo turtlebot3_house.launch
+   # roslaunch turtlebot3_gazebo turtlebot3_house.launch gui:=false
 
 (Note that there are other simulated worlds where the robot can be launched.
 Look inside the :code:`launch` directory of the :code:`turtlebot3_gazebo`
 package for more details.)
+
+
+Notes
+-----
+
+The :code:`gui` launch argument is currently ignored, and so the container will
+attempt to launch the Gazebo GUI regardless of the value of that argument.
 
 
 References
