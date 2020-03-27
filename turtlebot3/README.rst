@@ -7,8 +7,7 @@ TurtleBot3
 Status
 ------
 
-The simulated world loads as expected in gzweb, but the model currently does
-not since it hasn't updated to support gzweb via a :code:`postbuild.sh` script.
+It works!
 
 .. image:: gzweb-progress.png
 
