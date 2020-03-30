@@ -3,6 +3,11 @@ RB1
 
 .. image:: robot.png
 
+Status
+------
+
+The Docker image builds successfully, but there is no :code:`prebuild.sh` yet.
+
 References
 ----------
 
