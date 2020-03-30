@@ -94,8 +94,9 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
      || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && catkin_make
+ && eval "${BUILD_COMMAND}"
 
 # install gazebo models
 COPY --from=gzweb /opt/gzweb /opt/gzweb
