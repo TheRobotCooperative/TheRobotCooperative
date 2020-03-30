@@ -3,6 +3,14 @@ rbcar
 
 .. image:: robot.png
 
+Usage
+-----
+
+.. code::
+
+   # roslaunch rbcar_sim_bringup rbcar_complete.launch
+
+
 References
 ----------
 
