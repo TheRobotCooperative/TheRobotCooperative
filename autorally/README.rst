@@ -19,6 +19,8 @@ Status
 The image now builds, but no :code:`postbuild.sh` script has been written yet
 to add gzweb compatibility.
 
+.. image:: gzweb-progress.png
+
 .. code::
 
    root@a498398b5021:/ros_ws# find . -name *.urdf*
