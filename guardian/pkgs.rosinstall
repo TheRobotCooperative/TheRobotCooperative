@@ -1,0 +1,32 @@
+- git:
+    local-name: guardian_robot
+    uri: https://github.com/RobotnikAutomation/guardian_robot.git
+    version: bf217a94b02c2919bbd57408589d96bd081fbffe
+- git:
+    local-name: guardian_sim
+    uri: https://github.com/RobotnikAutomation/guardian_sim.git
+    version: 4011c2bcd9a7f651515763249279c01007cc7f0f
+- git:
+    local-name: robotnik_gazebo_models
+    uri: https://github.com/RobotnikAutomation/robotnik_gazebo_models.git
+    version: ca13ad1bf0e39ff5a1410fd2edfa5788f044015a
+- git:
+    local-name: robotnik_msgs
+    uri: https://github.com/RobotnikAutomation/robotnik_msgs.git
+    version: 1.0.0
+- git:
+    local-name: robotnik_sensors
+    uri: https://github.com/RobotnikAutomation/robotnik_sensors.git
+    version: kinetic-1.1.2
+- git:
+    local-name: robotnik_pad
+    uri: https://github.com/RobotnikAutomation/robotnik_pad.git
+    version: 04ed51e3c4e18d344961e066c1fe9c6ca0c67e6d
+- git:
+    local-name: rcomponent
+    uri: https://github.com/RobotnikAutomation/rcomponent.git
+    version: acd7670e6154a4a4abd1b43bdc72547d0e57f84e
+#- git:
+#    local-name:  costmap_prohibition_layer
+#    uri: https://github.com/RobotnikAutomation/costmap_prohibition_layer.git
+#    version: fafc7ce82888b0211d64a3afb3aaff7f775a1714
