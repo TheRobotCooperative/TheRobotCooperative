@@ -4,14 +4,21 @@ pallet_truck
 Status
 ------
 
-There is a build order issue somewhere in the code that causes catkin to
+This image now builds, but there is no :code:`postbuild.sh` script for setting
+up :code:`gzweb` support.
+
+Notes
+-----
+
+Note that there is a build order issue somewhere in the code that causes catkin to
 attempt to build :code:`pallet_truck_common/ackermann_drive_controller` before
 :code:`robotnik_msgs` has been built. Attempting to build the code again after
 the initial failure will work (as the :code:`robotnik_msgs` headers will have
 been generated and will be present in :code:`/ros_ws/devel/include`).
 
 In a bizzare twist, the build issue only occurs if :code:`catkin_make` is used
-but not if :code:`catkin build` is used.
+but not if :code:`catkin build` is used. As a workaround, we simply build the
+image using :code:`catkin_build`.
 
 .. code::
 
