@@ -1,0 +1,32 @@
+- git:
+    local-name: rb1_base_common
+    uri: https://github.com/RobotnikAutomation/rb1_base_common.git
+    version: e42384ef3ada3e04030e804414ad3ff0c8e1a410
+- git:
+    local-name: rb1_base_sim
+    uri: https://github.com/RobotnikAutomation/rb1_base_sim.git
+    version: a43f9cb26664ceca2338fcae7640ba8f4360be6b
+- git:
+    local-name: robotnik_gazebo_models
+    uri: https://github.com/RobotnikAutomation/robotnik_gazebo_models.git
+    version: ca13ad1bf0e39ff5a1410fd2edfa5788f044015a
+- git:
+    local-name: robotnik_msgs
+    uri: https://github.com/RobotnikAutomation/robotnik_msgs.git
+    version: 1.0.0
+- git:
+    local-name: robotnik_sensors
+    uri: https://github.com/RobotnikAutomation/robotnik_sensors.git
+    version: kinetic-1.1.2
+- git:
+    local-name: robotnik_base_hw_sim
+    uri: https://github.com/RobotnikAutomation/robotnik_base_hw_sim.git
+    version: c89c8e7da8ea5cb40a82bf0974f0fe53e67b03df
+- git:
+    local-name: robot_localization_utils
+    uri: https://github.com/RobotnikAutomation/robot_localization_utils.git
+    version: 0ae59be55ba58275970d9c4108fb6e7d249f7a16
+- git:
+    local-name:  costmap_prohibition_layer
+    uri: https://github.com/RobotnikAutomation/costmap_prohibition_layer.git
+    version: fafc7ce82888b0211d64a3afb3aaff7f775a1714

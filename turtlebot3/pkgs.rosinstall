@@ -1,0 +1,28 @@
+- git:
+    local-name: turtlebot3
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3.git
+    version: 1.2.2
+- git:
+    local-name: turtlebot3_msgs
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+    version: 1.0.0
+- git:
+    local-name: turtlebot3_simulations
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+    version: 1.2.0
+- git:
+    local-name: turtlebot3_applications
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_applications.git
+    version: 1.1.0
+- git:
+    local-name: turtlebot3_applications_msgs
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_applications_msgs.git
+    version: 1.0.0
+- git:
+    local-name: turtlebot3_autorace
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_autorace.git
+    version: 1.2.0
+- git:
+    local-name: turtlebot3_deliver
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_deliver
+    version: 41b2a825fdc943989b13853d5c35b85b2328f1f9

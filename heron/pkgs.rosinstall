@@ -46,3 +46,7 @@
     local-name: heron/heron_worlds
     uri: https://github.com/heron/heron_worlds.git
     version: c7dac1eb4f53079c7de22f181cbd3621ed54639e
+- git:
+    local-name: uuv_simulator
+    uri: https://github.com/uuvsimulator/uuv_simulator.git
+    version: 0.6.13

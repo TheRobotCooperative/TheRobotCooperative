@@ -11,3 +11,4 @@ ros-indigo-xacro
 python-wstool
 ros-indigo-tf-conversions
 ros-indigo-kdl-parser
+libgts-dev

@@ -4,27 +4,37 @@ AutoRally
 .. image:: robot.jpg
 
 
-Status
-------
+Usage
+-----
 
 .. code::
 
-   Errors     << autorally_core:make /ros_ws/logs/autorally_core/build.make.000.log                                                                                                   
-   /ros_ws/src/autorally/autorally_core/src/ocs/ImageMaskEntry.hpp:0: Note: No relevant classes found. No output generated.
-   /ros_ws/src/autorally/autorally_core/src/CameraAutoBalance/CameraAutoBalance.cpp: In member function ‘void autorally_core::CameraAutoBalance::configCallback(const autorally_core::camera_auto_balance_paramsConfig&, uint32_t)’:
-   /ros_ws/src/autorally/autorally_core/src/CameraAutoBalance/CameraAutoBalance.cpp:86:97: warning: unused parameter ‘level’ [-Wunused-parameter]
-    void CameraAutoBalance::configCallback(const camera_auto_balance_paramsConfig &config, uint32_t level)
-                                                                                                    ^~~~~
-   In file included from /ros_ws/src/autorally/autorally_core/src/StateEstimator/StateEstimator.cpp:52:0:
-   /ros_ws/src/autorally/autorally_core/src/StateEstimator/StateEstimator.h:68:10: fatal error: imu_3dm_gx4/FilterOutput.h: No such file or directory
-    #include <imu_3dm_gx4/FilterOutput.h>
-             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   compilation terminated.
-   make[2]: *** [src/StateEstimator/CMakeFiles/StateEstimator.dir/StateEstimator.cpp.o] Error 1
-   make[1]: *** [src/StateEstimator/CMakeFiles/StateEstimator.dir/all] Error 2
-   make[1]: *** Waiting for unfinished jobs....
-   make: *** [all] Error 2
-   cd /ros_ws/build/autorally_core; c
+   # source /ros_ws/src/autorally/autorally_util/setupEnvLocal.sh
+   # roslaunch autorally_gazebo autoRallyTrackGazeboSim.launch
+
+
+Status
+------
+
+The image now builds, but no :code:`postbuild.sh` script has been written yet
+to add gzweb compatibility.
+
+.. image:: gzweb-progress.png
+
+.. code::
+
+   root@a498398b5021:/ros_ws# find . -name *.urdf*
+   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/test_flea3.urdf.xacro
+   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/test_bumblebee2.urdf.xacro
+   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/pointgrey_bumblebee2.urdf.xacro
+   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/pointgrey_flea3.urdf.xacro
+   ./src/autorally/autorally_core/launch/robot.urdf
+   ./src/autorally/autorally_description/urdf/jump30deg.urdf
+   ./src/autorally/autorally_description/urdf/autoRallyPlatform.urdf.xacro
+   ./src/autorally/autorally_description/urdf/jump26deg.urdf
+   ./src/autorally/autorally_description/urdf/jump22deg.urdf
+   ./src/autorally/autorally_description/urdf/jump18deg.urdf
+
 
 
 References
@@ -32,4 +42,6 @@ References
 
 * https://github.com/AutoRally
 * https://github.com/AutoRally/autorally/issues/84
+* https://github.com/AutoRally/autorally/issues/88
 * https://github.com/ethz-asl/rotors_simulator/issues/520
+* http://wiki.ros.org/catkin/CMakeLists.txt
