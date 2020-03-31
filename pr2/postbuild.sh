@@ -42,7 +42,7 @@ echo "<?xml version="1.0"?>
 
 # WARNING: This line may not work for launch files where 'command' is not the
 # last attribute on the line.
-sed -i 's/command=".*"/command="cat $(find pr2_description)\/robots\/pr2\/pr2.urdf"/' /ros_ws/src/pr2_common/pr2_description/robots/upload_pr2.launch
+sed -i 's#command=".*"#command="cat $(find pr2_description)/robots/pr2/pr2.urdf"#' /ros_ws/src/pr2_common/pr2_description/robots/upload_pr2.launch
 
 # Almost done!
 # We now update the Gazebo model path to include the robot directory that we
