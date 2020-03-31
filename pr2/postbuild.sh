@@ -16,9 +16,8 @@ xacro /ros_ws/src/pr2_common/pr2_description/robots/pr2.urdf.xacro --inorder KIN
 # ensure gzweb compatibility
 sed -i "s#package://#model://#g" pr2.urdf
 
-# if you take a look at the resulting paths, you'll notice that they all begin
-# with "model://fetch_description/". This is problematic. The meshes and
-# materials for the Fetch robot are not stored in the same package as its Xacro
+# The meshes and
+# materials for the robot are not stored in the same package as its Xacro
 # file. Because of this, GzWeb will fail to locate and build those meshes.
 # We rectify the situation by first symlinking the meshes directory into the
 # newly created robot directory.
@@ -41,6 +40,8 @@ echo "<?xml version="1.0"?>
 # We also need to update the XML launch file for the Fetch simulator to use our
 # new, pure URDF file
 
+# WARNING: This line may not work for launch files where 'command' is not the
+# last attribute on the line.
 sed -i 's/command=".*"/command="cat $(find pr2_description)\/robots\/pr2\/pr2.urdf"/' /ros_ws/src/pr2_common/pr2_description/robots/upload_pr2.launch
 
 # Almost done!
