@@ -16,7 +16,7 @@ RUN apt-get update \
 FROM ros:${DISTRO} AS main
 WORKDIR /ros_ws
 RUN apt-get update \
- && apt-get install -y --no-install-recommends \
+ && apt-get install -y --no-install-recommends --allow-unauthenticated \
       apt-utils \
       ca-certificates \
       "ros-${ROS_DISTRO}-cmake-modules" \
@@ -27,6 +27,7 @@ RUN apt-get update \
       g++ \
       gcc \
       python-pip \
+      tmux \
  && echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list \
  && wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add - \
  && echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros-latest.list \
@@ -105,3 +106,6 @@ RUN cd /opt/gzweb \
 RUN (test -f /.dockerinstall/postbuild.sh \
      && (echo "running postbuild script..." && /.dockerinstall/postbuild.sh || exit 1) \
      || (echo "skipping postbuild step [no postbuild.sh]" && exit 0))
+
+EXPOSE 8080
+EXPOSE 7681
