@@ -4,21 +4,15 @@ VNC
 Usage
 -----
 
-To launch a VNC server inside the Docker container:
+From the inside the Docker container, launch a VNC server:
 
 .. code:: command
 
-   $ vncserver
+   # vncserver
 
-To check that the VNC server is actually running:
-
-.. code:: command
-
-   $ vncserver -list
-
-To kill the VNC server inside the Docker container, assuming that server
-:code:`:1` is being used:
+Obtain the IP address of the container, which is :code:`172.17.0.2` in this
+example, and connect to the VNC server, assumed to be :code:`:1`:
 
 .. code:: command
 
-   $ vncserver -kill :1
+   $ vncviewer 172.17.0.2:1
