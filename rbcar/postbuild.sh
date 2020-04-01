@@ -14,9 +14,10 @@ mkdir -p "${DIR_RBCAR}"
 # link meshes
 ln -s "${DIR_DESCRIPTION}/meshes" "${DIR_RBCAR}/meshes"
 
-# move and fix URDF file
-mv "${DIR_ROBOTS}/rbcar.urdf" "${DIR_RBCAR}/rbcar.urdf"
-sed -i "s#package://rbcar_description/#${DIR_RBCAR}#g" "${DIR_RBCAR}/rbcar.urdf"
+# generate and fix URDF file
+rm "${DIR_ROBOTS}/rbcar.urdf"
+xacro --inorder "${DIR_ROBOTS}/rbcar.urdf.xacro" > "${DIR_RBCAR}/rbcar.urdf"
+sed -i "s#package://rbcar_description#${DIR_RBCAR}#g" "${DIR_RBCAR}/rbcar.urdf"
 
 # create robot config
 echo "<?xml version="1.0"?>
