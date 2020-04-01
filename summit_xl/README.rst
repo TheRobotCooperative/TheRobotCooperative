@@ -13,7 +13,7 @@ https://github.com/RobotnikAutomation/summit_xl_sim/issues/22
 Usage
 -----
 
-.. code:: shell
+.. code:: command
 
    # roslaunch summit_xl_sim_bringup summit_xl_complete.launch launch_rviz:=false
 
