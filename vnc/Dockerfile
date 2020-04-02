@@ -26,12 +26,13 @@ RUN echo "installing desktop environment: Xfce 4..." \
 
 # create the xstartup file
 RUN mkdir ~/.vnc \
- && echo "#!/bin/bash \
-# disable screensaver and power management \
-set -e \
-xset -dpms \
-xset s noblank \ 
-xset s off \
+ && echo "#!/bin/bash\n\
+# disable screensaver and power management\n\
+set -e\n\
+xset -dpms\n\
+xset s noblank\n\ 
+xset s off\n\
+exec startxfce4 &\n\
  " >> ~/.vnc/xstartup \
  && chmod 755 ~/.vnc/xstartup \
  && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
