@@ -156,11 +156,7 @@ ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && eval "${BUILD_COMMAND}"
 
-# run gzweb installation scripts, if any are provided, and if GzWeb support is
-# requested
-# RUN cd /opt/gzweb \
-#  && . /usr/share/gazebo/setup.sh \
-#  && npm run deploy --- -m
+# optionally add gzweb support 
 ARG GZWEB="no"
 RUN (test "${GZWEB}" = "yes" \
      && (echo "running gzweb installation scripts..." && /.dockerinstall/install-gzweb.sh || exit 1) \
