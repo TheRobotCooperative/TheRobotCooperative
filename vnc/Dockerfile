@@ -1,3 +1,4 @@
+# NOTE: this works with "FROM ubuntu" but not with a ROS base image
 FROM ros:melodic
 
 RUN echo "installing vnc prerequisites..." \
@@ -38,10 +39,9 @@ RUN mkdir ~/.vnc \
  && echo "#!/bin/bash \
 # disable screensaver and power management \
 set -e \
-xset -dpms & \
-xset s noblank & \
-xset s off & \
-exec startxfce4 \
+xset -dpms \
+xset s noblank \ 
+xset s off \
  " >> ~/.vnc/xstartup \
  && chmod 755 ~/.vnc/xstartup \
  && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
