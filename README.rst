@@ -44,3 +44,16 @@ Assuming that everything goes to plan, you should see a desktop that looks somet
 like this:
 
 .. image:: images/vnc-desktop.png
+
+You should continue to work inside the virtual desktop using your VNC client.
+Below is an example of running the Fetch simulation inside the virtual desktop.
+
+.. image:: images/vnc-fetch.png
+
+If you wish to modify the resolution of the virtual desktop, you can edit the
+following line inside :code:`/etc/supervisor/conf.d/supervisord.conf` before
+running :code:`/startup-vnc.sh`.
+
+.. code::
+
+   command=/usr/bin/Xvfb :1 -screen 0 1024x768x16
