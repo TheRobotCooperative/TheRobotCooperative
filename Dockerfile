@@ -1,3 +1,27 @@
+# This is a generic Dockerfile that is used to build all of the images within
+# the dataset. To do so, the Dockerfile relies on the use of build arguments
+# and the copying of additional scripts from the directory of the robot that
+# is being built.
+#
+# Build arguments
+# ---------------
+# BUILD_COMMAND: the command that should be used to build the Catkin workspace.
+#   By default, catkin_make is used, but one may also use "catkin build"
+#   instead as a means of avoiding certain build issues.
+# DISTRO: specifies the ROS distribution that should be used by the base image
+# DIRECTORY: specifies the directory that provides files for the robot
+# GZWEB: use to specify whether GzWeb support should be added to the image
+#   values should be "yes" or "no".
+#
+# References
+# ----------
+# * http://blog.fx.lv/2017/08/running-gui-apps-in-docker-containers-using-vnc
+# * https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer
+# * https://github.com/ConSol/docker-headless-vnc-container/blob/master/src/ubuntu/install/libnss_wrapper.sh
+# * https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
+# * https://hackernoon.com/installation-of-vnc-server-on-ubuntu-1cf035370bd3
+# * https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu
+# * https://stackoverflow.com/questions/48601146/docker-how-to-set-tightvncserver-password
 ARG DISTRO
 
 FROM ubuntu:18.04 AS gzweb
@@ -15,15 +39,19 @@ RUN apt-get update \
 # (https://github.com/ros-industrial/industrial_calibration/issues/50)
 # supervisor
 FROM ros:${DISTRO} AS main
+COPY --from=gzweb /opt/gzweb /opt/gzweb
 WORKDIR /ros_ws
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       apt-utils \
       bzip2 \
+      cmake \
+      build-essential \
       ca-certificates \
       curl \
       gcc \
       g++ \
+      mercurial \
       python-pip \
       "ros-${ROS_DISTRO}-cmake-modules" \
       software-properties-common \
@@ -41,16 +69,39 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+# install gzweb deps
+ENV NODE_PATH /opt/nodejs
+ENV NODE_VERSION v6.17.1
+ENV NODE_DISTRO linux-x64
+ENV NODE_RELEASE "node-${NODE_VERSION}-${NODE_DISTRO}"
+ENV PATH "${NODE_PATH}/${NODE_RELEASE}/bin:${PATH}"
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      imagemagick \
+      libjansson-dev \
+      libboost-dev \
+      libtinyxml-dev \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && cd /tmp \
+ && wget -nv "https://nodejs.org/dist/${NODE_VERSION}/${NODE_RELEASE}.tar.xz" \
+ && mkdir -p "${NODE_PATH}" \
+ && tar -xJvf "${NODE_RELEASE}.tar.xz" -C "${NODE_PATH}" \
+ && rm -f "${NODE_RELEASE}.tar.xz"
+
+# create an entrypoint
+ENV ROS_WSPACE /ros_ws
+WORKDIR "${ROS_WSPACE}"
+RUN echo "#!/bin/bash \n\
+set -e \n\
+source \"/opt/ros/\${ROS_DISTRO}/setup.bash\" \n\
+source \"${ROS_WSPACE}/devel/setup.bash\" \n\
+exec \"\$@\"" > "${ROS_WSPACE}/entrypoint.sh" \
+ && chmod +x "${ROS_WSPACE}/entrypoint.sh"
+ENTRYPOINT ["/ros_ws/entrypoint.sh"]
+CMD ["/bin/bash"]
+
 # install vncserver
-#
-# References:
-# http://blog.fx.lv/2017/08/running-gui-apps-in-docker-containers-using-vnc
-# https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer
-# https://github.com/ConSol/docker-headless-vnc-container/blob/master/src/ubuntu/install/libnss_wrapper.sh
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
-# https://hackernoon.com/installation-of-vnc-server-on-ubuntu-1cf035370bd3
-# https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu
-# https://stackoverflow.com/questions/48601146/docker-how-to-set-tightvncserver-password
 RUN apt-get update \
  && export DEBIAN_FRONTEND=noninteractive \
  && apt-get install -y \
@@ -81,42 +132,6 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/
 RUN chmod +x /bin/tini
 COPY rootfs /
 
-# install gzweb deps
-RUN apt-get update \
- && apt-get install -y --no-install-recommends \
-      wget \
-      libjansson-dev \
-      libboost-dev \
-      imagemagick \
-      libtinyxml-dev \
-      mercurial \
-      cmake \
-      build-essential \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
-ENV NODE_PATH /opt/nodejs
-ENV NODE_VERSION v6.17.1
-ENV NODE_DISTRO linux-x64
-ENV NODE_RELEASE "node-${NODE_VERSION}-${NODE_DISTRO}"
-RUN cd /tmp \
- && wget -nv "https://nodejs.org/dist/${NODE_VERSION}/${NODE_RELEASE}.tar.xz" \
- && mkdir -p "${NODE_PATH}" \
- && tar -xJvf "${NODE_RELEASE}.tar.xz" -C "${NODE_PATH}" \
- && rm -f "${NODE_RELEASE}.tar.xz"
-ENV PATH "${NODE_PATH}/${NODE_RELEASE}/bin:${PATH}"
-
-# add entrypoint
-ENV ROS_WSPACE /ros_ws
-WORKDIR "${ROS_WSPACE}"
-RUN echo "#!/bin/bash \n\
-set -e \n\
-source \"/opt/ros/\${ROS_DISTRO}/setup.bash\" \n\
-source \"${ROS_WSPACE}/devel/setup.bash\" \n\
-exec \"\$@\"" > "${ROS_WSPACE}/entrypoint.sh" \
- && chmod +x "${ROS_WSPACE}/entrypoint.sh"
-ENTRYPOINT ["/ros_ws/entrypoint.sh"]
-CMD ["/bin/bash"]
-
 # build package
 ARG DIRECTORY
 COPY "${DIRECTORY}" /.dockerinstall
@@ -141,11 +156,12 @@ ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && eval "${BUILD_COMMAND}"
 
-# install gazebo models
-COPY --from=gzweb /opt/gzweb /opt/gzweb
-RUN cd /opt/gzweb \
- && . /usr/share/gazebo/setup.sh \
- && npm run deploy --- -m
-RUN (test -f /.dockerinstall/postbuild.sh \
-     && (echo "running postbuild step..." && /.dockerinstall/postbuild.sh || exit 1) \
-     || (echo "skipping postbuild step [no postbuild.sh]" && exit 0))
+# run gzweb installation scripts, if any are provided, and if GzWeb support is
+# requested
+# RUN cd /opt/gzweb \
+#  && . /usr/share/gazebo/setup.sh \
+#  && npm run deploy --- -m
+ARG GZWEB="no"
+RUN (test "${GZWEB}" = "yes" \
+     && (echo "running gzweb installation scripts..." && /.dockerinstall/install-gzweb.sh || exit 1) \
+     || (echo "skipping gzweb installation step" && exit 0))
