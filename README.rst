@@ -34,7 +34,7 @@ the server:
 
 .. code:: command
 
-   $ vncviewer 172.17.0.2:1
+   $ vncviewer 172.17.0.2:0
 
 When prompted, login using the password :code:`password`
 
