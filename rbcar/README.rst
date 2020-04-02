@@ -10,6 +10,8 @@ Usage
 
    # roslaunch rbcar_sim_bringup rbcar_complete.launch
 
+.. image:: vnc-desktop.png
+
 
 References
 ----------
