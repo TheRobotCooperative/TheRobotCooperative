@@ -39,3 +39,8 @@ the server:
 When prompted, login using the password :code:`password`
 
 .. image:: images/vnc-login.png
+
+Assuming that everything goes to plan, you should see a desktop that looks something
+like this:
+
+.. image:: images/vnc-desktop.png
