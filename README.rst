@@ -15,6 +15,10 @@ means of visualisation.)
 Usage
 -----
 
+Below we provide general instructions for using the images provided by the
+repository. Specific instructions on how to use an image for a particular robot
+can be found in the associated directories for those robots.
+
 Using VNC to provide visualisation
 ..................................
 
@@ -22,7 +26,7 @@ To launch a VNC server from the inside the Docker container:
 
 .. code:: command
 
-   # /startup-vnc.sh
+   $ /startup-vnc.sh
 
 To connect to the VNC server from the host machine, first obtain the IP address
 of the container (e.g., :code:`172.17.0.2`), and use a VNC client to connect to
@@ -34,4 +38,4 @@ the server:
 
 When prompted, login using the password :code:`password`
 
-.. image:: vnc-login.png
+.. image:: images/vnc-login.png
