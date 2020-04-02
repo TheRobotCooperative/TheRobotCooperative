@@ -117,15 +117,6 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir ~/.vnc \
- && echo "#!/bin/bash\n\
-# disable screensaver and power management\n\
-set -e\n\
-xset -dpms\n\
-xset s noblank\n\
-xset s off\n\
-exec startxfce4\n\
- " >> ~/.vnc/xstartup \
- && chmod 755 ~/.vnc/xstartup \
  && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
