@@ -1,4 +1,3 @@
-# NOTE: this works with "FROM ubuntu" but not with a ROS base image
 FROM ros:melodic
 
 RUN echo "installing vnc prerequisites..." \
@@ -10,14 +9,6 @@ RUN echo "installing vnc prerequisites..." \
       tmux \
       vim \
       wget
-
-## install a standalone tigervnc
-#ARG TIGERVNC_URL="https://bintray.com/tigervnc/stable/download_file?file_path=tigervnc-1.10.1.x86_64.tar.gz"
-#ENV TIGERVNC_DIR /opt/tigervnc
-#RUN echo "installing tigervnc..." \
-# && mkdir -p "${TIGERVNC_DIR}" \
-# && curl -L -s "${TIGERVNC_URL}" | tar xvz --strip-components=1 -C "${TIGERVNC_DIR}"
-#ENV PATH "${TIGERVNC_DIR}/usr/bin:${PATH}"
 
 # install vnc4server
 RUN apt-get install -y --no-install-recommends vnc4server
@@ -35,7 +26,6 @@ RUN echo "installing desktop environment: Xfce 4..." \
 
 # create the xstartup file
 RUN mkdir ~/.vnc \
- && touch ~/.Xauthority \
  && echo "#!/bin/bash \
 # disable screensaver and power management \
 set -e \
@@ -45,3 +35,14 @@ xset s off \
  " >> ~/.vnc/xstartup \
  && chmod 755 ~/.vnc/xstartup \
  && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
+
+### install a standalone tigervnc
+#ARG TIGERVNC_URL="https://bintray.com/tigervnc/stable/download_file?file_path=tigervnc-1.10.1.x86_64.tar.gz"
+#ENV TIGERVNC_DIR /opt/tigervnc
+#RUN echo "installing tigervnc..." \
+# && mkdir -p "${TIGERVNC_DIR}" \
+# && curl -L -s "${TIGERVNC_URL}" | tar xvz --strip-components=1 -C "${TIGERVNC_DIR}"
+#ENV PATH "${TIGERVNC_DIR}/usr/bin:${PATH}"
+
+ENTRYPOINT ["/bin/sh", "-c"]
+CMD ["/bin/bash"]
