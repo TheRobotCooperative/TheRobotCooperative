@@ -41,7 +41,7 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-# install vnc4server + Xfce4
+# install vncserver
 #
 # References:
 # http://blog.fx.lv/2017/08/running-gui-apps-in-docker-containers-using-vnc
@@ -61,6 +61,7 @@ RUN apt-get update \
       xfce4-terminal \
       xserver-xorg-core \
       xterm \
+      xvfb \
       x11vnc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
