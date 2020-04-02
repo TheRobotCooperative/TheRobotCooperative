@@ -53,7 +53,7 @@ RUN apt-get update \
 # https://stackoverflow.com/questions/48601146/docker-how-to-set-tightvncserver-password
 RUN apt-get update \
  && export DEBIAN_FRONTEND=noninteractive \
- && apt-get install -y --no-install-recommends \
+ && apt-get install -y \
       supervisor \
       vnc4server \
       xfce4 \
