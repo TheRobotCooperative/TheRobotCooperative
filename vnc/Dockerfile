@@ -22,7 +22,9 @@ RUN echo "installing desktop environment: Xfce 4..." \
       xfce4-goodies \
       xfce4-terminal \
       xterm \
-      xserver-xorg-core
+      xserver-xorg-core \
+      xvfb \
+      x11vnc
 
 # create the xstartup file
 RUN mkdir ~/.vnc \
@@ -47,3 +49,8 @@ exec startxfce4 &\n\
 
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["/bin/bash"]
+
+RUN echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list \
+ && wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add - \
+ && apt-get update \
+ && apt-get install -y gazebo11
