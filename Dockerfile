@@ -13,20 +13,23 @@ RUN apt-get update \
 # NOTE: We need to install the cmake_modules to avoid some build failures
 # that are due to unspecified dependencies.
 # (https://github.com/ros-industrial/industrial_calibration/issues/50)
+# supervisor
 FROM ros:${DISTRO} AS main
 WORKDIR /ros_ws
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       apt-utils \
+      bzip2 \
       ca-certificates \
-      "ros-${ROS_DISTRO}-cmake-modules" \
-      vim \
-      software-properties-common \
-      wget \
       curl \
-      g++ \
       gcc \
+      g++ \
       python-pip \
+      "ros-${ROS_DISTRO}-cmake-modules" \
+      software-properties-common \
+      tmux \
+      vim \
+      wget \
  && echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list \
  && wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add - \
  && echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros-latest.list \
@@ -37,6 +40,39 @@ RUN apt-get update \
       rosinstall-generator==0.1.18 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
+
+# install vnc4server + Xfce4
+#
+# References:
+# http://blog.fx.lv/2017/08/running-gui-apps-in-docker-containers-using-vnc
+# https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer
+# https://github.com/ConSol/docker-headless-vnc-container/blob/master/src/ubuntu/install/libnss_wrapper.sh
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-18-04
+# https://hackernoon.com/installation-of-vnc-server-on-ubuntu-1cf035370bd3
+# https://www.tecmint.com/install-and-configure-vnc-server-on-ubuntu
+# https://stackoverflow.com/questions/48601146/docker-how-to-set-tightvncserver-password
+RUN apt-get update \
+ && export DEBIAN_FRONTEND=noninteractive \
+ && apt-get install -y --no-install-recommends \
+      supervisor \
+      vnc4server \
+      xfce4 \
+      xfce4-goodies \
+      xfce4-terminal \
+      xserver-xorg-core \
+      xterm \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && mkdir ~/.vnc \
+ && echo "#!/bin/bash \
+# disable screensaver and power management \
+set -e \
+xset -dpms \
+xset s noblank \
+xset s off \
+ " >> ~/.vnc/xstartup \
+ && chmod 755 ~/.vnc/xstartup \
+ && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
 
 # install gzweb deps
 RUN apt-get update \
