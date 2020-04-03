@@ -7,34 +7,16 @@ AutoRally
 Usage
 -----
 
+To launch the AutoRally platform inside a simulated world using Gazebo:
+
 .. code::
 
    # source /ros_ws/src/autorally/autorally_util/setupEnvLocal.sh
    # roslaunch autorally_gazebo autoRallyTrackGazeboSim.launch
 
+The simulated world should look something like that shown below:
 
-Status
-------
-
-The image now builds, but no :code:`postbuild.sh` script has been written yet
-to add gzweb compatibility.
-
-.. image:: gzweb-progress.png
-
-.. code::
-
-   root@a498398b5021:/ros_ws# find . -name *.urdf*
-   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/test_flea3.urdf.xacro
-   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/test_bumblebee2.urdf.xacro
-   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/pointgrey_bumblebee2.urdf.xacro
-   ./src/pointgrey_camera_driver/pointgrey_camera_description/urdf/pointgrey_flea3.urdf.xacro
-   ./src/autorally/autorally_core/launch/robot.urdf
-   ./src/autorally/autorally_description/urdf/jump30deg.urdf
-   ./src/autorally/autorally_description/urdf/autoRallyPlatform.urdf.xacro
-   ./src/autorally/autorally_description/urdf/jump26deg.urdf
-   ./src/autorally/autorally_description/urdf/jump22deg.urdf
-   ./src/autorally/autorally_description/urdf/jump18deg.urdf
-
+.. image:: vnc-screenshot.png
 
 
 References

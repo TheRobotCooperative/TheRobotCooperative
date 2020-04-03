@@ -14,6 +14,8 @@ To launch the Heron robot in a Gazebo simulation:
 
    # roslaunch heron_gazebo heron_world.launch
 
+.. image:: vnc-desktop.png
+
 
 References
 ----------
