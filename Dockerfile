@@ -8,10 +8,12 @@
 # BUILD_COMMAND: the command that should be used to build the Catkin workspace.
 #   By default, catkin_make is used, but one may also use "catkin build"
 #   instead as a means of avoiding certain build issues.
-# DISTRO: specifies the ROS distribution that should be used by the base image
-# DIRECTORY: specifies the directory that provides files for the robot
-# GZWEB: use to specify whether GzWeb support should be added to the image
-#   values should be "yes" or "no".
+# DISTRO: specifies the ROS distribution that should be used by the base image.
+# DIRECTORY: specifies the directory that provides files for the robot.
+# GZWEB: specifies whether GzWeb support should be added.
+#   (values should be "yes" or "no".)
+# VNC: specifies whether VNC support should be added.
+#   (values should be "yes" or "no".)
 #
 # References
 # ----------
@@ -62,6 +64,7 @@ RUN apt-get update \
       tmux \
       vim \
       wget \
+      xvfb \
  && echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list \
  && wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add - \
  && echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros-latest.list \
@@ -94,7 +97,10 @@ RUN apt-get update \
  && rm -f "${NODE_RELEASE}.tar.xz"
 
 # install vncserver
-RUN apt-get update \
+ENV TINI_VERSION v0.9.0
+ARG VNC="yes"
+RUN test "${VNC}" = "no" && echo "skipping vnc installation..." || (\
+    apt-get update \
  && export DEBIAN_FRONTEND=noninteractive \
  && apt-get install -y \
       supervisor \
@@ -104,15 +110,13 @@ RUN apt-get update \
       xfce4-terminal \
       xserver-xorg-core \
       xterm \
-      xvfb \
       x11vnc \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir ~/.vnc \
- && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd"
-ENV TINI_VERSION v0.9.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
-RUN chmod +x /bin/tini
+ && /bin/bash -c "echo -e 'password\npassword\nn' | vncpasswd") \
+ && wget -nv "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini" -O /bin/tini \
+ && chmod +x /bin/tini
 
 # build package
 ARG DIRECTORY
