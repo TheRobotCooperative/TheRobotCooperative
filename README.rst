@@ -36,6 +36,18 @@ the server:
 
    $ vncviewer 172.17.0.2:0
 
+*Mac OS X:* If you are using Mac OS X, you cannot interact directly with a
+container via its IP address. To get around this problem, you will need to
+use port forwarding to forward the VNC port 5900 to the host, which can be
+achieved by adding a :code:`-p 5900` option to the :code:`docker run` command
+used to launch the container, as shown below.
+
+.. code:: command
+
+   $ docker run -p 5900 --rm -it name_of_image
+   ...
+   $ vncviewer 172.0.0.1
+
 When prompted, login using the password :code:`password`
 
 .. image:: images/vnc-login.png
