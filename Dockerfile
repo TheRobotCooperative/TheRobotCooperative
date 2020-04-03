@@ -40,7 +40,11 @@ RUN apt-get update \
 # supervisor
 FROM ros:${DISTRO} AS main
 COPY --from=gzweb /opt/gzweb /opt/gzweb
+COPY rootfs /
 WORKDIR /ros_ws
+ENTRYPOINT ["/ros_ws/entrypoint.sh"]
+CMD ["/bin/bash"]
+
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       apt-utils \
@@ -89,18 +93,6 @@ RUN apt-get update \
  && tar -xJvf "${NODE_RELEASE}.tar.xz" -C "${NODE_PATH}" \
  && rm -f "${NODE_RELEASE}.tar.xz"
 
-# create an entrypoint
-ENV ROS_WSPACE /ros_ws
-WORKDIR "${ROS_WSPACE}"
-RUN echo "#!/bin/bash \n\
-set -e \n\
-source \"/opt/ros/\${ROS_DISTRO}/setup.bash\" \n\
-source \"${ROS_WSPACE}/devel/setup.bash\" \n\
-exec \"\$@\"" > "${ROS_WSPACE}/entrypoint.sh" \
- && chmod +x "${ROS_WSPACE}/entrypoint.sh"
-ENTRYPOINT ["/ros_ws/entrypoint.sh"]
-CMD ["/bin/bash"]
-
 # install vncserver
 RUN apt-get update \
  && export DEBIAN_FRONTEND=noninteractive \
@@ -121,7 +113,6 @@ RUN apt-get update \
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
 RUN chmod +x /bin/tini
-COPY rootfs /
 
 # build package
 ARG DIRECTORY
