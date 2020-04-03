@@ -171,6 +171,8 @@ via its :code:`-param` option.
 Resources
 ---------
 
+* https://bitbucket.org/osrf/gzweb/issues/61/colors-not-working
+* https://bitbucket.org/osrf/gzweb/issues/42/inserting-custom-models
 * https://answers.ros.org/question/10401/how-to-convert-xacro-file-to-urdf-file
 * https://github.com/Ly0n/awesome-robotic-tooling
 * http://moore-mike.com/docker-ros.html

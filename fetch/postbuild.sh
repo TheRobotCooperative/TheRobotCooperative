@@ -43,6 +43,9 @@ echo "<?xml version="1.0"?>
 # new, pure URDF file
 sed -i "s#fetch.gazebo.xacro#fetch/fetch.gazebo.urdf#g" /ros_ws/src/fetch_gazebo/fetch_gazebo/launch/include/fetch.launch.xml
 
+# Workaround: We need to replace model:// paths with absolute paths
+sed -i "s#model://#/ros_ws/src/fetch_gazebo/fetch_gazebo/robots/#g" /ros_ws/src/fetch_gazebo/fetch_gazebo/robots/fetch/fetch.gazebo.urdf
+
 # Almost done!
 # We now update the Gazebo model path to include the robot directory that we
 # just created, as well as some existing models that are used for the simulated

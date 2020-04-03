@@ -46,3 +46,15 @@
     local-name: nao_robot/nao_robot
     uri: https://github.com/ros-naoqi/nao_robot-release.git
     version: release/kinetic/nao_robot/0.5.15-0
+- git:
+    local-name: roboticsgroup_gazebo_plugins
+    uri: https://github.com/roboticsgroup/roboticsgroup_gazebo_plugins.git
+    version: 4d93ecd86e4415c3fe74d0027fd41c5e3b39ec44
+- git:
+    local-name: pal_msgs
+    uri: https://github.com/pal-robotics/pal_msgs.git
+    version: 0.12.14
+- git:
+    local-name: pal_gazebo_plugins
+    uri: https://github.com/pal-robotics/pal_gazebo_plugins.git
+    version: 2.0.0
