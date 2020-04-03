@@ -24,8 +24,8 @@
     version: release/melodic/warthog_gazebo/0.2.0-1
 - git:
     local-name: warthog_simulator/warthog_simulator
-    uri: https://github.com/clearpath-gbp/warthog_simulator-release.git
-    version: release/melodic/warthog_simulator/0.2.0-1
+    uri: https://github.com/warthog-cpr/warthog_simulator.git
+    version: 0ce747563b492e4af2a9f7d675375f82fc12498d
 - git:
     local-name: warthog/warthog_manipulation
     uri: https://github.com/warthog-cpr/warthog_manipulation
