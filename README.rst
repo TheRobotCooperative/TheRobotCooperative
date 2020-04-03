@@ -19,6 +19,32 @@ Below we provide general instructions for using the images provided by the
 repository. Specific instructions on how to use an image for a particular robot
 can be found in the associated directories for those robots.
 
+Image installation
+-------------------
+
+To build a Docker image for a particular robot with VNC support enabled, simply
+execute :code:`make` with name of the robot that you wish to build.
+For example, to build the image for :code:`fetch`, execute the following:
+
+.. code:: command
+
+   $ make fetch
+
+For more advanced uses, you manually build the image for a particular robot by
+using the provided :code:`Dockerfile` at the root of the repository and
+supplying the appropriate build arguments (documented at the top of
+:code:`Dockerfile`). For example, to build a slimmer, headless image for
+:code:`fetch`, running on ROS Melodic, without support for VNC, execute the
+following from the root of the repository:
+
+.. code:: command
+
+   $ docker build \
+         --build-arg VNC=no \
+         --build-arg DISTRO=melodic \
+         --build-arg DIRECTORY=fetch \
+         -t fetch .
+
 Using VNC to provide visualisation
 ..................................
 
