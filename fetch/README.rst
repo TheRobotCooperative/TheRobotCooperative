@@ -14,12 +14,6 @@ To launch the Fetch robot in a simulated office:
 
 .. image:: vnc.png
 
-As usual, GzWeb is started via:
-
-.. code:: command
-
-   $ cd /opt/gzweb && npm start
-
 Once the robot has been spawned in the simulated world, a demo application can
 be started by executing the following:
 
