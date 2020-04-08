@@ -15,6 +15,10 @@ you need to add these two rows to the `pkgs.rosinstall`:
     version: release/melodic/fetchit_challenge/0.9.2-1
 ```
 
+
+Here is a good description of what the challenge is and what the robots
+are supposed to do: https://roscon.ros.org/2019/talks/roscon2019_fetchitthemobilemanipulationchallengeresults.pdf
+
 ### Open source competitors
 
 Here is the source code of one of the competitors: https://github.com/uml-robotics/fetchit2019
