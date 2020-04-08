@@ -1,11 +1,15 @@
 pallet_truck
 ============
 
-Status
-------
+Usage
+-----
 
-This image now builds, but there is no :code:`postbuild.sh` script for setting
-up :code:`gzweb` support.
+.. code:: command
+
+   $ roslaunch pallet_truck_sim_bringup pallet_truck_complete.launch
+
+.. image:: vnc.png
+
 
 Notes
 -----

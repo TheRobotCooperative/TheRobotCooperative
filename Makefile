@@ -28,7 +28,7 @@ husky:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=husky -t husky .
 
 nao:
-	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=nao -t nao .
+	docker build --build-arg DISTRO=indigo --build-arg DIRECTORY=nao -t nao .
 
 pallet_truck:
 	docker build --build-arg BUILD_COMMAND="catkin build" --build-arg DISTRO=kinetic --build-arg DIRECTORY=pallet_truck -t pallet_truck .
