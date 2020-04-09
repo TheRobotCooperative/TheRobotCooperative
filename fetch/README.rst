@@ -10,7 +10,7 @@ To launch the Fetch robot in a simulated office:
 
 .. code:: command
 
-   $ roslaunch fetch_gazebo playground.launch
+   $ roslaunch fetch_gazebo pickplace_playground.launch
 
 .. image:: vnc.png
 
@@ -19,8 +19,9 @@ be started by executing the following:
 
 .. code:: command
 
-   $ roslaunch fetch_gazebo_demo demo.launch
+   $ roslaunch fetch_gazebo_demo pick_place_demo.launch
 
+Note: This execution may not terminate.
 
 Headless Execution
 ..................
