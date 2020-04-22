@@ -19,6 +19,22 @@ Below we provide general instructions for using the images provided by the
 repository. Specific instructions on how to use an image for a particular robot
 can be found in the associated directories for those robots.
 
+Building the Docker image for a robot
+.....................................
+
+For most general purposes, Docker images should be built by providing the
+corresponding directory name for the robot to :code:`make`.
+Below is an example of how to build the image for Fetch.
+
+.. code:: command
+
+   $ make fetch
+
+It is also possible to build the Docker image using :code:`docker build`
+directly by supplying the appropriate build-time arguments. Please see the
+:code:`Dockerfile` for instructions.
+
+
 Using VNC to provide visualisation
 ..................................
 
