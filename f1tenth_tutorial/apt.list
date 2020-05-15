@@ -1,0 +1,7 @@
+ros-melodic-ros-control
+ros-melodic-gazebo-ros-control
+ros-melodic-ros-controllers
+ros-melodic-navigation qt4-default
+ros-melodic-ackermann-msgs
+ros-melodic-serial
+ros-melodic-teb-local-planner*
