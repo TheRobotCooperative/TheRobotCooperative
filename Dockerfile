@@ -69,6 +69,7 @@ RUN apt-get update \
  && apt-get update \
  && pip install \
       catkin-tools==0.4.5 \
+      coverage==5.1 \
       rosinstall-generator==0.1.18 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
