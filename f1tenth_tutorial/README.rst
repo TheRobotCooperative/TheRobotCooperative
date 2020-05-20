@@ -11,7 +11,7 @@ To launch the F1/10 racecar in a Gazebo simulation:
 
 .. code:: command
 
-   $ roslaunch f1tenth-sim simulator.launch
+   $ roslaunch f1tenth-sim simulator.launch run_gazebo:=true
 
 
 To launch the simulation and `move_base`:
