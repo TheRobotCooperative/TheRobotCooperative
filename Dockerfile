@@ -46,7 +46,7 @@ ENTRYPOINT ["/ros_ws/entrypoint.sh"]
 CMD ["/bin/bash"]
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends --allow-unauthenticated \
+ && apt-get install -y --no-install-recommends \
       apt-utils \
       bzip2 \
       cmake \
