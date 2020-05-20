@@ -1,0 +1,16 @@
+- git:
+    local-name: simulator
+    uri: https://github.com/f1tenth-dev/simulator.git
+    version: 140f8bd93b22b59d7cf7bfa753e1fdc73a4a8e59
+- git:
+    local-name: hector_slam
+    uri: https://github.com/tu-darmstadt-ros-pkg/hector_slam.git
+    version: aaaf8a7a67f67ee3839ef6c92496a3eb2bdbeee0
+- git:
+    local-name: particle_filter
+    uri: https://github.com/mit-racecar/particle_filter.git
+    version: 95613c656f32584143aa98e0f950f1be55f0c6dd
+- git:
+    local-name: range_libc
+    uri: https://github.com/kctess5/range_libc.git
+    version: 1251dc3c72f8dd72204ca32ac745fa90cb097e4e

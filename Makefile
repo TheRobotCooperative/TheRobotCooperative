@@ -1,4 +1,4 @@
-all = autorally baxter cob4 fanuc fetch f1tenth guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
+all = autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
 
 autorally:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=autorally -t autorally .
@@ -20,6 +20,9 @@ guardian:
 
 f1tenth:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=f1tenth -t f1tenth .
+
+f1tenth_tutorial:
+	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=f1tenth_tutorial -t f1tenth_tutorial .
 
 heron:
 	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=heron -t heron .
@@ -57,4 +60,4 @@ turtlebot3:
 warthog:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=warthog -t warthog .
 
-.PHONY: autorally baxter cob4 fanuc fetch f1tenth guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
+.PHONY: autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
