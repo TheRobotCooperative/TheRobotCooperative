@@ -1,0 +1,11 @@
+- git:
+    local-name: husky
+    uri: https://github.com/husky/husky.git
+    version: 0.4.2
+- git:
+    local-name: executive_smach
+    uri: https://github.com/ros/executive_smach.git
+    version: 2.5.0
+- git:
+    local-name: follow_waypoints
+    uri: https://github.com/squaresLab/follow_waypoints.git

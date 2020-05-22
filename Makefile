@@ -1,4 +1,4 @@
-all = autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
+all = autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky husky_waypoints nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
 
 autorally:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=autorally -t autorally .
@@ -30,6 +30,9 @@ heron:
 husky:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=husky -t husky .
 
+husky_waypoints:
+	docker build --build-arg BUILD_COMMAND="catkin_make" --build-arg BUILD_COMMAND="catkin_make_isolated" --build-arg DISTRO=melodic --build-arg DIRECTORY=husky_waypoints -t husky_waypoints .
+
 nao:
 	docker build --build-arg DISTRO=indigo --build-arg DIRECTORY=nao -t nao .
 
@@ -60,4 +63,4 @@ turtlebot3:
 warthog:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=warthog -t warthog .
 
-.PHONY: autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
+.PHONY: autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky husky_waypoints nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
