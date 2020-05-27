@@ -108,7 +108,7 @@ command used to launch the container, as shown below.
 
    $ docker run -p 5900:5900 --rm -it name_of_image
    ...
-   $ vncviewer 172.0.0.1
+   $ vncviewer 127.0.0.1
 
 When prompted, login using the password :code:`password`
 
