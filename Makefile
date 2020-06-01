@@ -64,6 +64,6 @@ warthog:
 
 upload:
 	docker image ls therobotcooperative/* --format "{{.Repository}}:{{.Tag}}" | \
-	  xargs docker push
+	  xargs -n1 docker push
 
 .PHONY: autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
