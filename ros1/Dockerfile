@@ -25,14 +25,14 @@
 ARG DISTRO
 
 FROM ubuntu:18.04 AS gzweb
-ENV GZWEB_RELEASE gzweb_1.4.0
+ENV GZWEB_RELEASE 5781220babcd95b217b28e69f6f8b6542be014b9
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
       ca-certificates \
-      mercurial \
+      git \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* \
- && hg clone https://bitbucket.org/osrf/gzweb /opt/gzweb -u "${GZWEB_RELEASE}"
+ && git clone https://github.com/osrf/gzweb /opt/gzweb -u "${GZWEB_RELEASE}"
 
 # NOTE: We need to install the cmake_modules to avoid some build failures
 # that are due to unspecified dependencies.
