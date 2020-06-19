@@ -1,0 +1,12 @@
+- git:
+    local-name: turtlebot3
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3.git
+    version: 2.0.1
+- git:
+    local-name: turtlebot3_msgs
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+    version: 2.2.0
+- git:
+    local-name: turtlebot3_simulations
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+    version: 2.0.1
