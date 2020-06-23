@@ -27,6 +27,8 @@ ARG DISTRO
 # (https://github.com/ros-industrial/industrial_calibration/issues/50)
 # supervisor
 FROM ros:${DISTRO} AS main
+ENV DEBIAN_FRONTEND noninteractive
+ENV RTI_NC_LICENSE_ACCEPTED yes
 COPY rootfs /
 WORKDIR /ros_ws
 ENTRYPOINT ["/ros_ws/entrypoint.sh"]
@@ -64,7 +66,6 @@ RUN apt-get update \
 
 # install vncserver
 RUN apt-get update \
- && export DEBIAN_FRONTEND=noninteractive \
  && apt-get install -y \
       supervisor \
       vnc4server \
