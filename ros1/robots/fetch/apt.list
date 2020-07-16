@@ -1,1 +1,5 @@
 xvfb
+ros-melodic-gazebo-plugins
+ros-melodic-image-proc
+ros-melodic-image-transport-plugins
+

@@ -13,3 +13,7 @@ cutecom
 cmake-curses-gui
 synaptic 
 ros-melodic-rqt-publisher
+ros-melodic-gazebo-plugins
+ros-melodic-image-proc
+ros-melodic-image-transport-plugins
+

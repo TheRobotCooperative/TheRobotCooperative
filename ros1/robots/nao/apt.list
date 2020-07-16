@@ -2,3 +2,6 @@ ros-indigo-humanoid-nav-msgs
 ros-indigo-gazebo-ros
 ros-indigo-control-toolbox
 libignition-math2-dev
+ros-indigo-gazebo-plugins
+ros-indigo-image-proc
+ros-indigo-image-transport-plugins

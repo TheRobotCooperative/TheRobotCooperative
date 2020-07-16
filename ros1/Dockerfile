@@ -94,14 +94,6 @@ RUN apt-get update \
  && tar -xJvf "${NODE_RELEASE}.tar.xz" -C "${NODE_PATH}" \
  && rm -f "${NODE_RELEASE}.tar.xz"
 
-# Install relevant gazebo and image processing
-# plugins
-RUN apt-get update \
-   && apt-get install -y \
-        ros-${ROS_DISTRO}-gazebo-plugins \
-	ros-${ROS_DISTRO}-image-proc \
-	ros-${ROS_DISTRO}-image-transport-plugins
-
 # install vncserver
 RUN apt-get update \
  && export DEBIAN_FRONTEND=noninteractive \

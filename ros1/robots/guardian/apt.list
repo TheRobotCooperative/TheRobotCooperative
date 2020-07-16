@@ -1,3 +1,5 @@
 ros-indigo-gazebo-plugins
 ros-indigo-costmap-2d
 ros-indigo-ackermann-msgs
+ros-indigo-image-proc
+ros-indigo-image-transport-plugins
