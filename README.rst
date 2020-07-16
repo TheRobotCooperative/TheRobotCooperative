@@ -114,6 +114,10 @@ When prompted, login using the password :code:`password`
 
 .. image:: images/vnc-login.png
 
+*Windows 10:* This works like on Mac OS X above: forward port 5900 to the host and use
+a VNC viewer (e.g., VNCConnect by Real VNC) to connect. In this case, a password is not
+required.
+
 Assuming that everything goes to plan, you should see a desktop that looks something
 like this:
 
