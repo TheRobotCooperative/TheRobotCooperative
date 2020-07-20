@@ -2,3 +2,6 @@ ros-kinetic-teleop-tools
 ros-kinetic-teleop-twist-joy
 ros-kinetic-twist-mux
 ros-kinetic-ros-control
+ros-kinetic-gazebo-plugins
+ros-kinetic-image-proc
+ros-kinetic-image-transport-plugins

@@ -6,3 +6,5 @@ ros-melodic-navigation qt4-default
 ros-melodic-ackermann-msgs
 ros-melodic-serial
 ros-melodic-teb-local-planner*
+ros-melodic-image-proc
+ros-melodic-image-transport-plugins
