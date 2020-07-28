@@ -36,6 +36,33 @@ Look inside the :code:`launch` directory of the :code:`turtlebot3_gazebo`
 package for more details.)
 
 
+Running Navigation Example
+------------------
+
+The container contains a map and launch files that can be used to run autonomous navigation. To run this:
+
+1. Open a terminal. Start the robot in the Gazebo World:
+
+.. code::
+
+    # ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+2. Open another terminal. Run the navigation example
+
+.. code::
+
+    # ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=/root/map.yaml
+
+This starts the navigation subsystem, as well as Rviz, which can be used for setting goals in the robot.
+
+3. In RViz, set the robot pose estimate to be where the robot is on the map.
+
+4. In RVis, set the navigation goal to where the robot should navigate to. The robot should then move to that goal.
+
+|GazeboAndRViz|
+
+.. |GazeboAndRViz| image:: rvizandgazebo.png
+
 Notes
 -----
 

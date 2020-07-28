@@ -514,14 +514,14 @@
     local-name: rmw/rmw_implementation_cmake
     uri: https://github.com/ros2-gbp/rmw-release.git
     version: release/dashing/rmw_implementation_cmake/0.7.2-1
-- git:
-    local-name: rmw_connext/rmw_connext_cpp
-    uri: https://github.com/ros2-gbp/rmw_connext-release.git
-    version: release/dashing/rmw_connext_cpp/0.7.4-1
-- git:
-    local-name: rmw_connext/rmw_connext_shared_cpp
-    uri: https://github.com/ros2-gbp/rmw_connext-release.git
-    version: release/dashing/rmw_connext_shared_cpp/0.7.4-1
+# - git:
+#     local-name: rmw_connext/rmw_connext_cpp
+#     uri: https://github.com/ros2-gbp/rmw_connext-release.git
+#     version: release/dashing/rmw_connext_cpp/0.7.4-1
+# - git:
+#     local-name: rmw_connext/rmw_connext_shared_cpp
+#     uri: https://github.com/ros2-gbp/rmw_connext-release.git
+#     version: release/dashing/rmw_connext_shared_cpp/0.7.4-1
 - git:
     local-name: rmw_fastrtps/rmw_fastrtps_cpp
     uri: https://github.com/ros2-gbp/rmw_fastrtps-release.git
@@ -602,18 +602,18 @@
     local-name: rosidl_typesupport/rosidl_typesupport_cpp
     uri: https://github.com/ros2-gbp/rosidl_typesupport-release.git
     version: release/dashing/rosidl_typesupport_cpp/0.7.1-1
-- git:
-    local-name: rosidl_typesupport_connext/connext_cmake_module
-    uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
-    version: release/dashing/connext_cmake_module/0.7.3-1
-- git:
-    local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_c
-    uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
-    version: release/dashing/rosidl_typesupport_connext_c/0.7.3-1
-- git:
-    local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_cpp
-    uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
-    version: release/dashing/rosidl_typesupport_connext_cpp/0.7.3-1
+# - git:
+#     local-name: rosidl_typesupport_connext/connext_cmake_module
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/connext_cmake_module/0.7.3-1
+# - git:
+#     local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_c
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/rosidl_typesupport_connext_c/0.7.3-1
+# - git:
+#     local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_cpp
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/rosidl_typesupport_connext_cpp/0.7.3-1
 - git:
     local-name: rosidl_typesupport_fastrtps/fastrtps_cmake_module
     uri: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
@@ -742,3 +742,8 @@
     local-name: yaml_cpp_vendor
     uri: https://github.com/ros2-gbp/yaml_cpp_vendor-release.git
     version: release/dashing/yaml_cpp_vendor/6.0.1-1
+- git:
+    local-name: turtlebot3_simulations
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_simulations
+    version: dashing-devel
+
