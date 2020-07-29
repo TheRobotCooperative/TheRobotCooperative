@@ -29,6 +29,7 @@ ARG DISTRO
 FROM ros:${DISTRO} AS main
 ENV DEBIAN_FRONTEND noninteractive
 ENV RTI_NC_LICENSE_ACCEPTED yes
+
 COPY rootfs /
 WORKDIR /ros_ws
 ENTRYPOINT ["/ros_ws/entrypoint.sh"]
@@ -83,6 +84,18 @@ RUN apt-get update \
 ENV TINI_VERSION v0.9.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
 RUN chmod +x /bin/tini
+
+RUN apt-get update \
+  && apt install -y libgazebo9-dev ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update \
+  && apt install -y \
+    libgazebo9-dev \
+    ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 # build package
 ARG DIRECTORY
