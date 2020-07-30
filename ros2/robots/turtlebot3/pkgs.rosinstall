@@ -1,0 +1,749 @@
+- git:
+    local-name: ament_cmake/ament_cmake
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_auto
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_auto/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_core
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_core/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_definitions
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_definitions/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_dependencies
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_dependencies/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_include_directories
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_include_directories/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_interfaces
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_interfaces/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_libraries
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_libraries/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_export_link_flags
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_export_link_flags/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_gmock
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_gmock/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_gtest
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_gtest/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_include_directories
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_include_directories/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_libraries
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_libraries/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_pytest
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_pytest/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_python
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_python/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_target_dependencies
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_target_dependencies/0.7.4-1
+- git:
+    local-name: ament_cmake/ament_cmake_test
+    uri: https://github.com/ros2-gbp/ament_cmake-release.git
+    version: release/dashing/ament_cmake_test/0.7.4-1
+- git:
+    local-name: ament_cmake_ros
+    uri: https://github.com/ros2-gbp/ament_cmake_ros-release.git
+    version: release/dashing/ament_cmake_ros/0.7.0-1
+- git:
+    local-name: ament_index/ament_index_cpp
+    uri: https://github.com/ros2-gbp/ament_index-release.git
+    version: release/dashing/ament_index_cpp/0.7.2-1
+- git:
+    local-name: ament_index/ament_index_python
+    uri: https://github.com/ros2-gbp/ament_index-release.git
+    version: release/dashing/ament_index_python/0.7.2-1
+- git:
+    local-name: ament_lint/ament_cmake_copyright
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_copyright/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_cppcheck
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_cppcheck/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_cpplint
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_cpplint/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_flake8
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_flake8/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_lint_cmake
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_lint_cmake/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_pep257
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_pep257/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_uncrustify
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_uncrustify/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cmake_xmllint
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cmake_xmllint/0.7.11-1
+- git:
+    local-name: ament_lint/ament_copyright
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_copyright/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cppcheck
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cppcheck/0.7.11-1
+- git:
+    local-name: ament_lint/ament_cpplint
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_cpplint/0.7.11-1
+- git:
+    local-name: ament_lint/ament_flake8
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_flake8/0.7.11-1
+- git:
+    local-name: ament_lint/ament_lint
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_lint/0.7.11-1
+- git:
+    local-name: ament_lint/ament_lint_auto
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_lint_auto/0.7.11-1
+- git:
+    local-name: ament_lint/ament_lint_cmake
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_lint_cmake/0.7.11-1
+- git:
+    local-name: ament_lint/ament_lint_common
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_lint_common/0.7.11-1
+- git:
+    local-name: ament_lint/ament_pep257
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_pep257/0.7.11-1
+- git:
+    local-name: ament_lint/ament_uncrustify
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_uncrustify/0.7.11-1
+- git:
+    local-name: ament_lint/ament_xmllint
+    uri: https://github.com/ros2-gbp/ament_lint-release.git
+    version: release/dashing/ament_xmllint/0.7.11-1
+- git:
+    local-name: ament_package
+    uri: https://github.com/ros2-gbp/ament_package-release.git
+    version: release/dashing/ament_package/0.7.3-1
+- git:
+    local-name: angles
+    uri: https://github.com/ros2-gbp/angles-release.git
+    version: release/dashing/angles/1.12.2-1
+- git:
+    local-name: behaviortree_cpp
+    uri: https://github.com/BehaviorTree/behaviortree_cpp-release.git
+    version: release/dashing/behaviortree_cpp/2.5.2-1
+- git:
+    local-name: cartographer
+    uri: https://github.com/ros2-gbp/cartographer-release.git
+    version: release/dashing/cartographer/1.0.9001-1
+- git:
+    local-name: cartographer_ros/cartographer_ros
+    uri: https://github.com/ros2-gbp/cartographer_ros-release.git
+    version: release/dashing/cartographer_ros/1.0.9000-1
+- git:
+    local-name: cartographer_ros/cartographer_ros_msgs
+    uri: https://github.com/ros2-gbp/cartographer_ros-release.git
+    version: release/dashing/cartographer_ros_msgs/1.0.9000-1
+- git:
+    local-name: class_loader
+    uri: https://github.com/ros2-gbp/class_loader-release.git
+    version: release/dashing/class_loader/1.3.3-1
+- git:
+    local-name: common_interfaces/geometry_msgs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/geometry_msgs/0.7.0-1
+- git:
+    local-name: common_interfaces/nav_msgs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/nav_msgs/0.7.0-1
+- git:
+    local-name: common_interfaces/sensor_msgs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/sensor_msgs/0.7.0-1
+- git:
+    local-name: common_interfaces/std_msgs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/std_msgs/0.7.0-1
+- git:
+    local-name: common_interfaces/std_srvs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/std_srvs/0.7.0-1
+- git:
+    local-name: common_interfaces/visualization_msgs
+    uri: https://github.com/ros2-gbp/common_interfaces-release.git
+    version: release/dashing/visualization_msgs/0.7.0-1
+- git:
+    local-name: console_bridge_vendor
+    uri: https://github.com/ros2-gbp/console_bridge_vendor-release.git
+    version: release/dashing/console_bridge_vendor/1.2.0-1
+- git:
+    local-name: dynamixel_sdk
+    uri: https://github.com/robotis-ros2-release/dynamixel_sdk-release.git
+    version: release/dashing/dynamixel_sdk/3.7.20-1
+- git:
+    local-name: eigen3_cmake_module
+    uri: https://github.com/ros2-gbp/eigen3_cmake_module-release.git
+    version: release/dashing/eigen3_cmake_module/0.1.1-1
+- git:
+    local-name: fastcdr
+    uri: https://github.com/ros2-gbp/fastcdr-release.git
+    version: release/dashing/fastcdr/1.0.11-1
+- git:
+    local-name: fastrtps
+    uri: https://github.com/ros2-gbp/fastrtps-release.git
+    version: release/dashing/fastrtps/1.8.2-1
+- git:
+    local-name: geometry2/tf2
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2/0.11.6-1
+- git:
+    local-name: geometry2/tf2_eigen
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2_eigen/0.11.6-1
+- git:
+    local-name: geometry2/tf2_geometry_msgs
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2_geometry_msgs/0.11.6-1
+- git:
+    local-name: geometry2/tf2_msgs
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2_msgs/0.11.6-1
+- git:
+    local-name: geometry2/tf2_ros
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2_ros/0.11.6-1
+- git:
+    local-name: geometry2/tf2_sensor_msgs
+    uri: https://github.com/ros2-gbp/geometry2-release.git
+    version: release/dashing/tf2_sensor_msgs/0.11.6-1
+- git:
+    local-name: googletest/gmock_vendor
+    uri: https://github.com/ros2-gbp/googletest-release.git
+    version: release/dashing/gmock_vendor/1.8.9000-1
+- git:
+    local-name: googletest/gtest_vendor
+    uri: https://github.com/ros2-gbp/googletest-release.git
+    version: release/dashing/gtest_vendor/1.8.9000-1
+- git:
+    local-name: hls_lfcd_lds_driver
+    uri: https://github.com/robotis-ros2-release/hls_lfcd_lds_driver-release.git
+    version: release/dashing/hls_lfcd_lds_driver/2.0.0-1
+- git:
+    local-name: kdl_parser
+    uri: https://github.com/ros2-gbp/kdl_parser-release.git
+    version: release/dashing/kdl_parser/2.2.0-1
+- git:
+    local-name: laser_geometry
+    uri: https://github.com/ros2-gbp/laser_geometry-release.git
+    version: release/dashing/laser_geometry/2.0.0-0
+- git:
+    local-name: launch/launch
+    uri: https://github.com/ros2-gbp/launch-release.git
+    version: release/dashing/launch/0.8.7-1
+- git:
+    local-name: launch/launch_testing
+    uri: https://github.com/ros2-gbp/launch-release.git
+    version: release/dashing/launch_testing/0.8.7-1
+- git:
+    local-name: launch/launch_testing_ament_cmake
+    uri: https://github.com/ros2-gbp/launch-release.git
+    version: release/dashing/launch_testing_ament_cmake/0.8.7-1
+- git:
+    local-name: launch_ros/launch_ros
+    uri: https://github.com/ros2-gbp/launch_ros-release.git
+    version: release/dashing/launch_ros/0.8.8-1
+- git:
+    local-name: libyaml_vendor
+    uri: https://github.com/ros2-gbp/libyaml_vendor-release.git
+    version: release/dashing/libyaml_vendor/1.0.0-1
+- git:
+    local-name: message_filters
+    uri: https://github.com/ros2-gbp/ros2_message_filters-release.git
+    version: release/dashing/message_filters/3.1.3-1
+- git:
+    local-name: navigation2/costmap_queue
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/costmap_queue/0.2.6-1
+- git:
+    local-name: navigation2/dwb_controller
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/dwb_controller/0.2.6-1
+- git:
+    local-name: navigation2/dwb_core
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/dwb_core/0.2.6-1
+- git:
+    local-name: navigation2/dwb_critics
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/dwb_critics/0.2.6-1
+- git:
+    local-name: navigation2/dwb_msgs
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/dwb_msgs/0.2.6-1
+- git:
+    local-name: navigation2/dwb_plugins
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/dwb_plugins/0.2.6-1
+- git:
+    local-name: navigation2/nav2_amcl
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_amcl/0.2.6-1
+- git:
+    local-name: navigation2/nav2_behavior_tree
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_behavior_tree/0.2.6-1
+- git:
+    local-name: navigation2/nav2_bringup
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_bringup/0.2.6-1
+- git:
+    local-name: navigation2/nav2_bt_navigator
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_bt_navigator/0.2.6-1
+- git:
+    local-name: navigation2/nav2_common
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_common/0.2.6-1
+- git:
+    local-name: navigation2/nav2_costmap_2d
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_costmap_2d/0.2.6-1
+- git:
+    local-name: navigation2/nav2_dwb_controller
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_dwb_controller/0.2.6-1
+- git:
+    local-name: navigation2/nav2_lifecycle_manager
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_lifecycle_manager/0.2.6-1
+- git:
+    local-name: navigation2/nav2_map_server
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_map_server/0.2.6-1
+- git:
+    local-name: navigation2/nav2_msgs
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_msgs/0.2.6-1
+- git:
+    local-name: navigation2/nav2_navfn_planner
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_navfn_planner/0.2.6-1
+- git:
+    local-name: navigation2/nav2_recoveries
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_recoveries/0.2.6-1
+- git:
+    local-name: navigation2/nav2_rviz_plugins
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_rviz_plugins/0.2.6-1
+- git:
+    local-name: navigation2/nav2_util
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_util/0.2.6-1
+- git:
+    local-name: navigation2/nav2_voxel_grid
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_voxel_grid/0.2.6-1
+- git:
+    local-name: navigation2/nav2_world_model
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav2_world_model/0.2.6-1
+- git:
+    local-name: navigation2/nav_2d_msgs
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav_2d_msgs/0.2.6-1
+- git:
+    local-name: navigation2/nav_2d_utils
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/nav_2d_utils/0.2.6-1
+- git:
+    local-name: navigation2/navigation2
+    uri: https://github.com/SteveMacenski/navigation2-release.git
+    version: release/dashing/navigation2/0.2.6-1
+- git:
+    local-name: navigation_msgs/map_msgs
+    uri: https://github.com/ros2-gbp/navigation_msgs-release.git
+    version: release/dashing/map_msgs/2.0.2-1
+- git:
+    local-name: orocos_kdl
+    uri: https://github.com/ros2-gbp/orocos_kinematics_dynamics-release.git
+    version: release/dashing/orocos_kdl/3.2.1-1
+- git:
+    local-name: osrf_pycommon
+    uri: https://github.com/ros2-gbp/osrf_pycommon-release.git
+    version: release/dashing/osrf_pycommon/0.1.9-1
+- git:
+    local-name: osrf_testing_tools_cpp/osrf_testing_tools_cpp
+    uri: https://github.com/ros2-gbp/osrf_testings_tools_cpp-release.git
+    version: release/dashing/osrf_testing_tools_cpp/1.2.2-1
+- git:
+    local-name: pcl_msgs
+    uri: https://github.com/ros2-gbp/pcl_msgs-release.git
+    version: release/dashing/pcl_msgs/1.0.0-1
+- git:
+    local-name: perception_pcl/pcl_conversions
+    uri: https://github.com/ros2-gbp/perception_pcl-release.git
+    version: release/dashing/pcl_conversions/2.0.0-1
+- git:
+    local-name: pluginlib
+    uri: https://github.com/ros2-gbp/pluginlib-release.git
+    version: release/dashing/pluginlib/2.3.3-1
+- git:
+    local-name: poco_vendor
+    uri: https://github.com/ros2-gbp/poco_vendor-release.git
+    version: release/dashing/poco_vendor/1.2.0-1
+- git:
+    local-name: rcl/rcl
+    uri: https://github.com/ros2-gbp/rcl-release.git
+    version: release/dashing/rcl/0.7.8-1
+- git:
+    local-name: rcl/rcl_action
+    uri: https://github.com/ros2-gbp/rcl-release.git
+    version: release/dashing/rcl_action/0.7.8-1
+- git:
+    local-name: rcl/rcl_lifecycle
+    uri: https://github.com/ros2-gbp/rcl-release.git
+    version: release/dashing/rcl_lifecycle/0.7.8-1
+- git:
+    local-name: rcl/rcl_yaml_param_parser
+    uri: https://github.com/ros2-gbp/rcl-release.git
+    version: release/dashing/rcl_yaml_param_parser/0.7.8-1
+- git:
+    local-name: rcl_interfaces/action_msgs
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/action_msgs/0.7.4-1
+- git:
+    local-name: rcl_interfaces/builtin_interfaces
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/builtin_interfaces/0.7.4-1
+- git:
+    local-name: rcl_interfaces/composition_interfaces
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/composition_interfaces/0.7.4-1
+- git:
+    local-name: rcl_interfaces/lifecycle_msgs
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/lifecycle_msgs/0.7.4-1
+- git:
+    local-name: rcl_interfaces/rcl_interfaces
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/rcl_interfaces/0.7.4-1
+- git:
+    local-name: rcl_interfaces/rosgraph_msgs
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/rosgraph_msgs/0.7.4-1
+- git:
+    local-name: rcl_interfaces/test_msgs
+    uri: https://github.com/ros2-gbp/rcl_interfaces-release.git
+    version: release/dashing/test_msgs/0.7.4-1
+- git:
+    local-name: rcl_logging/rcl_logging_noop
+    uri: https://github.com/ros2-gbp/rcl_logging-release.git
+    version: release/dashing/rcl_logging_noop/0.2.1-1
+- git:
+    local-name: rclcpp/rclcpp
+    uri: https://github.com/ros2-gbp/rclcpp-release.git
+    version: release/dashing/rclcpp/0.7.13-1
+- git:
+    local-name: rclcpp/rclcpp_action
+    uri: https://github.com/ros2-gbp/rclcpp-release.git
+    version: release/dashing/rclcpp_action/0.7.13-1
+- git:
+    local-name: rclcpp/rclcpp_lifecycle
+    uri: https://github.com/ros2-gbp/rclcpp-release.git
+    version: release/dashing/rclcpp_lifecycle/0.7.13-1
+- git:
+    local-name: rclpy
+    uri: https://github.com/ros2-gbp/rclpy-release.git
+    version: release/dashing/rclpy/0.7.10-1
+- git:
+    local-name: rcpputils
+    uri: https://github.com/ros2-gbp/rcpputils-release.git
+    version: release/dashing/rcpputils/0.1.1-1
+- git:
+    local-name: rcutils
+    uri: https://github.com/ros2-gbp/rcutils-release.git
+    version: release/dashing/rcutils/0.7.5-1
+- git:
+    local-name: resource_retriever/libcurl_vendor
+    uri: https://github.com/ros2-gbp/resource_retriever-release.git
+    version: release/dashing/libcurl_vendor/2.1.2-1
+- git:
+    local-name: resource_retriever/resource_retriever
+    uri: https://github.com/ros2-gbp/resource_retriever-release.git
+    version: release/dashing/resource_retriever/2.1.2-1
+- git:
+    local-name: rmw/rmw
+    uri: https://github.com/ros2-gbp/rmw-release.git
+    version: release/dashing/rmw/0.7.2-1
+- git:
+    local-name: rmw/rmw_implementation_cmake
+    uri: https://github.com/ros2-gbp/rmw-release.git
+    version: release/dashing/rmw_implementation_cmake/0.7.2-1
+# - git:
+#     local-name: rmw_connext/rmw_connext_cpp
+#     uri: https://github.com/ros2-gbp/rmw_connext-release.git
+#     version: release/dashing/rmw_connext_cpp/0.7.4-1
+# - git:
+#     local-name: rmw_connext/rmw_connext_shared_cpp
+#     uri: https://github.com/ros2-gbp/rmw_connext-release.git
+#     version: release/dashing/rmw_connext_shared_cpp/0.7.4-1
+- git:
+    local-name: rmw_fastrtps/rmw_fastrtps_cpp
+    uri: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    version: release/dashing/rmw_fastrtps_cpp/0.7.7-1
+- git:
+    local-name: rmw_fastrtps/rmw_fastrtps_shared_cpp
+    uri: https://github.com/ros2-gbp/rmw_fastrtps-release.git
+    version: release/dashing/rmw_fastrtps_shared_cpp/0.7.7-1
+- git:
+    local-name: rmw_implementation
+    uri: https://github.com/ros2-gbp/rmw_implementation-release.git
+    version: release/dashing/rmw_implementation/0.7.2-1
+- git:
+    local-name: rmw_opensplice_cpp
+    uri: https://github.com/ros2-gbp/rmw_opensplice-release.git
+    version: release/dashing/rmw_opensplice_cpp/0.7.3-1
+- git:
+    local-name: robot_state_publisher
+    uri: https://github.com/ros2-gbp/robot_state_publisher-release.git
+    version: release/dashing/robot_state_publisher/2.2.5-1
+- git:
+    local-name: rosidl/rosidl_adapter
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_adapter/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_cmake
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_cmake/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_generator_c
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_generator_c/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_generator_cpp
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_generator_cpp/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_parser
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_parser/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_typesupport_interface
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_typesupport_interface/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_typesupport_introspection_c
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_typesupport_introspection_c/0.7.9-1
+- git:
+    local-name: rosidl/rosidl_typesupport_introspection_cpp
+    uri: https://github.com/ros2-gbp/rosidl-release.git
+    version: release/dashing/rosidl_typesupport_introspection_cpp/0.7.9-1
+- git:
+    local-name: rosidl_defaults/rosidl_default_generators
+    uri: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    version: release/dashing/rosidl_default_generators/0.7.0-1
+- git:
+    local-name: rosidl_defaults/rosidl_default_runtime
+    uri: https://github.com/ros2-gbp/rosidl_defaults-release.git
+    version: release/dashing/rosidl_default_runtime/0.7.0-1
+- git:
+    local-name: rosidl_generator_dds_idl
+    uri: https://github.com/ros2-gbp/rosidl_dds-release.git
+    version: release/dashing/rosidl_generator_dds_idl/0.7.1-1
+- git:
+    local-name: rosidl_python/python_cmake_module
+    uri: https://github.com/ros2-gbp/rosidl_python-release.git
+    version: release/dashing/python_cmake_module/0.7.10-1
+- git:
+    local-name: rosidl_python/rosidl_generator_py
+    uri: https://github.com/ros2-gbp/rosidl_python-release.git
+    version: release/dashing/rosidl_generator_py/0.7.10-1
+- git:
+    local-name: rosidl_typesupport/rosidl_typesupport_c
+    uri: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    version: release/dashing/rosidl_typesupport_c/0.7.1-1
+- git:
+    local-name: rosidl_typesupport/rosidl_typesupport_cpp
+    uri: https://github.com/ros2-gbp/rosidl_typesupport-release.git
+    version: release/dashing/rosidl_typesupport_cpp/0.7.1-1
+# - git:
+#     local-name: rosidl_typesupport_connext/connext_cmake_module
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/connext_cmake_module/0.7.3-1
+# - git:
+#     local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_c
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/rosidl_typesupport_connext_c/0.7.3-1
+# - git:
+#     local-name: rosidl_typesupport_connext/rosidl_typesupport_connext_cpp
+#     uri: https://github.com/ros2-gbp/rosidl_typesupport_connext-release.git
+#     version: release/dashing/rosidl_typesupport_connext_cpp/0.7.3-1
+- git:
+    local-name: rosidl_typesupport_fastrtps/fastrtps_cmake_module
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    version: release/dashing/fastrtps_cmake_module/0.7.1-1
+- git:
+    local-name: rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_c
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    version: release/dashing/rosidl_typesupport_fastrtps_c/0.7.1-1
+- git:
+    local-name: rosidl_typesupport_fastrtps/rosidl_typesupport_fastrtps_cpp
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_fastrtps-release.git
+    version: release/dashing/rosidl_typesupport_fastrtps_cpp/0.7.1-1
+- git:
+    local-name: rosidl_typesupport_opensplice/opensplice_cmake_module
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    version: release/dashing/opensplice_cmake_module/0.7.3-1
+- git:
+    local-name: rosidl_typesupport_opensplice/rosidl_typesupport_opensplice_c
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    version: release/dashing/rosidl_typesupport_opensplice_c/0.7.3-1
+- git:
+    local-name: rosidl_typesupport_opensplice/rosidl_typesupport_opensplice_cpp
+    uri: https://github.com/ros2-gbp/rosidl_typesupport_opensplice-release.git
+    version: release/dashing/rosidl_typesupport_opensplice_cpp/0.7.3-1
+- git:
+    local-name: rviz/rviz2
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz2/6.1.6-1
+- git:
+    local-name: rviz/rviz_assimp_vendor
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_assimp_vendor/6.1.6-1
+- git:
+    local-name: rviz/rviz_common
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_common/6.1.6-1
+- git:
+    local-name: rviz/rviz_default_plugins
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_default_plugins/6.1.6-1
+- git:
+    local-name: rviz/rviz_ogre_vendor
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_ogre_vendor/6.1.6-1
+- git:
+    local-name: rviz/rviz_rendering
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_rendering/6.1.6-1
+- git:
+    local-name: rviz/rviz_rendering_tests
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_rendering_tests/6.1.6-1
+- git:
+    local-name: rviz/rviz_visual_testing_framework
+    uri: https://github.com/ros2-gbp/rviz-release.git
+    version: release/dashing/rviz_visual_testing_framework/6.1.6-1
+- git:
+    local-name: test_interface_files
+    uri: https://github.com/ros2-gbp/test_interface_files-release.git
+    version: release/dashing/test_interface_files/0.7.1-1
+- git:
+    local-name: tinydir_vendor
+    uri: https://github.com/ros2-gbp/tinydir_vendor-release.git
+    version: release/dashing/tinydir_vendor/1.1.0-1
+- git:
+    local-name: tinyxml2_vendor
+    uri: https://github.com/ros2-gbp/tinyxml2_vendor-release.git
+    version: release/dashing/tinyxml2_vendor/0.6.1-1
+- git:
+    local-name: tinyxml_vendor
+    uri: https://github.com/ros2-gbp/tinyxml_vendor-release.git
+    version: release/dashing/tinyxml_vendor/0.7.0-1
+- git:
+    local-name: turtlebot3/turtlebot3
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_bringup
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_bringup/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_cartographer
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_cartographer/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_description
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_description/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_navigation2
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_navigation2/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_node
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_node/2.0.1-1
+- git:
+    local-name: turtlebot3/turtlebot3_teleop
+    uri: https://github.com/robotis-ros2-release/turtlebot3-release.git
+    version: release/dashing/turtlebot3_teleop/2.0.1-1
+- git:
+    local-name: turtlebot3_msgs
+    uri: https://github.com/robotis-ros2-release/turtlebot3_msgs-release.git
+    version: release/dashing/turtlebot3_msgs/2.2.0-1
+- git:
+    local-name: uncrustify_vendor
+    uri: https://github.com/ros2-gbp/uncrustify_vendor-release.git
+    version: release/dashing/uncrustify_vendor/1.2.0-1
+- git:
+    local-name: unique_identifier_msgs
+    uri: https://github.com/ros2-gbp/unique_identifier_msgs-release.git
+    version: release/dashing/unique_identifier_msgs/2.1.1-1
+- git:
+    local-name: urdf
+    uri: https://github.com/ros2-gbp/urdf-release.git
+    version: release/dashing/urdf/2.2.0-1
+- git:
+    local-name: urdfdom
+    uri: https://github.com/ros2-gbp/urdfdom-release.git
+    version: release/dashing/urdfdom/2.2.0-1
+- git:
+    local-name: urdfdom_headers
+    uri: https://github.com/ros2-gbp/urdfdom_headers-release.git
+    version: release/dashing/urdfdom_headers/1.0.4-1
+- git:
+    local-name: yaml_cpp_vendor
+    uri: https://github.com/ros2-gbp/yaml_cpp_vendor-release.git
+    version: release/dashing/yaml_cpp_vendor/6.0.1-1
+- git:
+    local-name: turtlebot3_simulations
+    uri: https://github.com/ROBOTIS-GIT/turtlebot3_simulations
+    version: dashing-devel
+
