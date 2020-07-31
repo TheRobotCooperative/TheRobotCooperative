@@ -29,6 +29,7 @@ ARG DISTRO
 FROM ros:${DISTRO} AS main
 ENV DEBIAN_FRONTEND noninteractive
 ENV RTI_NC_LICENSE_ACCEPTED yes
+ENV RTI_VERSION=5.3.1
 
 COPY rootfs /
 WORKDIR /ros_ws
@@ -86,20 +87,18 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/
 RUN chmod +x /bin/tini
 
 RUN apt-get update \
-  && apt install -y libgazebo9-dev ros-${ROS_DISTRO}-gazebo-ros-pkgs \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update \
   && apt install -y \
     libgazebo9-dev \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+    rti-connext-dds-${RTI_VERSION} \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
+# Make the default workspace somewhere other than /root, and do not copy the examples
+RUN mv /rticommon_config.sh /opt/rti.com/rti_connext_dds-${RTI_VERSION}/resource/scripts/rticommon_config.sh
 
 # build package
 ARG DIRECTORY
-COPY "${DIRECTORY}" /.dockerinstall
+COPY "${DIRECTORY}"/pkgs.rosinstall "${DIRECTORY}"/apt.list* /.dockerinstall/
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && apt-get update \
@@ -112,10 +111,18 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
       --ignore-src \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
       --rosdistro="${ROS_DISTRO}" \
- && (test -f /.dockerinstall/prebuild.sh \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+# We copy pkgs.rosinstall again because copy needs at least one file that exists
+# But we explicitly copy prebuild.sh and files that are used by it in pbfiles
+COPY "${DIRECTORY}"/pkgs.rosinstall  "${DIRECTORY}"/pbfiles* "${DIRECTORY}"/prebuild.sh* /.dockerinstall/
+RUN apt-get update\
+     && (test -f /.dockerinstall/prebuild.sh \
      && (echo "running prebuild step..." && /bin/bash /.dockerinstall/prebuild.sh || exit 1) \
      || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && colcon build
+RUN chown -R root:root /root
