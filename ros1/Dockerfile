@@ -117,24 +117,30 @@ RUN chmod +x /bin/tini
 
 # build package
 ARG DIRECTORY
-COPY "${DIRECTORY}" /.dockerinstall
+COPY "${DIRECTORY}"/pkgs.rosinstall "${DIRECTORY}"/apt.list* /.dockerinstall/
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && apt-get update \
  && (test -f /.dockerinstall/apt.list \
      && xargs -a /.dockerinstall/apt.list apt-get install -y --no-install-recommends \
      || exit 0) \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && wstool init -j8 src pkgs.rosinstall \
  && rosdep update \
  && rosdep install -i -y -r --from-paths src \
       --ignore-src \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
-      --rosdistro="${ROS_DISTRO}" \
- && (test -f /.dockerinstall/prebuild.sh \
-     && (echo "running prebuild step..." && /bin/bash /.dockerinstall/prebuild.sh || exit 1) \
-     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+      --rosdistro="${ROS_DISTRO}" 
+
+COPY "${DIRECTORY}" /.dockerinstall/
+RUN ls -al /.dockerinstall
+RUN (test -f /.dockerinstall/prebuild.sh \
+     && ((echo "running prebuild step..." && apt-get update && /bin/bash /.dockerinstall/prebuild.sh && apt-get clean && rm -rf /var/lib/apt/lists/* )|| exit 1) \
+     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) 
+
+#ENV PLEXIL_HOME /root/plexil
 ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && eval "${BUILD_COMMAND}"
