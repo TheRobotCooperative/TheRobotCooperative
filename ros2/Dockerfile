@@ -29,6 +29,7 @@ ARG DISTRO
 FROM ros:${DISTRO} AS main
 ENV DEBIAN_FRONTEND noninteractive
 ENV RTI_NC_LICENSE_ACCEPTED yes
+ENV RTI_VERSION=5.3.1
 
 COPY rootfs /
 WORKDIR /ros_ws
@@ -86,20 +87,23 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/
 RUN chmod +x /bin/tini
 
 RUN apt-get update \
-  && apt install -y libgazebo9-dev ros-${ROS_DISTRO}-gazebo-ros-pkgs \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update \
   && apt install -y \
     libgazebo9-dev \
     ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+    rti-connext-dds-${RTI_VERSION} \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && mv /rticommon_config.sh /opt/rti.com/rti_connext_dds-${RTI_VERSION}/resource/scripts/rticommon_config.sh
+      # Make the default workspace somewhere other than /root, and do not copy the examples
 
 # build package
+# We don't want to copy all of the contents of ${DIRECTORY} in this step
+# because the build is very long and we may only be changing files
+# relevant to the next step.
+# The '*' here allows apt.list to be optional: 
+# https://stackoverflow.com/questions/31528384/conditional-copy-add-in-dockerfile
 ARG DIRECTORY
-COPY "${DIRECTORY}" /.dockerinstall
+COPY "${DIRECTORY}"/pkgs.rosinstall "${DIRECTORY}"/apt.list* /.dockerinstall/
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && apt-get update \
@@ -112,10 +116,16 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
       --ignore-src \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
       --rosdistro="${ROS_DISTRO}" \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY "${DIRECTORY}" /.dockerinstall/
+RUN apt-get update\
  && (test -f /.dockerinstall/prebuild.sh \
      && (echo "running prebuild step..." && /bin/bash /.dockerinstall/prebuild.sh || exit 1) \
      || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && colcon build
+ && colcon build --executor parallel 
+RUN chown -R root:root /root
