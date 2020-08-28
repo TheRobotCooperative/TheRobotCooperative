@@ -8,7 +8,7 @@ Usage
 
 The OceanWATERS simulation can be run with the following command:
 
-..code::
+.. code::
 
   # roslaunch ow europa_terminator_workspace.launch
 
