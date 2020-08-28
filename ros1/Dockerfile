@@ -140,7 +140,6 @@ RUN (test -f /.dockerinstall/prebuild.sh \
      && ((echo "running prebuild step..." && apt-get update && /bin/bash /.dockerinstall/prebuild.sh && apt-get clean && rm -rf /var/lib/apt/lists/* )|| exit 1) \
      || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) 
 
-#ENV PLEXIL_HOME /root/plexil
 ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && eval "${BUILD_COMMAND}"
