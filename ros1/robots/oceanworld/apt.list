@@ -1,0 +1,36 @@
+python-wstool 
+python-catkin-tools 
+ros-melodic-tf2-ros 
+ros-melodic-robot-state-publisher 
+ros-melodic-joint-state-publisher 
+ros-melodic-joint-state-controller
+ros-melodic-effort-controllers 
+ros-melodic-dynamic-reconfigure 
+ros-melodic-nodelet 
+ros-melodic-nodelet-topic-tools 
+ros-melodic-camera-info-manager 
+ros-melodic-tf2-geometry-msgs 
+ros-melodic-gazebo-ros-control 
+ros-melodic-xacro ros-melodic-rviz-visual-tools 
+ros-melodic-rqt-plot ros-melodic-rqt-rviz 
+ros-melodic-rqt-image-view 
+ros-melodic-rqt-common-plugins 
+ros-melodic-gazebo-plugins 
+ros-melodic-moveit 
+ros-melodic-moveit-ros-visualization 
+ros-melodic-moveit-visual-tools
+ros-melodic-geometry-msgs 
+ros-melodic-cmake-modules 
+ros-melodic-stereo-msgs 
+ros-melodic-stereo-image-proc 
+libgtk2.0-dev 
+libglew-dev 
+automake
+make 
+autotools-dev 
+autoconf 
+libtool 
+g++ 
+ant 
+gperf 
+openjdk-11-jdk 
