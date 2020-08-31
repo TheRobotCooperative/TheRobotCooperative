@@ -18,7 +18,4 @@
     uri: 'https://github.com/nasa/irg_open'
     version: melodic-devel 
 
-- git:
-    local-name: ow
-    uri: 'https://github.com/nasa/ow_simulator'
 
