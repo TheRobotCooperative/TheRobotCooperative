@@ -8,6 +8,9 @@ autorally:
 baxter:
 	docker build --build-arg DISTRO=indigo --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
+chatter:
+	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
+
 cob4:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
@@ -65,4 +68,4 @@ warthog:
 oceanworld:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ --build-arg BUILD_COMMAND="(. ~/.profile; catkin_make)" -t ${DOCKERHUB_ORG}/$@ .
 
-.PHONY: autorally baxter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
+.PHONY: autorally baxter chatter cob4 fanuc fetch f1tenth f1tenth_tutorial guardian heron husky nao pallet_truck pr2 rbcar rb1 rb2 summit_xl turtlebot turtlebot3 warthog
