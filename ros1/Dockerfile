@@ -127,12 +127,15 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && rm -rf /var/lib/apt/lists/*
 
 RUN mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
+ && apt-get update \
  && wstool init -j8 src pkgs.rosinstall \
  && rosdep update \
  && rosdep install -i -y -r --from-paths src \
       --ignore-src \
       --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
-      --rosdistro="${ROS_DISTRO}" 
+      --rosdistro="${ROS_DISTRO}" \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 COPY "${DIRECTORY}" /.dockerinstall/
 RUN ls -al /.dockerinstall
