@@ -62,6 +62,9 @@ turtlebot:
 turtlebot3:
 	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
+turtlesim:
+	docker build --build-arg BUILD_COMMAND="catkin_make_isolated" --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
+
 warthog:
 	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
