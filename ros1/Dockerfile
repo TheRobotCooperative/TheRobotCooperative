@@ -39,6 +39,9 @@ RUN apt-get update \
 # (https://github.com/ros-industrial/industrial_calibration/issues/50)
 # supervisor
 FROM ros:${DISTRO} AS main
+ENV DEBIAN_FRONTEND noninteractive
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
 COPY --from=gzweb /opt/gzweb /opt/gzweb
 COPY rootfs /
 WORKDIR /ros_ws
@@ -50,6 +53,7 @@ RUN apt-get update \
       apt-utils \
       bzip2 \
       cmake \
+      clang \
       build-essential \
       ca-certificates \
       curl \
@@ -141,13 +145,13 @@ COPY "${DIRECTORY}" /.dockerinstall/
 RUN ls -al /.dockerinstall
 RUN (test -f /.dockerinstall/prebuild.sh \
      && ((echo "running prebuild step..." && apt-get update && /bin/bash /.dockerinstall/prebuild.sh && apt-get clean && rm -rf /var/lib/apt/lists/* )|| exit 1) \
-     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0)) 
+     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0))
 
 ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && eval "${BUILD_COMMAND}"
 
-# optionally add gzweb support 
+# optionally add gzweb support
 ARG GZWEB="no"
 RUN (test "${GZWEB}" = "yes" \
      && (echo "running gzweb installation scripts..." && /.dockerinstall/install-gzweb.sh || exit 1) \
