@@ -18,7 +18,11 @@ fanuc:
 	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
 fetch:
-	docker build --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
+	docker build \
+	  --build-arg DISTRO=melodic \
+	  --build-arg BUILD_COMMAND="catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++" \
+	  --build-arg DIRECTORY=robots/$@ \
+	  -t ${DOCKERHUB_ORG}/$@ .
 
 guardian:
 	docker build --build-arg BUILD_COMMAND="catkin_make" --build-arg DISTRO=indigo --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
