@@ -35,9 +35,8 @@ COPY rootfs /
 WORKDIR /ros_ws
 ENTRYPOINT ["/ros_ws/entrypoint.sh"]
 CMD ["/bin/bash"]
-
-RUN apt-get update \
- && apt-get install -y --no-install-recommends \
+RUN mv /etc/apt/sources.list.d/ros2-latest.list ~
+RUN apt update && apt install -y --no-install-recommends \
       apt-utils \
       bzip2 \
       cmake \
@@ -47,13 +46,14 @@ RUN apt-get update \
       gcc \
       g++ \
       mercurial \
-      python-pip \
+      python3-pip \
       software-properties-common \
       tmux \
       vim \
-      wget \
+      wget 
+RUn curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg \
+ && wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -  \
  && echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list \
- && wget http://packages.osrfoundation.org/gazebo.key -O - | apt-key add - \
  && echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros-latest.list \
  && wget http://packages.ros.org/ros.key -O - | apt-key add - \
  && apt-get update \
@@ -70,7 +70,7 @@ RUN apt-get update \
 RUN apt-get update \
  && apt-get install -y \
       supervisor \
-      vnc4server \
+      tightvncserver \
       xfce4 \
       xfce4-goodies \
       xfce4-terminal \
@@ -88,8 +88,10 @@ RUN chmod +x /bin/tini
 
 RUN apt-get update \
   && apt install -y \
-    libgazebo9-dev \
-    ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+    gazebo11 \
+    libgazebo11-dev 
+RUN mv ~/ros2-latest.list /etc/apt/sources.list.d/ros2-latest.list && apt-get update
+RUN apt install -y    ros-${ROS_DISTRO}-gazebo-ros-pkgs \
     rti-connext-dds-${RTI_VERSION} \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
