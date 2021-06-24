@@ -130,29 +130,31 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-RUN mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
- && apt-get update \
- && wstool init -j8 src pkgs.rosinstall \
- && rosdep update \
- && rosdep install -i -y -r --from-paths src \
-      --ignore-src \
-      --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
-      --rosdistro="${ROS_DISTRO}" \
- && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+#RUN mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
+# && apt-get update \
+# && wstool init -j8 src pkgs.rosinstall \
+# && rosdep update \
+# && rosdep install -i -y -r --from-paths src \
+#      --ignore-src \
+#      --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
+#      --rosdistro="${ROS_DISTRO}" \
+# && apt-get clean \
+# && rm -rf /var/lib/apt/lists/*
 
 COPY "${DIRECTORY}" /.dockerinstall/
-RUN ls -al /.dockerinstall
-RUN (test -f /.dockerinstall/prebuild.sh \
-     && ((echo "running prebuild step..." && apt-get update && /bin/bash /.dockerinstall/prebuild.sh && apt-get clean && rm -rf /var/lib/apt/lists/* )|| exit 1) \
-     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0))
+#RUN ls -al /.dockerinstall
+#RUN (test -f /.dockerinstall/prebuild.sh \
+#     && ((echo "running prebuild step..." && apt-get update && /bin/bash /.dockerinstall/prebuild.sh && apt-get clean && rm -rf /var/lib/apt/lists/* )|| exit 1) \
+#     || (echo "skipping prebuild step [no prebuild.sh]" && exit 0))
 
-ARG BUILD_COMMAND="catkin_make"
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && eval "${BUILD_COMMAND}"
+#ARG BUILD_COMMAND="catkin_make"
+#RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
+# && eval "${BUILD_COMMAND}"
 
 # optionally add gzweb support
 ARG GZWEB="no"
 RUN (test "${GZWEB}" = "yes" \
      && (echo "running gzweb installation scripts..." && /.dockerinstall/install-gzweb.sh || exit 1) \
      || (echo "skipping gzweb installation step" && exit 0))
+RUN mkdir /ros_ws/devel && \
+   touch /ros_ws/devel/setup.bash
