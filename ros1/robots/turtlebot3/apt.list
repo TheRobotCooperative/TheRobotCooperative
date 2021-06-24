@@ -1,3 +1,11 @@
 ros-kinetic-gazebo-plugins 
 ros-kinetic-image-proc 
 ros-kinetic-image-transport-plugins
+ros-kinetic-resource-retriever
+ros-kinetic-geometry
+ros-kinetic-geometry2
+ros-kinetic-pcl-ros
+ros-kinetic-tf*
+ros-kinetic-interactive-markers
+ros-kinetic-gazebo-ros
+ros-kinetic-urdf*

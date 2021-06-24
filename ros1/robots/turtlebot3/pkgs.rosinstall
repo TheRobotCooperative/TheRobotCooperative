@@ -26,3 +26,32 @@
     local-name: turtlebot3_deliver
     uri: https://github.com/ROBOTIS-GIT/turtlebot3_deliver
     version: 41b2a825fdc943989b13853d5c35b85b2328f1f9
+- git:
+    local-name: ar_track_alvar
+    uri: https://github.com/ros-perception/ar_track_alvar
+    version: 0.7.1
+#- git:
+#    local-name: urdf
+#    uri: https://github.com/ros/urdf
+#    version: 1.13.2
+#- git:
+#    local-name: interactive_markers
+#    uri: https://github.com/ros-visualization/interactive_markers
+#    version: 2.2.0
+#- git:
+#    local-name: geometry2
+#    uri: https://github.com/ros/geometry2
+#    version: 0.7.5
+#- git:
+#    local-name: geometry
+#    uri: https://github.com/ros/geometry
+#    version: 1.13.2
+#- git:
+#    local-name: angles
+#    uri: https://github.com/ros/angles
+#    version: 1.12.4
+#- git:
+#    local-name: resource_retriever
+#    uri: https://github.com/ros/resource_retriever
+#    version: 2.5.0
+
