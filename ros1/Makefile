@@ -20,7 +20,7 @@ fanuc:
 fetch:
 	docker build \
 	  --build-arg DISTRO=melodic \
-	  --build-arg BUILD_COMMAND="catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++" \
+	  --build-arg BUILD_COMMAND="catkin build -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++" \
 	  --build-arg DIRECTORY=robots/$@ \
 	  -t ${DOCKERHUB_ORG}/$@ .
 

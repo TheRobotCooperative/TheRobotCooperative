@@ -149,7 +149,7 @@ RUN (test -f /.dockerinstall/prebuild.sh \
 
 ARG BUILD_COMMAND="catkin_make"
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
- && eval "${BUILD_COMMAND}"
+ && eval "${BUILD_COMMAND} -DCMAKE_EXPORT_COMPILE_COMMANDS=1"
 
 # optionally add gzweb support
 ARG GZWEB="no"
