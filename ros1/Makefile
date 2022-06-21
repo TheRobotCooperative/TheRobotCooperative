@@ -58,7 +58,7 @@ rb2:
 	docker build --build-arg BUILD_COMMAND="catkin build" --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
 summit_xl:
-	docker build --build-arg BUILD_COMMAND="catkin build" --build-arg DISTRO=kinetic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
+	docker build --build-arg BUILD_COMMAND="catkin build" --build-arg DISTRO=melodic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .
 
 turtlebot:
 	docker build --build-arg DISTRO=kinetic --build-arg DIRECTORY=robots/$@ -t ${DOCKERHUB_ORG}/$@ .

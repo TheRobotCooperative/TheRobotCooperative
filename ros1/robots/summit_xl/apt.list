@@ -1,4 +1,4 @@
-ros-kinetic-teleop-tools
-ros-kinetic-teleop-twist-joy
-ros-kinetic-twist-mux
-ros-kinetic-ros-control
+ros-melodic-teleop-tools
+ros-melodic-teleop-twist-joy
+ros-melodic-twist-mux
+ros-melodic-ros-control

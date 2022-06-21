@@ -1,32 +1,32 @@
 - git:
     local-name: summit_xl_common
     uri: https://github.com/RobotnikAutomation/summit_xl_common.git
-    version: 8590eb2d9625521d73927695397de83caf1a946f
+    version: 82c27bba1f3ce5dc9a1ccb6ea69637be47884917
 - git:
     local-name: summit_xl_sim
     uri: https://github.com/RobotnikAutomation/summit_xl_sim.git
-    version: 49b17ad4af90c5c03763a1794945b7668cf080d3
+    version: a8f062a2478ca28f233589840d43a902ac64537d
 - git:
     local-name: robotnik_gazebo_models
     uri: https://github.com/RobotnikAutomation/robotnik_gazebo_models.git
-    version: ca13ad1bf0e39ff5a1410fd2edfa5788f044015a
+    version: 52f3d1513a187f15c61d672f84b7147899a96a97
 - git:
     local-name: robotnik_msgs
     uri: https://github.com/RobotnikAutomation/robotnik_msgs.git
-    version: 1.0.0
+    version: 5cc6d5e435798f43e26a2e1f68877120c564d669
 - git:
     local-name: robotnik_sensors
     uri: https://github.com/RobotnikAutomation/robotnik_sensors.git
-    version: kinetic-1.1.2
+    version: 160c735cada6fd613b4dffad6dac90523115a3d7
 - git:
     local-name: robotnik_pad
     uri: https://github.com/RobotnikAutomation/robotnik_pad.git
-    version: 04ed51e3c4e18d344961e066c1fe9c6ca0c67e6d
+    version: bc2d7f5e20438ecf3ed6d2f536c1ef71991049ab
 - git:
     local-name: rcomponent
     uri: https://github.com/RobotnikAutomation/rcomponent.git
-    version: acd7670e6154a4a4abd1b43bdc72547d0e57f84e
+    version: 14c0b54f50bc1a7e31dcd40ef67025c7d36ab006
 - git:
-    local-name:  costmap_prohibition_layer
+    local-name: costmap_prohibition_layer
     uri: https://github.com/RobotnikAutomation/costmap_prohibition_layer.git
     version: fafc7ce82888b0211d64a3afb3aaff7f775a1714

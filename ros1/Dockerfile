@@ -121,7 +121,7 @@ RUN chmod +x /bin/tini
 
 # build package
 ARG DIRECTORY
-COPY "${DIRECTORY}"/pkgs.rosinstall "${DIRECTORY}"/apt.list* /.dockerinstall/
+COPY "${DIRECTORY}"/pkgs.rosinstall "${DIRECTORY}"/apt.list* "${DIRECTORY}"/rosdep.skip* /.dockerinstall/
 RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
  && apt-get update \
  && (test -f /.dockerinstall/apt.list \
@@ -133,10 +133,11 @@ RUN . /opt/ros/${ROS_DISTRO}/setup.sh \
 RUN mv /.dockerinstall/pkgs.rosinstall /ros_ws/pkgs.rosinstall \
  && apt-get update \
  && wstool init -j8 src pkgs.rosinstall \
+ && touch /.dockerinstall/rosdep.skip \
  && rosdep update \
  && rosdep install -i -y -r --from-paths src \
       --ignore-src \
-      --skip-keys="python-rosdep python-catkin-pkg python-rospkg" \
+      --skip-keys="python-rosdep python-catkin-pkg python-rospkg $(cat /.dockerinstall/rosdep.skip)" \
       --rosdistro="${ROS_DISTRO}" \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
