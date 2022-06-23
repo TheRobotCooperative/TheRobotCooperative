@@ -1,6 +1,6 @@
 - git:
     local-name: summit_xl_common
-    uri: https://github.com/RobotnikAutomation/summit_xl_common.git
+    uri: https://github.com/rosqual/summit_xl_common.git
     version: 82c27bba1f3ce5dc9a1ccb6ea69637be47884917
 - git:
     local-name: summit_xl_sim
