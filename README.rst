@@ -98,6 +98,12 @@ the server:
 
    $ vncviewer 172.17.0.2:0
 
+*Mac OS Silicon M1:* If you are using Mac OS on an M1 chip, you will need to
+add the option :code:`--platform linux/amd64` to the :code:`docker run`
+command. If you run into issues with interacting with the VNC Viewer, we
+advise running the TigerVNC Viewer application itself rather than using the
+command line.
+
 *Mac OS X:* If you are using Mac OS X, you cannot interact directly with a
 container via its IP address. To get around this problem, you will need to
 use port forwarding to forward the VNC port 5900 to the host, which can be
